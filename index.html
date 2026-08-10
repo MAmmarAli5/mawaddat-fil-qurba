@@ -1,189 +1,1676 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mawaddat-e-Fil-Qurba | Online Learning Platform</title>
+<meta charset="UTF-8">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            color: #222;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #12372a;
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
+<title>
+Mawaddat-e-Fil-Qurba | Online Islamic Learning Platform
+</title>
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
 
-        header p {
-            margin-top: 8px;
-            font-size: 17px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-        nav {
-            background: #0b241b;
-            padding: 12px;
-            text-align: center;
-        }
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 16px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        .hero {
-            padding: 70px 20px;
-            text-align: center;
-            background: white;
-        }
 
-        .hero h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
+<style>
 
-        .hero p {
-            font-size: 19px;
-            line-height: 1.8;
-        }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 13px 28px;
-            background: #b8860b;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .courses {
-            padding: 50px 20px;
-            text-align: center;
-        }
 
-        .courses h2 {
-            font-size: 30px;
-        }
+body{
 
-        .course-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
+font-family:'Poppins','Noto Naskh Arabic',sans-serif;
 
-        .course {
-            background: white;
-            width: 280px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-        }
+background:#0b0b0b;
 
-        .course h3 {
-            color: #12372a;
-        }
+color:white;
 
-        footer {
-            background: #12372a;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
-    </style>
+line-height:1.8;
+
+}
+
+
+/* NAVBAR */
+
+
+.navbar{
+
+width:100%;
+
+background:#080808;
+
+border-bottom:1px solid #b8860b;
+
+padding:15px 40px;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+}
+
+
+.nav-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+
+.brand-logo{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+
+.brand-name{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#d4af37;
+
+}
+
+
+.brand small{
+
+color:#ddd;
+
+}
+
+
+
+.nav-links a{
+
+color:white;
+
+text-decoration:none;
+
+margin:0 10px;
+
+font-size:15px;
+
+}
+
+
+.nav-links a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+.login-btn{
+
+background:#b8860b;
+
+padding:8px 20px;
+
+border-radius:25px;
+
+}
+
+
+
+/* HERO SECTION */
+
+
+.hero{
+
+
+min-height:90vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+
+}
+
+
+.hero-background{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,0.65),
+
+rgba(0,0,0,0.85)
+
+),
+
+url("images/banner.jpg");
+
+
+background-size:cover;
+
+background-position:center;
+
+z-index:-1;
+
+
+}
+
+
+
+.hero-content{
+
+
+max-width:850px;
+
+padding:40px;
+
+
+}
+
+
+
+.hero-logo{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+border:3px solid #d4af37;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.hero h1{
+
+
+font-size:55px;
+
+color:#d4af37;
+
+margin-bottom:10px;
+
+font-family:'Noto Naskh Arabic',serif;
+
+
+}
+
+
+
+.hero h2{
+
+
+font-size:28px;
+
+color:white;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.hero p{
+
+
+font-size:20px;
+
+color:#eee;
+
+margin-bottom:35px;
+
+line-height:2;
+
+
+}
+
+
+
+.hero-buttons{
+
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+.hero-buttons a{
+
+
+text-decoration:none;
+
+padding:14px 30px;
+
+border-radius:30px;
+
+font-size:17px;
+
+background:#b8860b;
+
+color:white;
+
+transition:0.3s;
+
+
+}
+
+
+
+.hero-buttons a:hover{
+
+
+background:#d4af37;
+
+transform:translateY(-3px);
+
+
+}
+
+
+.hero-buttons .secondary{
+
+
+background:transparent;
+
+border:1px solid #d4af37;
+
+
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:768px){
+
+
+.nav-container{
+
+flex-direction:column;
+
+}
+
+
+.nav-links{
+
+margin-top:15px;
+
+}
+
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+
+}
+
+</style>
+
+
 </head>
+
+
 
 <body>
 
-<header>
-    <h1>مَوَدَّتِ فِی الْقُرْبَىٰ</h1>
-    <p>Mawaddat-e-Fil-Qurba Online Learning Platform</p>
-</header>
 
-<nav>
-    <a href="#">ہوم</a>
-    <a href="#courses">کورسز</a>
-    <a href="#">ہمارے بارے میں</a>
-    <a href="#">رابطہ</a>
-    <a href="#">Login</a>
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar">
+
+
+<div class="nav-container">
+
+
+
+<a href="index.html" class="brand">
+
+
+<img src="images/logo.png" class="brand-logo">
+
+
+<div>
+
+<div class="brand-name">
+
+مَوَدَّتِ فِی الْقُرْبَىٰ
+
+</div>
+
+
+<small>
+
+Online Learning Platform
+
+</small>
+
+
+</div>
+
+
+</a>
+
+
+
+<div class="nav-links">
+
+
+<a href="index.html">
+
+Home
+
+</a>
+
+
+<a href="#courses">
+
+Courses
+
+</a>
+
+
+<a href="#about">
+
+About
+
+</a>
+
+
+<a href="#updates">
+
+Updates
+
+</a>
+
+
+<a href="login.html" class="login-btn">
+
+Login
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
 </nav>
+
+
+
+
+
+<!-- HERO -->
+
 
 <section class="hero">
 
-    <h2>آن لائن اسلامی تعلیم کا جدید پلیٹ فارم</h2>
 
-    <p>
-        معارفِ قرآن، احادیث، عقائد، فقہِ اہل بیتؑ
-        اور سیرتِ معصومین علیہم السلام کے علمی کورسز
-        ایک ہی پلیٹ فارم پر۔
-    </p>
 
-    <a href="#courses" class="button">
-        کورسز دیکھیں
-    </a>
+<div class="hero-background"></div>
+
+
+
+<div class="hero-content">
+
+
+
+<img src="images/logo.png" class="hero-logo">
+
+
+
+<h1>
+
+مَوَدَّتِ فِی الْقُرْبَىٰ
+
+</h1>
+
+
+
+<h2>
+
+Mawaddat-e-Fil-Qurba
+
+<br>
+
+Online Islamic Learning Platform
+
+</h2>
+
+
+
+
+<p>
+
+
+قرآن مجید، احادیث، عقائد، فقہ اہل بیتؑ
+اور سیرتِ معصومین علیہم السلام کی
+آن لائن تعلیم کا جدید پلیٹ فارم
+
+
+</p>
+
+
+
+
+<div class="hero-buttons">
+
+
+<a href="register.html">
+
+داخلہ حاصل کریں
+
+</a>
+
+
+<a href="login.html" class="secondary">
+
+Student Login
+
+</a>
+
+
+<a href="#intro-video" class="secondary">
+
+Intro Video
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
 
 </section>
+<!-- ========================================= -->
+<!-- ABOUT PLATFORM SECTION -->
+<!-- ========================================= -->
 
-<section class="courses" id="courses">
+<section id="about" class="section about-section">
 
-    <h2>ہمارے کورسز</h2>
+    <div class="section-container">
 
-    <div class="course-container">
+        <div class="section-heading">
 
-        <div class="course">
-            <h3>معرفتِ عقیدہ</h3>
-            <p>اسلامی اور شیعی عقائد کا تحقیقی مطالعہ۔</p>
+            <span class="section-tag">
+                مَوَدَّتِ فِی الْقُرْبَىٰ
+            </span>
+
+            <h2>
+                ہمارے پلیٹ فارم کے بارے میں
+            </h2>
+
+            <div class="heading-line"></div>
+
         </div>
 
-        <div class="course">
-            <h3>معرفتِ احادیث</h3>
-            <p>احادیثِ اہل بیت علیہم السلام کا مطالعہ۔</p>
-        </div>
 
-        <div class="course">
-            <h3>معرفتِ قرآن</h3>
-            <p>قرآن مجید کی تعلیم اور معارف۔</p>
-        </div>
+        <div class="about-grid">
 
-        <div class="course">
-            <h3>معرفتِ تفسیر</h3>
-            <p>قرآن کی تفسیری تعلیمات کا مطالعہ۔</p>
-        </div>
+            <div class="about-content">
 
-        <div class="course">
-            <h3>معرفتِ معصومینؑ</h3>
-            <p>رسول اکرم ﷺ اور ائمہ اہل بیتؑ کی سیرت و معرفت۔</p>
-        </div>
+                <h3>
+                    علم، معرفت اور تعلیماتِ اہل بیتؑ
+                </h3>
 
-        <div class="course">
-            <h3>معرفتِ فقہ اہل بیتؑ</h3>
-            <p>فقہِ اہل بیت علیہم السلام کے بنیادی احکام۔</p>
+                <p>
+                    Mawaddat-e-Fil-Qurba ایک آن لائن اسلامی
+                    تعلیمی پلیٹ فارم ہے جس کا مقصد قرآن مجید،
+                    احادیثِ اہل بیت علیہم السلام، عقائد، تفسیر،
+                    فقہ اور سیرتِ معصومین علیہم السلام کے
+                    معارف کو منظم اور جدید انداز میں طلبہ تک پہنچانا ہے۔
+                </p>
+
+                <p>
+                    اس پلیٹ فارم پر مختلف اسلامی اور تحقیقی
+                    کورسز کا انعقاد کیا جائے گا، جہاں طلبہ
+                    آن لائن رجسٹریشن، کلاسز، مطالعاتی مواد،
+                    امتحانات اور نتائج سے استفادہ کر سکیں گے۔
+                </p>
+
+                <a href="#courses" class="gold-button">
+                    ہمارے کورسز دیکھیں
+                </a>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    ہمارا مقصد
+                </h3>
+
+                <p>
+                    معارفِ قرآن و اہل بیت علیہم السلام کو
+                    تحقیق، تعلیم اور جدید ٹیکنالوجی کے ذریعے
+                    زیادہ سے زیادہ طلبہ تک پہنچانا۔
+                </p>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<footer>
-    <p>© 2026 Mawaddat-e-Fil-Qurba Online Learning Platform</p>
-    <p>علم، معرفت اور تعلیمِ اہل بیت علیہم السلام</p>
+
+
+<!-- ========================================= -->
+<!-- CURRENT COURSE SECTION -->
+<!-- ========================================= -->
+
+<section class="current-course">
+
+    <div class="section-container">
+
+        <div class="current-course-box">
+
+            <div class="course-label">
+                جاری کورس
+            </div>
+
+
+            <h2>
+                معرفتِ معصومین علیہم السلام
+            </h2>
+
+
+            <p class="course-subtitle">
+                سیرت، حیات، تعلیمات اور معارفِ اہل بیت علیہم السلام
+            </p>
+
+
+            <div class="session-highlight">
+
+                <div class="session-number">
+                    02
+                </div>
+
+
+                <div class="session-info">
+
+                    <span>
+                        Session No. 02
+                    </span>
+
+                    <h3>
+                        امام محمد باقر العلوم علیہ السلام
+                    </h3>
+
+                    <p>
+                        امام محمد باقر علیہ السلام کی حیاتِ مبارکہ،
+                        علمی مقام، سیرت، تعلیمات، احادیث اور
+                        دورِ امامت کا مطالعہ۔
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="course-actions">
+
+                <a href="#" class="gold-button">
+                    Course Details
+                </a>
+
+                <a href="#" class="outline-button">
+                    Student Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- COURSES SECTION -->
+<!-- ========================================= -->
+
+<section id="courses" class="section courses-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                OUR PROGRAMS
+            </span>
+
+            <h2>
+                ہمارے تعلیمی کورسز
+            </h2>
+
+            <p>
+                مختلف اسلامی علوم اور معارف پر مشتمل
+                منظم آن لائن کورسز
+            </p>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="courses-grid">
+
+
+            <!-- COURSE 1 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    ☪
+                </div>
+
+                <span class="course-status">
+                    Coming Soon
+                </span>
+
+                <h3>
+                    معرفتِ عقیدہ
+                </h3>
+
+                <p>
+                    اسلامی اور شیعی عقائد کے بنیادی
+                    اور تحقیقی مباحث کا مطالعہ۔
+                </p>
+
+                <a href="#">
+                    View Course →
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 2 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    📖
+                </div>
+
+                <span class="course-status">
+                    Coming Soon
+                </span>
+
+                <h3>
+                    معرفتِ احادیث
+                </h3>
+
+                <p>
+                    احادیثِ رسول اکرم ﷺ اور ائمہ اہل بیتؑ
+                    کی روایات کا مطالعہ۔
+                </p>
+
+                <a href="#">
+                    View Course →
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 3 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    ﷽
+                </div>
+
+                <span class="course-status">
+                    Coming Soon
+                </span>
+
+                <h3>
+                    معرفتِ قرآن
+                </h3>
+
+                <p>
+                    قرآن مجید کے معارف، تعلیمات اور
+                    منتخب قرآنی موضوعات کا مطالعہ۔
+                </p>
+
+                <a href="#">
+                    View Course →
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 4 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    ✧
+                </div>
+
+                <span class="course-status">
+                    Coming Soon
+                </span>
+
+                <h3>
+                    معرفتِ تفسیر
+                </h3>
+
+                <p>
+                    قرآن مجید کی تفسیر اور تفسیری
+                    مباحث کا منظم مطالعہ۔
+                </p>
+
+                <a href="#">
+                    View Course →
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 5 -->
+
+            <div class="course-card featured-course">
+
+                <div class="featured-label">
+                    CURRENT
+                </div>
+
+                <div class="course-icon">
+                    ♡
+                </div>
+
+                <span class="course-status active">
+                    جاری ہے
+                </span>
+
+                <h3>
+                    معرفتِ معصومینؑ
+                </h3>
+
+                <p>
+                    رسول اکرم ﷺ اور ائمہ اہل بیت
+                    علیہم السلام کی سیرت و معارف پر
+                    مشتمل خصوصی کورس۔
+                </p>
+
+                <a href="#">
+                    View Course →
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 6 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    ⚖
+                </div>
+
+                <span class="course-status">
+                    Coming Soon
+                </span>
+
+                <h3>
+                    معرفتِ فقہ اہل بیتؑ
+                </h3>
+
+                <p>
+                    فقہِ اہل بیت علیہم السلام کے
+                    بنیادی احکام اور فقہی مباحث۔
+                </p>
+
+                <a href="#">
+                    View Course →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- LEARNING FEATURES -->
+<!-- ========================================= -->
+
+<section class="features-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                LEARNING EXPERIENCE
+            </span>
+
+            <h2>
+                ایک مکمل آن لائن تعلیمی تجربہ
+            </h2>
+
+            <p>
+                طلبہ کے لیے تعلیم، مطالعہ اور امتحان
+                ایک ہی پلیٹ فارم پر
+            </p>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="features-grid">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Online Enrollment
+                </h3>
+
+                <p>
+                    طلبہ اپنی پسند کے کورس میں
+                    آن لائن رجسٹریشن کر سکیں گے۔
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Study Material
+                </h3>
+
+                <p>
+                    متعلقہ کورس کے PDFs، Notes اور
+                    مطالعاتی مواد دستیاب ہوگا۔
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🎥
+                </div>
+
+                <h3>
+                    Online Classes
+                </h3>
+
+                <p>
+                    طلبہ متعلقہ کورس کی آن لائن
+                    کلاسز اور لیکچرز تک رسائی حاصل کریں گے۔
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Online Examination
+                </h3>
+
+                <p>
+                    کورس مکمل ہونے کے بعد آن لائن
+                    امتحان دینے کی سہولت۔
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Online Results
+                </h3>
+
+                <p>
+                    امتحان کے نتائج طلبہ کے
+                    personal dashboard میں دستیاب ہوں گے۔
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Certificates
+                </h3>
+
+                <p>
+                    کامیاب طلبہ کے لیے کورس کی
+                    تکمیل کا certificate system۔
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- INTRO VIDEO SECTION -->
+<!-- ========================================= -->
+
+<section id="intro-video" class="section video-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                WELCOME TO OUR PLATFORM
+            </span>
+
+            <h2>
+                پلیٹ فارم کا تعارف
+            </h2>
+
+            <p>
+                Mawaddat-e-Fil-Qurba Online Learning Platform
+                کے بارے میں مختصر تعارفی پیغام
+            </p>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="video-container">
+
+            <video
+                controls
+                preload="metadata"
+                poster="images/banner.jpg"
+            >
+
+                <source
+                    src="videos/intro.mp4"
+                    type="video/mp4"
+                >
+
+                آپ کا browser video کو support نہیں کرتا۔
+                
+            </video>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- OUR TEAM / INTRODUCTION -->
+<!-- ========================================= -->
+
+<section id="team" class="section team-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                OUR TEAM
+            </span>
+
+            <h2>
+                ادارہ اور انتظامیہ
+            </h2>
+
+            <p>
+                Mawaddat-e-Fil-Qurba کے تعلیمی و انتظامی نظام سے وابستہ افراد
+            </p>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="team-grid">
+
+
+            <!-- LECTURER -->
+
+            <div class="team-card">
+
+                <div class="team-image">
+
+                    <img
+                        src="images/lecturer.jpg"
+                        alt="Lecturer"
+                    >
+
+                </div>
+
+
+                <div class="team-content">
+
+                    <span>
+                        Founder & Lecturer
+                    </span>
+
+                    <h3>
+                        محمد عمار علی ہاشمی
+                    </h3>
+
+                    <p>
+                        اسلامی علوم، سیرتِ معصومین علیہم السلام
+                        اور معارفِ اہل بیتؑ کے مدرس و محقق۔
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MANAGEMENT -->
+
+            <div class="team-card">
+
+                <div class="team-image">
+
+                    <img
+                        src="images/management.jpg"
+                        alt="Management"
+                    >
+
+                </div>
+
+
+                <div class="team-content">
+
+                    <span>
+                        Management
+                    </span>
+
+                    <h3>
+                        Mawaddat-e-Fil-Qurba
+                    </h3>
+
+                    <p>
+                        آن لائن تعلیمی پروگرامز، طلبہ کی رہنمائی
+                        اور انتظامی امور کی نگرانی۔
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- LATEST UPDATES -->
+<!-- ========================================= -->
+
+<section id="updates" class="section updates-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                LATEST UPDATES
+            </span>
+
+            <h2>
+                تازہ ترین اعلانات
+            </h2>
+
+            <p>
+                Mawaddat-e-Fil-Qurba کے تازہ تعلیمی اعلانات
+            </p>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="updates-grid">
+
+
+            <!-- UPDATE 1 -->
+
+            <div class="update-card">
+
+                <div class="update-date">
+
+                    <strong>
+                        2026
+                    </strong>
+
+                    <span>
+                        SESSION 02
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span class="update-label">
+                        جاری کورس
+                    </span>
+
+                    <h3>
+                        معرفتِ معصومینؑ
+                    </h3>
+
+                    <p>
+                        Session 02 امام محمد باقر العلوم
+                        علیہ السلام کے موضوع پر جاری ہے۔
+                    </p>
+
+                    <a href="#">
+                        مزید معلومات →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- UPDATE 2 -->
+
+            <div class="update-card">
+
+                <div class="update-date">
+
+                    <strong>
+                        EXAM
+                    </strong>
+
+                    <span>
+                        ONLINE
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span class="update-label">
+                        اہم اعلان
+                    </span>
+
+                    <h3>
+                        Online Examination
+                    </h3>
+
+                    <p>
+                        موجودہ Session کے طلبہ کے لیے
+                        آن لائن امتحان کا نظام۔
+                    </p>
+
+                    <a href="#">
+                        Exam Portal →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- UPDATE 3 -->
+
+            <div class="update-card">
+
+                <div class="update-date">
+
+                    <strong>
+                        NEW
+                    </strong>
+
+                    <span>
+                        COURSES
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span class="update-label">
+                        جلد شروع ہوگا
+                    </span>
+
+                    <h3>
+                        نئے اسلامی کورسز
+                    </h3>
+
+                    <p>
+                        معرفتِ عقیدہ، قرآن، احادیث،
+                        تفسیر اور فقہ اہل بیتؑ کے نئے پروگرامز۔
+                    </p>
+
+                    <a href="#courses">
+                        Courses دیکھیں →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- CONTACT SECTION -->
+<!-- ========================================= -->
+
+<section class="contact-section">
+
+    <div class="section-container">
+
+        <div class="contact-box">
+
+            <div class="contact-content">
+
+                <span class="section-tag">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    ہم سے رابطہ کریں
+                </h2>
+
+                <p>
+                    کورسز، داخلہ، امتحانات یا کسی بھی
+                    تعلیمی معلومات کے لیے ہم سے رابطہ کریں۔
+                </p>
+
+            </div>
+
+
+            <div class="contact-buttons">
+
+                <a
+                    href="#"
+                    class="gold-button"
+                >
+                    WhatsApp
+                </a>
+
+
+                <a
+                    href="#"
+                    class="outline-button"
+                >
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="images/logo.png"
+                alt="Mawaddat-e-Fil-Qurba Logo"
+            >
+
+
+            <h3>
+                مَوَدَّتِ فِی الْقُرْبَىٰ
+            </h3>
+
+
+            <p>
+                Mawaddat-e-Fil-Qurba
+                Online Learning Platform
+            </p>
+
+
+            <p>
+                علم، معرفت اور تعلیماتِ اہل بیت
+                علیہم السلام
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="#courses">
+                Courses
+            </a>
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#team">
+                Our Team
+            </a>
+
+
+            <a href="#updates">
+                Updates
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>
+                Student Portal
+            </h3>
+
+
+            <a href="login.html">
+                Student Login
+            </a>
+
+
+            <a href="register.html">
+                Student Registration
+            </a>
+
+
+            <a href="#">
+                Online Exam
+            </a>
+
+
+            <a href="#">
+                Results
+            </a>
+
+
+            <a href="#">
+                Certificates
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>
+                Connect With Us
+            </h3>
+
+
+            <a href="#">
+                WhatsApp
+            </a>
+
+
+            <a href="#">
+                YouTube
+            </a>
+
+
+            <a href="#">
+                Facebook
+            </a>
+
+
+            <a href="#">
+                Contact Us
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Mawaddat-e-Fil-Qurba.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed for Islamic Online Education
+        </p>
+
+    </div>
+
 </footer>
+
+
+
+<!-- ========================================= -->
+<!-- SIMPLE JAVASCRIPT -->
+<!-- ========================================= -->
+
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+    link.addEventListener('click', function(event) {
+
+        const target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+
+        }
+
+    });
+
+});
+
+
+/* Prevent empty links from jumping */
+
+document.querySelectorAll('a[href="#"]').forEach(function(link) {
+
+    link.addEventListener('click', function(event) {
+
+        event.preventDefault();
+
+    });
+
+});
+
+</script>
+
+
 
 </body>
 </html>

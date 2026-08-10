@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ur" dir="rtl">
 
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Mawaddat Fil Qurba Online Learning Platform - Islamic Education and Knowledge of Ahlulbayt (AS).">
+          content="Mawaddat Fil Qurba Online Learning Platform - اسلامی آن لائن تعلیمی پلیٹ فارم">
 
-    <meta name="keywords"
-          content="Mawaddat Fil Qurba, Islamic Courses, Ahlulbayt, Shia Islamic Education, Seerat e Masoomeen">
-
-    <meta name="author"
-          content="Mawaddat Fil Qurba">
-
-    <title>
-        Mawaddat Fil Qurba | Online Learning Platform
-    </title>
+    <title>Mawaddat Fil Qurba | Online Learning Platform</title>
 
 
-    <!-- =====================================================
+    <!-- =========================
          GOOGLE FONTS
-         ===================================================== -->
+         ========================= -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -37,67 +27,49 @@
           rel="stylesheet">
 
 
-    <!-- =====================================================
-         WEBSITE STYLE
-         ===================================================== -->
+    <!-- =========================
+         CSS
+         ========================= -->
 
     <style>
 
-       /* =================================================
-   FINAL WHITE BACKGROUND THEME
-   ================================================= */
+        /* =========================================
+           COLOR SYSTEM
+           ========================================= */
 
-body {
-    background: #ffffff !important;
-    color: #26352d;
-}
+        :root {
 
-/* Main light sections */
-.about-section,
-.courses-section,
-.video-section {
-    background: #ffffff !important;
-}
+            --white: #ffffff;
 
-/* Very subtle alternate sections */
-.current-course,
-.features-section,
-.updates-section {
-    background: #f8f8f5 !important;
-}
+            --off-white: #fafafa;
 
-/* Cards remain clean white */
-.about-box,
-.course-card,
-.feature-card,
-.update-card {
-    background: #ffffff !important;
-}
+            --light-section: #f6f7f5;
 
-/* Keep premium green course section */
-.current-course-box {
-    background: linear-gradient(
-        135deg,
-        #123d2c,
-        #09291e
-    ) !important;
-}
+            --green-dark: #08281d;
 
-/* Dark student portal */
-.portal-section {
-    background: #09291e !important;
-}
+            --green: #123d2c;
 
-/* Dark footer */
-.footer {
-    background: #09291e !important;
-}
+            --green-light: #2f6b50;
+
+            --gold: #b08a3c;
+
+            --gold-light: #d4b66c;
+
+            --gold-dark: #806326;
+
+            --text: #26352d;
+
+            --muted: #69746d;
+
+            --border: rgba(18,61,44,0.12);
+
+            --shadow: rgba(18,61,44,0.10);
         }
 
 
-        /* =================================================
+        /* =========================================
            RESET
-           ================================================= */
+           ========================================= */
 
         * {
             margin: 0;
@@ -113,9 +85,7 @@ body {
 
         body {
 
-            margin: 0;
-
-            background: var(--cream);
+            background: var(--white);
 
             color: var(--text);
 
@@ -142,15 +112,9 @@ body {
         }
 
 
-        button,
-        a {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-
-        /* =================================================
+        /* =========================================
            NAVBAR
-           ================================================= */
+           ========================================= */
 
         .navbar {
 
@@ -158,12 +122,10 @@ body {
 
             top: 0;
 
-            z-index: 1000;
-
-            width: 100%;
+            z-index: 999;
 
             background:
-                rgba(9, 41, 30, 0.98);
+                rgba(8,40,29,0.98);
 
             border-bottom:
                 2px solid var(--gold);
@@ -183,8 +145,7 @@ body {
 
             margin: auto;
 
-            padding:
-                8px 22px;
+            padding: 8px 22px;
 
             display: flex;
 
@@ -192,13 +153,13 @@ body {
 
             justify-content: space-between;
 
-            gap: 30px;
+            gap: 25px;
         }
 
 
-        /* =================================================
+        /* =========================================
            LOGO
-           ================================================= */
+           ========================================= */
 
         .brand {
 
@@ -218,32 +179,30 @@ body {
 
             height: 50px !important;
 
-            min-width: 50px;
-
-            min-height: 50px;
-
-            object-fit: cover;
+            object-fit: contain;
 
             border-radius: 50%;
 
             border:
                 1px solid var(--gold-light);
 
-            box-shadow:
-                0 0 15px
-                rgba(210,182,108,0.15);
+            background: white;
         }
 
 
         .brand-text {
 
-            line-height: 1.25;
+            line-height: 1.3;
+
+            text-align: left;
+
+            direction: ltr;
         }
 
 
         .brand-name {
 
-            color: var(--cream-light);
+            color: #fffaf0;
 
             font-size: 15px;
 
@@ -257,23 +216,19 @@ body {
 
             font-size: 9px;
 
-            letter-spacing: 0.5px;
-
-            margin-top: 2px;
+            letter-spacing: 0.4px;
         }
 
 
-        /* =================================================
-           NAVIGATION LINKS
-           ================================================= */
+        /* =========================================
+           NAVIGATION
+           ========================================= */
 
         .nav-links {
 
             display: flex;
 
             align-items: center;
-
-            justify-content: flex-end;
 
             gap: 3px;
 
@@ -283,17 +238,15 @@ body {
 
         .nav-links a {
 
-            color: #dce6df;
+            color: #e0e8e3;
 
             font-size: 12px;
 
-            padding:
-                8px 10px;
+            padding: 8px 10px;
 
             border-radius: 4px;
 
-            transition:
-                all 0.25s ease;
+            transition: 0.25s ease;
         }
 
 
@@ -308,34 +261,30 @@ body {
 
         .nav-login {
 
-            background:
-                var(--gold);
+            background: var(--gold);
 
-            color:
-                #ffffff !important;
+            color: white !important;
 
             padding:
-                8px 17px !important;
-
-            margin-left: 5px;
+                8px 16px !important;
 
             font-weight: 600;
+
+            margin-left: 4px;
         }
 
 
         .nav-login:hover {
 
-            background:
-                var(--gold-light) !important;
+            background: var(--gold-light) !important;
 
-            color:
-                var(--green-dark) !important;
+            color: var(--green-dark) !important;
         }
 
 
-        /* =================================================
+        /* =========================================
            HERO
-           ================================================= */
+           ========================================= */
 
         .hero {
 
@@ -357,21 +306,17 @@ body {
         }
 
 
-        /* HERO BANNER */
-
         .hero-background {
 
             position: absolute;
 
             inset: 0;
 
-            z-index: 0;
-
             background-image:
 
                 linear-gradient(
-                    rgba(5, 25, 18, 0.28),
-                    rgba(5, 25, 18, 0.70)
+                    rgba(4,22,16,0.30),
+                    rgba(4,22,16,0.72)
                 ),
 
                 url("images/banner.jpg");
@@ -384,8 +329,6 @@ body {
         }
 
 
-        /* DARK EDGE */
-
         .hero-background::after {
 
             content: "";
@@ -395,19 +338,13 @@ body {
             inset: 0;
 
             background:
-
                 radial-gradient(
                     circle at center,
                     transparent 15%,
-                    rgba(0,0,0,0.30) 70%,
-                    rgba(0,0,0,0.65) 100%
+                    rgba(0,0,0,0.35) 100%
                 );
         }
 
-
-        /* =================================================
-           HERO CONTENT
-           ================================================= */
 
         .hero-content {
 
@@ -419,108 +356,83 @@ body {
 
             max-width: 900px;
 
-            padding:
-                80px 25px;
+            padding: 80px 25px;
 
             text-align: center;
         }
 
 
-        /* HERO LOGO */
-
         .hero-logo {
 
-            width: 120px !important;
+            width: 115px !important;
 
-            height: 120px !important;
+            height: 115px !important;
 
-            min-width: 120px;
-
-            min-height: 120px;
-
-            object-fit: cover;
+            object-fit: contain;
 
             border-radius: 50%;
-
-            border:
-                2px solid var(--gold-light);
 
             margin:
                 0 auto 22px;
 
+            background: white;
+
+            border:
+                2px solid var(--gold-light);
+
             box-shadow:
-
-                0 0 0 6px
-                rgba(0,0,0,0.22),
-
-                0 15px 40px
-                rgba(0,0,0,0.55);
+                0 0 0 6px rgba(0,0,0,0.22),
+                0 15px 40px rgba(0,0,0,0.5);
         }
 
 
-        /* ARABIC TITLE */
-
         .hero-arabic {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
-                "Times New Roman",
                 serif;
 
             color:
                 var(--gold-light);
 
             font-size:
-                clamp(38px, 5vw, 62px);
+                clamp(40px, 5vw, 65px);
 
             font-weight: 700;
 
-            line-height: 1.35;
+            line-height: 1.3;
 
             text-shadow:
                 0 3px 15px rgba(0,0,0,0.8);
-
-            margin-bottom: 4px;
         }
 
-
-        /* ENGLISH TITLE */
 
         .hero-title {
 
             direction: ltr;
 
             color:
-                var(--cream-light);
+                #ffffff;
 
             font-size:
-                clamp(22px, 3vw, 32px);
+                clamp(22px, 3vw, 34px);
 
             font-weight: 500;
 
-            letter-spacing: 0.5px;
-
-            margin-bottom: 15px;
-
-            text-shadow:
-                0 3px 12px rgba(0,0,0,0.7);
+            margin-bottom: 14px;
         }
 
 
         .hero-description {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
                 serif;
 
             color:
-                #eee8da;
+                #f0eee7;
 
-            font-size: 18px;
+            font-size: 19px;
 
             line-height: 2;
 
@@ -531,21 +443,17 @@ body {
         }
 
 
-        /* =================================================
-           HERO BUTTONS
-           ================================================= */
-
         .hero-buttons {
 
             display: flex;
 
-            align-items: center;
-
             justify-content: center;
 
-            flex-wrap: wrap;
+            align-items: center;
 
-            gap: 10px;
+            gap: 12px;
+
+            flex-wrap: wrap;
 
             direction: ltr;
         }
@@ -556,7 +464,7 @@ body {
             display: inline-block;
 
             padding:
-                11px 25px;
+                11px 26px;
 
             border-radius: 4px;
 
@@ -567,8 +475,7 @@ body {
 
             font-weight: 600;
 
-            transition:
-                all 0.25s ease;
+            transition: 0.25s ease;
         }
 
 
@@ -577,11 +484,7 @@ body {
             background:
                 var(--gold);
 
-            color:
-                #ffffff;
-
-            border-color:
-                var(--gold);
+            color: white;
         }
 
 
@@ -603,8 +506,7 @@ body {
             background:
                 rgba(0,0,0,0.30);
 
-            color:
-                var(--cream-light);
+            color: white;
         }
 
 
@@ -618,14 +520,17 @@ body {
         }
 
 
-        /* =================================================
-           SECTION
-           ================================================= */
+        /* =========================================
+           GENERAL SECTIONS
+           ========================================= */
 
         .section {
 
             padding:
                 85px 25px;
+
+            background:
+                var(--white);
         }
 
 
@@ -658,13 +563,11 @@ body {
 
             letter-spacing: 2px;
 
-            text-transform: uppercase;
+            direction: ltr;
         }
 
 
         .section-heading h2 {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
@@ -678,24 +581,24 @@ body {
             font-weight: 700;
 
             margin:
-                8px 0;
+                7px 0;
         }
 
 
         .section-heading p {
 
-            max-width: 700px;
-
-            margin: auto;
-
-            color:
-                var(--text-light);
-
             font-family:
                 "Noto Naskh Arabic",
                 serif;
 
+            color:
+                var(--muted);
+
             font-size: 16px;
+
+            max-width: 700px;
+
+            margin: auto;
         }
 
 
@@ -713,14 +616,14 @@ body {
         }
 
 
-        /* =================================================
+        /* =========================================
            ABOUT
-           ================================================= */
+           ========================================= */
 
         .about-section {
 
             background:
-                var(--cream);
+                #ffffff;
         }
 
 
@@ -738,7 +641,7 @@ body {
         .about-box {
 
             background:
-                var(--cream-light);
+                #ffffff;
 
             border:
                 1px solid var(--border);
@@ -749,40 +652,18 @@ body {
 
             box-shadow:
                 0 8px 30px var(--shadow);
+
+            transition: 0.3s ease;
         }
 
 
-        .about-box h3 {
+        .about-box:hover {
 
-            direction: rtl;
+            transform:
+                translateY(-4px);
 
-            font-family:
-                "Noto Naskh Arabic",
-                serif;
-
-            color:
-                var(--green);
-
-            font-size: 28px;
-
-            margin-bottom: 12px;
-        }
-
-
-        .about-box p {
-
-            direction: rtl;
-
-            font-family:
-                "Noto Naskh Arabic",
-                serif;
-
-            color:
-                var(--text-light);
-
-            font-size: 17px;
-
-            line-height: 2;
+            border-color:
+                rgba(176,138,60,0.35);
         }
 
 
@@ -793,18 +674,50 @@ body {
 
             font-size: 30px;
 
+            margin-bottom: 7px;
+        }
+
+
+        .about-box h3 {
+
+            font-family:
+                "Noto Naskh Arabic",
+                serif;
+
+            color:
+                var(--green);
+
+            font-size: 29px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .about-box p {
+
+            font-family:
+                "Noto Naskh Arabic",
+                serif;
+
+            color:
+                var(--muted);
+
+            font-size: 17px;
+
+            line-height: 2;
+
             margin-bottom: 8px;
         }
 
 
-        /* =================================================
+        /* =========================================
            CURRENT COURSE
-           ================================================= */
+           ========================================= */
 
         .current-course {
 
             background:
-                var(--cream-dark);
+                var(--light-section);
         }
 
 
@@ -817,7 +730,6 @@ body {
             padding: 50px;
 
             background:
-
                 linear-gradient(
                     135deg,
                     var(--green),
@@ -831,7 +743,7 @@ body {
 
             box-shadow:
                 0 20px 55px
-                rgba(18,61,44,0.22);
+                rgba(18,61,44,0.20);
 
             text-align: center;
         }
@@ -854,20 +766,18 @@ body {
 
             letter-spacing: 1.5px;
 
-            text-transform: uppercase;
+            direction: ltr;
         }
 
 
         .current-course-box h2 {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
                 serif;
 
             color:
-                var(--cream-light);
+                #fffaf0;
 
             font-size: 40px;
 
@@ -878,20 +788,14 @@ body {
 
         .course-subtitle {
 
-            direction: rtl;
-
-            font-family:
-                "Noto Naskh Arabic",
-                serif;
+            direction: ltr;
 
             color:
                 #cbd8cf;
 
-            font-size: 17px;
+            font-size: 14px;
         }
 
-
-        /* SESSION */
 
         .session-box {
 
@@ -905,7 +809,7 @@ body {
 
             padding: 25px;
 
-            text-align: left;
+            text-align: right;
 
             background:
                 rgba(255,255,255,0.055);
@@ -936,11 +840,13 @@ body {
                 var(--gold);
 
             color:
-                #ffffff;
+                white;
 
             font-size: 24px;
 
             font-weight: 700;
+
+            direction: ltr;
         }
 
 
@@ -952,19 +858,21 @@ body {
             font-size: 10px;
 
             letter-spacing: 1px;
+
+            direction: ltr;
+
+            display: block;
         }
 
 
         .session-info h3 {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
                 serif;
 
             color:
-                var(--cream-light);
+                #fffaf0;
 
             font-size: 27px;
 
@@ -974,8 +882,6 @@ body {
 
         .session-info p {
 
-            direction: rtl;
-
             font-family:
                 "Noto Naskh Arabic",
                 serif;
@@ -984,17 +890,25 @@ body {
                 #cbd8cf;
 
             margin: 0;
+
+            font-size: 15px;
         }
 
 
-        /* =================================================
+        .current-course-box > .hero-button {
+
+            margin-top: 28px;
+        }
+
+
+        /* =========================================
            COURSES
-           ================================================= */
+           ========================================= */
 
         .courses-section {
 
             background:
-                var(--cream);
+                #ffffff;
         }
 
 
@@ -1003,7 +917,7 @@ body {
             display: grid;
 
             grid-template-columns:
-                repeat(3, 1fr);
+                repeat(3,1fr);
 
             gap: 20px;
         }
@@ -1018,7 +932,7 @@ body {
             padding: 30px;
 
             background:
-                var(--cream-light);
+                #ffffff;
 
             border:
                 1px solid var(--border);
@@ -1030,21 +944,21 @@ body {
                 rgba(18,61,44,0.07);
 
             transition:
-                all 0.3s ease;
+                0.3s ease;
         }
 
 
         .course-card:hover {
 
             transform:
-                translateY(-5px);
+                translateY(-6px);
 
             border-color:
-                rgba(177,138,61,0.45);
+                rgba(176,138,60,0.45);
 
             box-shadow:
                 0 15px 35px
-                rgba(18,61,44,0.14);
+                rgba(18,61,44,0.13);
         }
 
 
@@ -1053,15 +967,13 @@ body {
             color:
                 var(--green-light);
 
-            font-size: 27px;
+            font-size: 28px;
 
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
 
         .course-card h3 {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
@@ -1072,20 +984,18 @@ body {
 
             font-size: 25px;
 
-            margin-bottom: 7px;
+            margin-bottom: 5px;
         }
 
 
         .course-card p {
-
-            direction: rtl;
 
             font-family:
                 "Noto Naskh Arabic",
                 serif;
 
             color:
-                var(--text-light);
+                var(--muted);
 
             font-size: 15px;
 
@@ -1105,21 +1015,22 @@ body {
             font-size: 12px;
 
             font-weight: 600;
+
+            direction: ltr;
         }
 
 
         .featured-course {
 
-            border:
-                1px solid
-                rgba(177,138,61,0.55);
-
             background:
                 linear-gradient(
                     145deg,
-                    #fffaf0,
-                    #f4ead6
+                    #ffffff,
+                    #faf7ef
                 );
+
+            border-color:
+                rgba(176,138,60,0.45);
         }
 
 
@@ -1134,8 +1045,7 @@ body {
             background:
                 var(--gold);
 
-            color:
-                #ffffff;
+            color: white;
 
             padding:
                 3px 9px;
@@ -1143,19 +1053,17 @@ body {
             font-size: 8px;
 
             font-weight: 700;
-
-            letter-spacing: 0.5px;
         }
 
 
-        /* =================================================
+        /* =========================================
            FEATURES
-           ================================================= */
+           ========================================= */
 
         .features-section {
 
             background:
-                var(--cream-dark);
+                var(--light-section);
         }
 
 
@@ -1164,7 +1072,7 @@ body {
             display: grid;
 
             grid-template-columns:
-                repeat(3, 1fr);
+                repeat(3,1fr);
 
             gap: 18px;
         }
@@ -1178,7 +1086,7 @@ body {
                 30px 25px;
 
             background:
-                var(--cream-light);
+                #ffffff;
 
             border:
                 1px solid var(--border);
@@ -1188,6 +1096,19 @@ body {
             box-shadow:
                 0 5px 18px
                 rgba(18,61,44,0.06);
+
+            transition:
+                0.3s ease;
+        }
+
+
+        .feature-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            border-color:
+                rgba(176,138,60,0.35);
         }
 
 
@@ -1204,8 +1125,6 @@ body {
 
         .feature-card h3 {
 
-            direction: rtl;
-
             font-family:
                 "Noto Naskh Arabic",
                 serif;
@@ -1219,27 +1138,25 @@ body {
 
         .feature-card p {
 
-            direction: rtl;
-
             font-family:
                 "Noto Naskh Arabic",
                 serif;
 
             color:
-                var(--text-light);
+                var(--muted);
 
             font-size: 15px;
         }
 
 
-        /* =================================================
+        /* =========================================
            VIDEO
-           ================================================= */
+           ========================================= */
 
         .video-section {
 
             background:
-                var(--cream);
+                #ffffff;
         }
 
 
@@ -1261,7 +1178,7 @@ body {
 
             box-shadow:
                 0 20px 50px
-                rgba(18,61,44,0.18);
+                rgba(18,61,44,0.16);
         }
 
 
@@ -1274,15 +1191,15 @@ body {
             max-height: 520px;
 
             background:
-                #000000;
+                #000;
 
             border-radius: 6px;
         }
 
 
-        /* =================================================
+        /* =========================================
            STUDENT PORTAL
-           ================================================= */
+           ========================================= */
 
         .portal-section {
 
@@ -1323,8 +1240,6 @@ body {
 
         .portal-content {
 
-            direction: rtl;
-
             text-align: right;
         }
 
@@ -1336,7 +1251,7 @@ body {
                 serif;
 
             color:
-                var(--cream-light);
+                #fffaf0;
 
             font-size: 35px;
         }
@@ -1352,6 +1267,8 @@ body {
                 #cbd8cf;
 
             font-size: 16px;
+
+            line-height: 2;
         }
 
 
@@ -1363,7 +1280,7 @@ body {
                 var(--gold);
 
             color:
-                #ffffff;
+                white;
 
             padding:
                 12px 27px;
@@ -1376,8 +1293,10 @@ body {
 
             white-space: nowrap;
 
+            direction: ltr;
+
             transition:
-                all 0.25s ease;
+                0.25s ease;
         }
 
 
@@ -1391,14 +1310,14 @@ body {
         }
 
 
-        /* =================================================
+        /* =========================================
            UPDATES
-           ================================================= */
+           ========================================= */
 
         .updates-section {
 
             background:
-                var(--cream-dark);
+                var(--light-section);
         }
 
 
@@ -1407,7 +1326,7 @@ body {
             display: grid;
 
             grid-template-columns:
-                repeat(3, 1fr);
+                repeat(3,1fr);
 
             gap: 20px;
         }
@@ -1422,12 +1341,16 @@ body {
             padding: 25px;
 
             background:
-                var(--cream-light);
+                #ffffff;
 
             border:
                 1px solid var(--border);
 
             border-radius: 8px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(18,61,44,0.05);
         }
 
 
@@ -1455,6 +1378,8 @@ body {
                 var(--gold-light);
 
             text-align: center;
+
+            direction: ltr;
         }
 
 
@@ -1472,8 +1397,6 @@ body {
 
         .update-content {
 
-            direction: rtl;
-
             text-align: right;
         }
 
@@ -1486,6 +1409,8 @@ body {
             font-size: 9px;
 
             letter-spacing: 1px;
+
+            direction: ltr;
         }
 
 
@@ -1509,15 +1434,15 @@ body {
                 serif;
 
             color:
-                var(--text-light);
+                var(--muted);
 
             font-size: 14px;
         }
 
 
-        /* =================================================
+        /* =========================================
            FOOTER
-           ================================================= */
+           ========================================= */
 
         .footer {
 
@@ -1527,7 +1452,8 @@ body {
             border-top:
                 2px solid var(--gold);
 
-            padding-top: 55px;
+            padding-top:
+                55px;
         }
 
 
@@ -1553,9 +1479,7 @@ body {
 
         .footer-brand {
 
-            direction: rtl;
-
-            text-align: left;
+            text-align: right;
         }
 
 
@@ -1565,14 +1489,17 @@ body {
 
             height: 72px !important;
 
-            object-fit: cover;
+            object-fit: contain;
 
             border-radius: 50%;
+
+            background: white;
 
             border:
                 1px solid var(--gold-light);
 
-            margin-bottom: 10px;
+            margin:
+                0 0 10px auto;
         }
 
 
@@ -1585,7 +1512,7 @@ body {
             color:
                 var(--gold-light);
 
-            font-size: 23px;
+            font-size: 24px;
         }
 
 
@@ -1609,17 +1536,19 @@ body {
             flex-direction: column;
 
             gap: 7px;
+
+            text-align: right;
         }
 
 
         .footer-links h3 {
 
             color:
-                var(--cream-light);
+                #fffaf0;
 
             font-size: 15px;
 
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
 
 
@@ -1629,6 +1558,9 @@ body {
                 #aebeb5;
 
             font-size: 12px;
+
+            transition:
+                0.2s ease;
         }
 
 
@@ -1654,12 +1586,14 @@ body {
                 #8fa097;
 
             font-size: 10px;
+
+            direction: ltr;
         }
 
 
-        /* =================================================
-           SCROLL BAR
-           ================================================= */
+        /* =========================================
+           SCROLLBAR
+           ========================================= */
 
         ::-webkit-scrollbar {
 
@@ -1690,11 +1624,11 @@ body {
         }
 
 
-        /* =================================================
+        /* =========================================
            TABLET
-           ================================================= */
+           ========================================= */
 
-        @media(max-width: 950px) {
+        @media(max-width:950px) {
 
             .nav-container {
 
@@ -1725,23 +1659,23 @@ body {
             .updates-grid {
 
                 grid-template-columns:
-                    repeat(2, 1fr);
+                    repeat(2,1fr);
             }
 
 
             .footer-container {
 
                 grid-template-columns:
-                    repeat(2, 1fr);
+                    repeat(2,1fr);
             }
         }
 
 
-        /* =================================================
+        /* =========================================
            MOBILE
-           ================================================= */
+           ========================================= */
 
-        @media(max-width: 650px) {
+        @media(max-width:650px) {
 
             .section {
 
@@ -1762,10 +1696,6 @@ body {
                 width: 43px !important;
 
                 height: 43px !important;
-
-                min-width: 43px;
-
-                min-height: 43px;
             }
 
 
@@ -1777,10 +1707,10 @@ body {
 
             .nav-links a {
 
+                font-size: 10px;
+
                 padding:
                     6px 7px;
-
-                font-size: 10px;
             }
 
 
@@ -1810,16 +1740,12 @@ body {
                 width: 95px !important;
 
                 height: 95px !important;
-
-                min-width: 95px;
-
-                min-height: 95px;
             }
 
 
             .hero-arabic {
 
-                font-size: 37px;
+                font-size: 38px;
             }
 
 
@@ -1831,7 +1757,7 @@ body {
 
             .hero-description {
 
-                font-size: 15px;
+                font-size: 16px;
             }
 
 
@@ -1895,7 +1821,16 @@ body {
             }
 
 
+            .footer-logo {
+
+                margin:
+                    0 auto 10px;
+            }
+
+
             .footer-links {
+
+                text-align: center;
 
                 align-items: center;
             }
@@ -1910,19 +1845,16 @@ body {
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================================
          NAVBAR
-         ===================================================== -->
+         ========================================= -->
 
     <header class="navbar">
 
         <div class="nav-container">
 
 
-            <!-- BRAND -->
-
-            <a href="#home"
-               class="brand">
+            <a href="#home" class="brand">
 
                 <img
                     src="images/logo.png"
@@ -1943,8 +1875,6 @@ body {
 
             </a>
 
-
-            <!-- NAVIGATION -->
 
             <nav class="nav-links">
 
@@ -1985,9 +1915,9 @@ body {
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          HERO
-         ===================================================== -->
+         ========================================= -->
 
     <section
         class="hero"
@@ -2000,29 +1930,19 @@ body {
         <div class="hero-content">
 
 
-            <!-- LOGO -->
-
             <img
                 src="images/logo.png"
                 alt="Mawaddat Fil Qurba"
                 class="hero-logo">
 
 
-            <!-- ARABIC -->
-
             <div class="hero-arabic">
-
                 مَوَدَّتِ فِی الْقُرْبَىٰ
-
             </div>
 
 
-            <!-- ENGLISH -->
-
             <div class="hero-title">
-
                 Mawaddat Fil Qurba
-
             </div>
 
 
@@ -2034,8 +1954,6 @@ body {
 
             </p>
 
-
-            <!-- BUTTONS -->
 
             <div class="hero-buttons">
 
@@ -2058,15 +1976,16 @@ body {
 
             </div>
 
+
         </div>
 
     </section>
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          ABOUT
-         ===================================================== -->
+         ========================================= -->
 
     <section
         class="section about-section"
@@ -2121,10 +2040,9 @@ body {
 
                     <p>
 
-                        یہاں مختلف کورسز کو Sessions اور
-                        Lectures کی صورت میں منظم کیا جائے گا
-                        تاکہ طلبہ اپنی سہولت کے مطابق
-                        تعلیم حاصل کر سکیں۔
+                        مختلف کورسز کو Sessions اور Lectures
+                        کی صورت میں منظم کیا جائے گا تاکہ طلبہ
+                        اپنی سہولت کے مطابق تعلیم حاصل کر سکیں۔
 
                     </p>
 
@@ -2143,10 +2061,9 @@ body {
 
                     <p>
 
-                        علم کو آسان، منظم اور جدید آن لائن
-                        نظام کے ذریعے طلبہ تک پہنچانا اور
-                        معارفِ اہل بیت علیہم السلام کے
-                        مطالعہ کو فروغ دینا۔
+                        علم کو آسان، منظم اور جدید آن لائن نظام
+                        کے ذریعے طلبہ تک پہنچانا اور معارفِ
+                        اہل بیت علیہم السلام کے مطالعہ کو فروغ دینا۔
 
                     </p>
 
@@ -2161,9 +2078,9 @@ body {
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          CURRENT COURSE
-         ===================================================== -->
+         ========================================= -->
 
     <section
         class="section current-course"
@@ -2206,9 +2123,7 @@ body {
 
 
                 <div class="course-subtitle">
-
-                    Seerat & Ma'arif of Ahlulbayt (AS)
-
+                    Seerat &amp; Ma'arif of Ahlulbayt (AS)
                 </div>
 
 
@@ -2216,9 +2131,7 @@ body {
 
 
                     <div class="session-number">
-
                         02
-
                     </div>
 
 
@@ -2242,7 +2155,6 @@ body {
 
                     </div>
 
-
                 </div>
 
 
@@ -2262,9 +2174,9 @@ body {
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          COURSES
-         ===================================================== -->
+         ========================================= -->
 
     <section
         class="section courses-section"
@@ -2296,8 +2208,6 @@ body {
 
             <div class="courses-grid">
 
-
-                <!-- COURSE 1 -->
 
                 <div class="course-card featured-course">
 
@@ -2332,8 +2242,6 @@ body {
                 </div>
 
 
-                <!-- COURSE 2 -->
-
                 <div class="course-card">
 
                     <div class="course-icon">
@@ -2351,9 +2259,8 @@ body {
 
                     </p>
 
-                    <a
-                        href="#portal"
-                        class="course-link">
+                    <a href="#portal"
+                       class="course-link">
 
                         Coming Soon →
 
@@ -2361,8 +2268,6 @@ body {
 
                 </div>
 
-
-                <!-- COURSE 3 -->
 
                 <div class="course-card">
 
@@ -2376,15 +2281,14 @@ body {
 
                     <p>
 
-                        احادیثِ رسول اکرم ﷺ اور
-                        ائمہ اہل بیت علیہم السلام
-                        کے منتخب علمی دروس۔
+                        احادیثِ رسول اکرم ﷺ اور ائمہ
+                        اہل بیت علیہم السلام کے منتخب
+                        علمی دروس۔
 
                     </p>
 
-                    <a
-                        href="#portal"
-                        class="course-link">
+                    <a href="#portal"
+                       class="course-link">
 
                         Coming Soon →
 
@@ -2392,8 +2296,6 @@ body {
 
                 </div>
 
-
-                <!-- COURSE 4 -->
 
                 <div class="course-card">
 
@@ -2407,15 +2309,13 @@ body {
 
                     <p>
 
-                        قرآن مجید کے تفسیری مباحث
-                        اور منتخب آیات کا مطالعاتی
-                        جائزہ۔
+                        قرآن مجید کے تفسیری مباحث اور
+                        منتخب آیات کا مطالعاتی جائزہ۔
 
                     </p>
 
-                    <a
-                        href="#portal"
-                        class="course-link">
+                    <a href="#portal"
+                       class="course-link">
 
                         Coming Soon →
 
@@ -2423,8 +2323,6 @@ body {
 
                 </div>
 
-
-                <!-- COURSE 5 -->
 
                 <div class="course-card">
 
@@ -2438,15 +2336,13 @@ body {
 
                     <p>
 
-                        قرآن فہمی، معارفِ قرآن اور
-                        منتخب قرآنی موضوعات کے
-                        دروس۔
+                        قرآن فہمی، معارفِ قرآن اور منتخب
+                        قرآنی موضوعات کے دروس۔
 
                     </p>
 
-                    <a
-                        href="#portal"
-                        class="course-link">
+                    <a href="#portal"
+                       class="course-link">
 
                         Coming Soon →
 
@@ -2454,8 +2350,6 @@ body {
 
                 </div>
 
-
-                <!-- COURSE 6 -->
 
                 <div class="course-card">
 
@@ -2469,15 +2363,13 @@ body {
 
                     <p>
 
-                        فقہ اہل بیت علیہم السلام کے
-                        بنیادی اصول اور عملی مسائل
-                        کا تعلیمی سلسلہ۔
+                        فقہ اہل بیت علیہم السلام کے بنیادی
+                        اصول اور عملی مسائل کا تعلیمی سلسلہ۔
 
                     </p>
 
-                    <a
-                        href="#portal"
-                        class="course-link">
+                    <a href="#portal"
+                       class="course-link">
 
                         Coming Soon →
 
@@ -2494,9 +2386,9 @@ body {
 
 
 
-    <!-- =====================================================
-         LEARNING FEATURES
-         ===================================================== -->
+    <!-- =========================================
+         FEATURES
+         ========================================= -->
 
     <section
         class="section features-section">
@@ -2516,8 +2408,8 @@ body {
                 </h2>
 
                 <p>
-                    ایک جگہ پر کورس، لیکچر، نوٹس، امتحان
-                    اور نتائج کا منظم نظام۔
+                    ایک جگہ پر کورس، لیکچر، نوٹس،
+                    امتحان اور نتائج کا منظم نظام۔
                 </p>
 
                 <div class="heading-line"></div>
@@ -2539,10 +2431,8 @@ body {
                     </h3>
 
                     <p>
-
                         طلبہ آن لائن فارم کے ذریعے
                         مطلوبہ کورس میں داخلہ لے سکیں گے۔
-
                     </p>
 
                 </div>
@@ -2559,10 +2449,8 @@ body {
                     </h3>
 
                     <p>
-
                         PDFs، Notes، Lectures اور
                         دیگر تعلیمی مواد ایک ہی جگہ۔
-
                     </p>
 
                 </div>
@@ -2579,10 +2467,8 @@ body {
                     </h3>
 
                     <p>
-
                         طلبہ اپنے Sessions کے
                         امتحانات آن لائن دے سکیں گے۔
-
                     </p>
 
                 </div>
@@ -2599,10 +2485,8 @@ body {
                     </h3>
 
                     <p>
-
                         امتحان مکمل ہونے کے بعد
                         نتائج Student Dashboard میں۔
-
                     </p>
 
                 </div>
@@ -2619,10 +2503,8 @@ body {
                     </h3>
 
                     <p>
-
                         ہر طالب علم کے لیے ذاتی
                         تعلیمی Dashboard۔
-
                     </p>
 
                 </div>
@@ -2639,10 +2521,8 @@ body {
                     </h3>
 
                     <p>
-
                         کورس اور Sessions میں
                         تعلیمی پیش رفت کا ریکارڈ۔
-
                     </p>
 
                 </div>
@@ -2656,9 +2536,9 @@ body {
 
 
 
-    <!-- =====================================================
-         INTRO VIDEO
-         ===================================================== -->
+    <!-- =========================================
+         INTRODUCTION VIDEO
+         ========================================= -->
 
     <section
         class="section video-section"
@@ -2697,9 +2577,6 @@ body {
                         src="images/intro-video.mp4"
                         type="video/mp4">
 
-                    Your browser does not support
-                    HTML5 video.
-
                 </video>
 
             </div>
@@ -2710,9 +2587,9 @@ body {
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          STUDENT PORTAL
-         ===================================================== -->
+         ========================================= -->
 
     <section
         class="portal-section"
@@ -2731,10 +2608,9 @@ body {
                 <p>
 
                     نئے طلبہ رجسٹریشن کر سکیں گے،
-                    اپنے کورسز دیکھ سکیں گے،
-                    Lectures اور PDFs حاصل کر سکیں گے،
-                    امتحانات دے سکیں گے اور اپنے
-                    نتائج دیکھ سکیں گے۔
+                    اپنے کورسز دیکھ سکیں گے، Lectures
+                    اور PDFs حاصل کر سکیں گے، امتحانات
+                    دے سکیں گے اور اپنے نتائج دیکھ سکیں گے۔
 
                 </p>
 
@@ -2756,9 +2632,9 @@ body {
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          UPDATES
-         ===================================================== -->
+         ========================================= -->
 
     <section
         class="section updates-section"
@@ -2793,7 +2669,6 @@ body {
 
                 <div class="update-card">
 
-
                     <div class="update-date">
 
                         <strong>
@@ -2818,11 +2693,8 @@ body {
                         </h3>
 
                         <p>
-
-                            Session 02
-                            امام محمد باقر العلوم
-                            علیہ السلام
-
+                            Session 02 —
+                            امام محمد باقر العلوم علیہ السلام
                         </p>
 
                     </div>
@@ -2830,9 +2702,7 @@ body {
                 </div>
 
 
-
                 <div class="update-card">
-
 
                     <div class="update-date">
 
@@ -2858,10 +2728,8 @@ body {
                         </h3>
 
                         <p>
-
-                            مزید اسلامی تعلیمی
-                            پروگرام جلد دستیاب ہوں گے۔
-
+                            مزید اسلامی تعلیمی پروگرام
+                            جلد دستیاب ہوں گے۔
                         </p>
 
                     </div>
@@ -2869,9 +2737,7 @@ body {
                 </div>
 
 
-
                 <div class="update-card">
-
 
                     <div class="update-date">
 
@@ -2897,10 +2763,8 @@ body {
                         </h3>
 
                         <p>
-
-                            طلبہ کے لیے آن لائن
-                            تعلیمی نظام جلد فعال ہوگا۔
-
+                            طلبہ کے لیے آن لائن تعلیمی
+                            نظام جلد فعال ہوگا۔
                         </p>
 
                     </div>
@@ -2916,17 +2780,15 @@ body {
 
 
 
-    <!-- =====================================================
+    <!-- =========================================
          FOOTER
-         ===================================================== -->
+         ========================================= -->
 
     <footer class="footer">
 
 
         <div class="footer-container">
 
-
-            <!-- FOOTER BRAND -->
 
             <div class="footer-brand">
 
@@ -2943,24 +2805,18 @@ body {
 
 
                 <p>
-
                     Online Islamic Learning Platform
-
                 </p>
 
 
                 <p>
-
                     معارفِ قرآن، حدیث، فقہ اور
                     اہل بیت علیہم السلام کی تعلیمات
                     کے لیے آن لائن تعلیمی پلیٹ فارم۔
-
                 </p>
 
             </div>
 
-
-            <!-- LINKS -->
 
             <div class="footer-links">
 
@@ -2987,8 +2843,6 @@ body {
             </div>
 
 
-            <!-- COURSES -->
-
             <div class="footer-links">
 
                 <h3>
@@ -3013,8 +2867,6 @@ body {
 
             </div>
 
-
-            <!-- INFORMATION -->
 
             <div class="footer-links">
 
@@ -3046,7 +2898,7 @@ body {
 
         <div class="footer-bottom">
 
-            © 2026 Mawaddat Fil Qurba.
+            © 2026 Mawaddat Fil Qurba —
             All Rights Reserved.
 
         </div>

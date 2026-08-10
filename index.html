@@ -43,41 +43,55 @@
 
     <style>
 
-        /* =================================================
-           ROOT COLORS
-           ================================================= */
+       /* =================================================
+   FINAL WHITE BACKGROUND THEME
+   ================================================= */
 
-        :root {
+body {
+    background: #ffffff !important;
+    color: #26352d;
+}
 
-            --cream: #f5efe2;
+/* Main light sections */
+.about-section,
+.courses-section,
+.video-section {
+    background: #ffffff !important;
+}
 
-            --cream-light: #fffaf0;
+/* Very subtle alternate sections */
+.current-course,
+.features-section,
+.updates-section {
+    background: #f8f8f5 !important;
+}
 
-            --cream-dark: #e9dfca;
+/* Cards remain clean white */
+.about-box,
+.course-card,
+.feature-card,
+.update-card {
+    background: #ffffff !important;
+}
 
-            --green-dark: #09291e;
+/* Keep premium green course section */
+.current-course-box {
+    background: linear-gradient(
+        135deg,
+        #123d2c,
+        #09291e
+    ) !important;
+}
 
-            --green: #123d2c;
+/* Dark student portal */
+.portal-section {
+    background: #09291e !important;
+}
 
-            --green-light: #2f6b50;
-
-            --green-soft: #dfe9df;
-
-            --gold: #b18a3d;
-
-            --gold-light: #d2b66c;
-
-            --gold-dark: #806326;
-
-            --text: #26352d;
-
-            --text-light: #68736c;
-
-            --white: #ffffff;
-
-            --border: rgba(18, 61, 44, 0.15);
-
-            --shadow: rgba(18, 61, 44, 0.12);
+/* Dark footer */
+.footer {
+    background: #09291e !important;
+}
         }
 
 

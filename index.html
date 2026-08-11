@@ -5,18 +5,24 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Mawaddat-e-Fil-Qurba - Online Islamic Learning Platform dedicated to the teachings of the Holy Quran and Ahlul Bayt (A.S.)">
+          content="Mawaddat-e-Fil-Qurba Online Islamic Learning Platform">
 
-    <meta name="theme-color" content="#063b2b">
+    <meta name="keywords"
+          content="Mawaddat Fil Qurba, Shia Islamic Courses, Ahlul Bayt, Islamic Learning, Seerat e Masoomeen">
+
+    <meta name="author"
+          content="Mawaddat-e-Fil-Qurba">
 
     <title>
         Mawaddat-e-Fil-Qurba | Online Islamic Learning Platform
     </title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -24,107 +30,95 @@
 <body>
 
 
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
+<!-- =====================================================
+     HEADER / NAVIGATION
+===================================================== -->
 
 <header class="site-header">
 
-    <nav class="navbar">
+    <div class="container nav-container">
 
-        <div class="nav-container">
+        <!-- Logo -->
+        <a href="#home" class="brand">
 
+            <img
+                src="images/logo.png"
+                alt="Mawaddat-e-Fil-Qurba Logo"
+                class="brand-logo"
+            >
 
-            <!-- BRAND -->
+            <div class="brand-text">
 
-            <a href="index.html" class="brand">
+                <strong>
+                    Mawaddat-e-Fil-Qurba
+                </strong>
 
-                <div class="brand-logo-wrap">
-
-                    <img
-                        src="images/logo.png"
-                        alt="Mawaddat-e-Fil-Qurba Logo"
-                        class="brand-logo"
-                    >
-
-                </div>
-
-
-                <div class="brand-text">
-
-                    <strong>
-                        Mawaddat-e-Fil-Qurba
-                    </strong>
-
-                    <span>
-                        ONLINE ISLAMIC LEARNING PLATFORM
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <!-- NAVIGATION -->
-
-            <div class="nav-links">
-
-                <a href="index.html" class="active">
-                    Home
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#courses">
-                    Courses
-                </a>
-
-                <a href="#team">
-                    Lecturers
-                </a>
-
-                <a href="#updates">
-                    Updates
-                </a>
-
-                <a href="login.html" class="nav-login">
-                    Student Portal
-                </a>
+                <span>
+                    ONLINE ISLAMIC LEARNING PLATFORM
+                </span>
 
             </div>
 
+        </a>
 
-        </div>
 
-    </nav>
+        <!-- Navigation -->
+
+        <nav class="main-nav">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#courses">Courses</a>
+
+            <a href="#lecturers">Lecturers</a>
+
+            <a href="#updates">Updates</a>
+
+            <a href="#student-portal"
+               class="nav-button">
+                Student Portal
+            </a>
+
+        </nav>
+
+
+        <!-- Mobile Menu Button -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu">
+
+            ☰
+
+        </button>
+
+    </div>
 
 </header>
 
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
 
 <main>
 
+<section
+    id="home"
+    class="hero-section">
 
-<section class="hero-section">
-
-
-    <div class="hero-container">
+    <div class="container hero-grid">
 
 
         <!-- LEFT CONTENT -->
 
         <div class="hero-content reveal">
 
-
-            <div class="hero-eyebrow">
-
-                <span class="eyebrow-dot"></span>
+            <div class="eyebrow">
 
                 AUTHENTIC ISLAMIC EDUCATION
 
@@ -142,22 +136,24 @@
             </h1>
 
 
-            <p class="hero-text">
+            <p class="hero-description">
 
-                A modern online learning platform dedicated
-                to the study of the Holy Quran, Ahadith,
-                Aqeedah, Fiqh and the Seerah of
-                Ahlul Bayt (A.S.).
+                Mawaddat-e-Fil-Qurba is a modern Islamic
+                learning platform dedicated to structured
+                study of the Holy Qur'an, Aqaid, Ahadith,
+                Fiqh, Tafseer and the Seerah of Ahlul Bayt
+                (A.S.).
 
             </p>
 
 
-            <!-- HERO BUTTONS -->
+            <!-- Buttons -->
 
-            <div class="hero-actions">
+            <div class="hero-buttons">
 
-                <a href="#courses"
-                   class="btn btn-primary">
+                <a
+                    href="#courses"
+                    class="btn btn-primary">
 
                     Explore Courses
                     <span>→</span>
@@ -165,8 +161,9 @@
                 </a>
 
 
-                <a href="register.html"
-                   class="btn btn-outline">
+                <a
+                    href="#student-portal"
+                    class="btn btn-outline">
 
                     Become a Student
 
@@ -175,52 +172,49 @@
             </div>
 
 
-            <!-- HERO FEATURES -->
+            <!-- Mini Features -->
 
             <div class="hero-features">
 
+                <div>
 
-                <div class="hero-feature">
-
-                    <strong>
-                        Structured
-                    </strong>
+                    <span class="feature-icon">
+                        ✓
+                    </span>
 
                     <span>
-                        Islamic Learning
+                        Structured Islamic Learning
                     </span>
 
                 </div>
 
 
-                <div class="hero-feature">
+                <div>
 
-                    <strong>
-                        Online
-                    </strong>
+                    <span class="feature-icon">
+                        ✓
+                    </span>
 
                     <span>
-                        Lectures & Exams
+                        Online Lectures & Exams
                     </span>
 
                 </div>
 
 
-                <div class="hero-feature">
+                <div>
 
-                    <strong>
-                        Student
-                    </strong>
+                    <span class="feature-icon">
+                        ✓
+                    </span>
 
                     <span>
-                        Learning Portal
+                        Student Learning Portal
                     </span>
 
                 </div>
-
 
             </div>
-
 
         </div>
 
@@ -230,48 +224,40 @@
 
         <div class="hero-video-wrapper reveal">
 
-
             <div class="video-frame">
 
+                <div class="video-badge">
+                    PLATFORM INTRODUCTION
+                </div>
+
+
+                <!--
+                    IMPORTANT:
+                    muted = required for autoplay
+                    autoplay = automatically starts
+                    loop = repeats continuously
+                    playsinline = mobile compatibility
+                -->
 
                 <video
-                    class="intro-video"
+                    class="hero-video"
                     autoplay
                     muted
                     loop
                     playsinline
                     preload="auto"
-                    poster="images/banner.jpg"
-                >
+                    poster="images/banner.jpg">
 
                     <source
                         src="videos/intro.mp4"
-                        type="video/mp4"
-                    >
+                        type="video/mp4">
 
                     Your browser does not support HTML5 video.
 
                 </video>
 
 
-                <!-- VIDEO TOP LABEL -->
-
-                <div class="video-label">
-
-                    <span class="video-live-dot"></span>
-
-                    PLATFORM INTRODUCTION
-
-                </div>
-
-
-                <!-- VIDEO BOTTOM -->
-
-                <div class="video-bottom">
-
-                    <span>
-                        Mawaddat-e-Fil-Qurba
-                    </span>
+                <div class="video-overlay">
 
                     <span>
                         Watch • Learn • Grow
@@ -279,31 +265,19 @@
 
                 </div>
 
-
             </div>
 
-
         </div>
-
 
     </div>
 
 
-</section>
 
+    <!-- HERO STATS -->
 
+    <div class="container stats-container">
 
-<!-- =========================================================
-     TRUST / STATS
-========================================================= -->
-
-<section class="stats-section">
-
-
-    <div class="stats-container">
-
-
-        <div class="stat-item reveal">
+        <div class="stat-card reveal">
 
             <strong>
                 06+
@@ -316,7 +290,7 @@
         </div>
 
 
-        <div class="stat-item reveal">
+        <div class="stat-card reveal">
 
             <strong>
                 03
@@ -329,7 +303,7 @@
         </div>
 
 
-        <div class="stat-item reveal">
+        <div class="stat-card reveal">
 
             <strong>
                 100%
@@ -342,7 +316,7 @@
         </div>
 
 
-        <div class="stat-item reveal">
+        <div class="stat-card reveal">
 
             <strong>
                 24/7
@@ -354,1088 +328,893 @@
 
         </div>
 
-
     </div>
 
 </section>
 
 
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+<!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
 
-<section id="about"
-         class="about-section section">
+<section
+    id="about"
+    class="section about-section">
 
-
-    <div class="section-container">
-
+    <div class="container">
 
         <div class="section-heading reveal">
 
-            <span class="section-kicker">
+            <span class="section-label">
                 ABOUT THE PLATFORM
             </span>
 
             <h2>
-                A Digital Space for
-                <span>Islamic Learning</span>
+                A Digital Space for Islamic Learning
             </h2>
 
             <p>
-
-                Mawaddat-e-Fil-Qurba is an online educational
-                initiative created to provide students with an
-                organized and accessible environment for
-                Islamic studies.
-
+                Knowledge • Faith • Seerah • Ahlul Bayt (A.S.)
             </p>
 
         </div>
-
 
 
         <div class="about-grid">
 
 
-            <div class="about-card reveal">
-
-
-                <div class="about-icon">
-                    ✦
-                </div>
-
-
-                <h3>
-                    Authentic Knowledge
-                </h3>
-
-
-                <p>
-
-                    Study the Holy Quran, Ahadith,
-                    Aqeedah, Fiqh and the teachings
-                    of Ahlul Bayt (A.S.).
-
-                </p>
-
-
-            </div>
-
-
-
-            <div class="about-card reveal">
-
-
-                <div class="about-icon">
-                    ◈
-                </div>
-
-
-                <h3>
-                    Structured Learning
-                </h3>
-
-
-                <p>
-
-                    Follow organized courses,
-                    sessions, lectures and
-                    assessments.
-
-                </p>
-
-
-            </div>
-
-
-
-            <div class="about-card reveal">
-
-
-                <div class="about-icon">
-                    ✧
-                </div>
-
-
-                <h3>
-                    Student Experience
-                </h3>
-
-
-                <p>
-
-                    Access your courses,
-                    examinations and results
-                    through one platform.
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================================
-     CURRENT PROGRAM
-========================================================= -->
-
-<section class="program-section section">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
-                CURRENT ACADEMIC PROGRAM
-            </span>
-
-            <h2>
-                Marifat-e-Masoomeen
-                <span>(A.S.)</span>
-            </h2>
-
-            <p>
-
-                A structured study of the lives,
-                teachings, knowledge and legacy
-                of the Holy Imams of Ahlul Bayt (A.S.).
-
-            </p>
-
-        </div>
-
-
-
-        <div class="program-timeline">
-
-
-            <div class="timeline-item completed reveal">
-
-
-                <div class="timeline-number">
-                    01
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <span>
-                        COMPLETED
-                    </span>
-
-                    <h3>
-                        Imam Muhammad Taqi
-                        Al-Jawad (A.S.)
-                    </h3>
-
-                    <p>
-                        Session One
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="timeline-item active-program reveal">
-
-
-                <div class="timeline-number">
-                    02
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <span>
-                        CURRENTLY ACTIVE
-                    </span>
-
-                    <h3>
-                        Imam Muhammad Baqir
-                        Al-Uloom (A.S.)
-                    </h3>
-
-                    <p>
-                        Session Two • Examination
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="timeline-item reveal">
-
-
-                <div class="timeline-number">
-                    03
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <span>
-                        UPCOMING
-                    </span>
-
-                    <h3>
-                        Imam Ja'far Al-Sadiq
-                        (A.S.)
-                    </h3>
-
-                    <p>
-                        Session Three
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================================
-     TEAM / LECTURER
-========================================================= -->
-
-<section id="team"
-         class="team-section section">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading reveal">
-
-            <span class="section-kicker">
-                OUR PEOPLE
-            </span>
-
-            <h2>
-                Lecturers &
-                <span>Management</span>
-            </h2>
-
-            <p>
-
-                Meet the people behind the educational
-                journey of Mawaddat-e-Fil-Qurba.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="team-list">
-
-
-            <!-- =================================================
-                 LECTURER CARD
-            ================================================== -->
-
-            <article class="person-card reveal">
-
-
-                <div class="person-image">
-
-                    <img
-                        src="images/lecturer.jpg"
-                        alt="Muhammad Ammar Ali Hashmi"
-                    >
-
-
-                    <div class="person-badge">
-                        LECTURER
-                    </div>
-
-                </div>
-
-
-                <div class="person-content">
-
-
-                    <span class="person-role">
-                        ZAKIR • EDUCATOR • ISLAMIC LECTURER
-                    </span>
-
-
-                    <h3>
-                        Muhammad Ammar Ali Hashmi
-                    </h3>
-
-
-                    <p class="person-lead">
-
-                        Founder & Lead Educator of
-                        Mawaddat-e-Fil-Qurba Online
-                        Learning Platform.
-
-                    </p>
-
-
-                    <div class="person-info">
-
-
-                        <div>
-
-                            <strong>
-                                Academic Background
-                            </strong>
-
-                            <span>
-                                BS Computational Physics
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                Areas of Interest
-                            </strong>
-
-                            <span>
-                                Quran • Ahadith • Aqeedah • Fiqh
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                Special Focus
-                            </strong>
-
-                            <span>
-                                Seerah & Teachings of Ahlul Bayt (A.S.)
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <p class="person-description">
-
-                        Dedicated to creating a structured,
-                        accessible and modern learning
-                        environment for students interested
-                        in Islamic knowledge and the teachings
-                        of Ahlul Bayt (A.S.).
-
-                    </p>
-
-
-                    <div class="person-tags">
-
-                        <span>
-                            Quran
-                        </span>
-
-                        <span>
-                            Ahadith
-                        </span>
-
-                        <span>
-                            Aqeedah
-                        </span>
-
-                        <span>
-                            Fiqh
-                        </span>
-
-                        <span>
-                            Seerah
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- =================================================
-                 MANAGEMENT CARD
-            ================================================== -->
-
-            <article class="person-card management-card reveal">
-
-
-                <div class="person-image">
-
-                    <img
-                        src="images/management.jpg"
-                        alt="Mawaddat-e-Fil-Qurba Management"
-                    >
-
-
-                    <div class="person-badge">
-                        MANAGEMENT
-                    </div>
-
-                </div>
-
-
-                <div class="person-content">
-
-
-                    <span class="person-role">
-                        PLATFORM MANAGEMENT
-                    </span>
-
-
-                    <h3>
-                        Mawaddat-e-Fil-Qurba
-                        Management Team
-                    </h3>
-
-
-                    <p class="person-lead">
-
-                        Supporting the academic and
-                        technical organization of
-                        the online learning platform.
-
-                    </p>
-
-
-                    <div class="person-info">
-
-
-                        <div>
-
-                            <strong>
-                                Student Support
-                            </strong>
-
-                            <span>
-                                Registration & Student Guidance
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                Academic Management
-                            </strong>
-
-                            <span>
-                                Courses • Sessions • Exams
-                            </span>
-
-                        </div>
-
-
-                        <div>
-
-                            <strong>
-                                Digital Services
-                            </strong>
-
-                            <span>
-                                Student Portal • Results • Resources
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <p class="person-description">
-
-                        Our management system is designed
-                        to keep learning, examinations,
-                        student records and academic
-                        activities organized in one place.
-
-                    </p>
-
-
-                    <div class="person-tags">
-
-                        <span>
-                            Student Support
-                        </span>
-
-                        <span>
-                            Course Management
-                        </span>
-
-                        <span>
-                            Online Exams
-                        </span>
-
-                        <span>
-                            Results
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-            </article>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================================
-     COURSES
-========================================================= -->
-
-<section id="courses"
-         class="courses-section section">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
-                LEARNING PROGRAMS
-            </span>
-
-            <h2>
-                Explore Our
-                <span>Courses</span>
-            </h2>
-
-            <p>
-
-                Structured programs designed to make
-                Islamic learning accessible and engaging.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="courses-grid">
-
-
-            <!-- COURSE 1 -->
-
-            <article class="course-card active-course reveal">
-
-
-                <div class="course-top">
-
-                    <div class="course-icon">
-                        01
-                    </div>
-
-                    <span>
-                        ACTIVE
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Marifat-e-Masoomeen
-                </h3>
-
-
-                <p>
-
-                    Explore the lives, teachings,
-                    knowledge and legacy of the
-                    Fourteen Infallibles (A.S.).
-
-                </p>
-
-
-                <a href="login.html"
-                   class="course-link">
-
-                    View Course
-                    <span>→</span>
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- COURSE 2 -->
-
-            <article class="course-card reveal">
-
-
-                <div class="course-top">
-
-                    <div class="course-icon">
-                        02
-                    </div>
-
-                    <span>
-                        UPCOMING
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Islamic Aqeedah
-                </h3>
-
-
-                <p>
-
-                    Build a stronger understanding
-                    of Islamic beliefs and
-                    theological foundations.
-
-                </p>
-
-
-                <button class="course-link disabled"
-                        disabled>
-
-                    Coming Soon
-
-                </button>
-
-
-            </article>
-
-
-
-            <!-- COURSE 3 -->
-
-            <article class="course-card reveal">
-
-
-                <div class="course-top">
-
-                    <div class="course-icon">
-                        03
-                    </div>
-
-                    <span>
-                        UPCOMING
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Fiqh of Ahlul Bayt
-                </h3>
-
-
-                <p>
-
-                    Learn the principles and
-                    practical aspects of Fiqh
-                    according to Ahlul Bayt (A.S.).
-
-                </p>
-
-
-                <button class="course-link disabled"
-                        disabled>
-
-                    Coming Soon
-
-                </button>
-
-
-            </article>
-
-
-
-            <!-- COURSE 4 -->
-
-            <article class="course-card reveal">
-
-
-                <div class="course-top">
-
-                    <div class="course-icon">
-                        04
-                    </div>
-
-                    <span>
-                        UPCOMING
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Quran Studies
-                </h3>
-
-
-                <p>
-
-                    Discover Quranic guidance,
-                    understanding and reflection
-                    through structured study.
-
-                </p>
-
-
-                <button class="course-link disabled"
-                        disabled>
-
-                    Coming Soon
-
-                </button>
-
-
-            </article>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================================
-     PLATFORM FEATURES
-========================================================= -->
-
-<section class="features-section section">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading centered reveal">
-
-            <span class="section-kicker">
-                THE PLATFORM
-            </span>
-
-            <h2>
-                Everything You Need
-                <span>In One Place</span>
-            </h2>
-
-        </div>
-
-
-
-        <div class="features-grid">
-
-
-            <div class="feature-box reveal">
-
-                <div class="feature-number">
-                    01
-                </div>
-
-                <h3>
-                    Online Courses
-                </h3>
-
-                <p>
-                    Structured Islamic learning
-                    programs for students.
-                </p>
-
-            </div>
-
-
-            <div class="feature-box reveal">
-
-                <div class="feature-number">
-                    02
-                </div>
-
-                <h3>
-                    Online Examinations
-                </h3>
-
-                <p>
-                    Secure and organized
-                    online assessments.
-                </p>
-
-            </div>
-
-
-            <div class="feature-box reveal">
-
-                <div class="feature-number">
-                    03
-                </div>
-
-                <h3>
-                    Student Portal
-                </h3>
-
-                <p>
-                    Access your courses,
-                    exams and academic information.
-                </p>
-
-            </div>
-
-
-            <div class="feature-box reveal">
-
-                <div class="feature-number">
-                    04
-                </div>
-
-                <h3>
-                    Results System
-                </h3>
-
-                <p>
-                    View examination results
-                    through your student account.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =========================================================
-     EXAM ANNOUNCEMENT
-========================================================= -->
-
-<section id="updates"
-         class="exam-section section">
-
-
-    <div class="section-container">
-
-
-        <div class="exam-card reveal">
-
-
-            <div class="exam-content">
-
-
-                <span class="exam-kicker">
-                    IMPORTANT ANNOUNCEMENT
-                </span>
-
-
-                <h2>
-                    Session 02 Examination
-                </h2>
-
-
-                <h3>
-                    Marifat-e-Masoomeen
-                    <span>(A.S.)</span>
-                </h3>
-
-
-                <p>
-
-                    Imam Muhammad Baqir
-                    Al-Uloom (A.S.)
-
-                </p>
-
-
-                <div class="exam-grid">
-
-
-                    <div>
-
-                        <strong>
-                            DATE
-                        </strong>
-
-                        <span>
-                            15 August 2026
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            TIME
-                        </strong>
-
-                        <span>
-                            7:00 PM – 11:00 PM
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            RESULT
-                        </strong>
-
-                        <span>
-                            16 August 2026
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            MODE
-                        </strong>
-
-                        <span>
-                            Online Examination
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="exam-actions">
-
-
-                    <a href="login.html"
-                       class="btn btn-gold">
-
-                        Student Login
-                        <span>→</span>
-
-                    </a>
-
-
-                    <a href="register.html"
-                       class="exam-register">
-
-                        Not registered yet?
-
-                        <strong>
-                            Register Now
-                        </strong>
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-</main>
-
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="footer">
-
-
-    <div class="footer-container">
-
-
-        <div class="footer-brand">
-
-
-            <img
-                src="images/logo.png"
-                alt="Mawaddat-e-Fil-Qurba"
-            >
-
-
-            <div>
+            <div class="about-content reveal">
 
                 <h3>
                     Mawaddat-e-Fil-Qurba
                 </h3>
 
                 <p>
+
+                    Mawaddat-e-Fil-Qurba is an online
+                    Islamic educational initiative created
+                    to provide students with an organized,
+                    accessible and meaningful environment
+                    for Islamic studies.
+
+                </p>
+
+                <p>
+
+                    Our academic focus is on understanding
+                    the teachings of the Holy Qur'an and
+                    the intellectual, spiritual and practical
+                    heritage of Ahlul Bayt (A.S.).
+
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        Structured Islamic Courses
+                    </li>
+
+                    <li>
+                        Recorded & Online Lectures
+                    </li>
+
+                    <li>
+                        Study Resources
+                    </li>
+
+                    <li>
+                        Online Assessments
+                    </li>
+
+                    <li>
+                        Student Learning System
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="about-highlight reveal">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <h3>
+                    Knowledge with Love,
+                    Faith with Understanding
+                </h3>
+
+                <p>
+
+                    A learning journey inspired by
+                    the teachings and legacy of the
+                    Holy Qur'an and Ahlul Bayt (A.S.).
+
+                </p>
+
+                <div class="gold-line"></div>
+
+                <span>
+                    Mawaddat-e-Fil-Qurba
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COURSES SECTION
+===================================================== -->
+
+<section
+    id="courses"
+    class="section courses-section">
+
+    <div class="container">
+
+        <div class="section-heading center reveal">
+
+            <span class="section-label">
+                ACADEMIC PROGRAMS
+            </span>
+
+            <h2>
+                Explore Our Courses
+            </h2>
+
+            <p>
+                Structured learning programs for students
+                seeking authentic Islamic knowledge.
+            </p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+
+            <!-- Course 01 -->
+
+            <article class="course-card reveal">
+
+                <div class="course-number">
+                    01
+                </div>
+
+                <div class="course-icon">
+                    ☾
+                </div>
+
+                <h3>
+                    Seerat-e-Masoomeen
+                </h3>
+
+                <p>
+
+                    A structured study of the lives,
+                    teachings and legacy of the Holy
+                    Imams of Ahlul Bayt (A.S.).
+
+                </p>
+
+                <a href="#updates">
+                    View Program →
+                </a>
+
+            </article>
+
+
+
+            <!-- Course 02 -->
+
+            <article class="course-card reveal">
+
+                <div class="course-number">
+                    02
+                </div>
+
+                <div class="course-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Qur'an & Tafseer
+                </h3>
+
+                <p>
+
+                    Study the Holy Qur'an with focus
+                    on understanding, reflection and
+                    authentic interpretation.
+
+                </p>
+
+                <a href="#updates">
+                    View Program →
+                </a>
+
+            </article>
+
+
+
+            <!-- Course 03 -->
+
+            <article class="course-card reveal">
+
+                <div class="course-number">
+                    03
+                </div>
+
+                <div class="course-icon">
+                    ✧
+                </div>
+
+                <h3>
+                    Aqaid & Ahadith
+                </h3>
+
+                <p>
+
+                    Explore Islamic beliefs and selected
+                    traditions with an educational and
+                    structured approach.
+
+                </p>
+
+                <a href="#updates">
+                    View Program →
+                </a>
+
+            </article>
+
+
+
+            <!-- Course 04 -->
+
+            <article class="course-card reveal">
+
+                <div class="course-number">
+                    04
+                </div>
+
+                <div class="course-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Fiqh & Islamic Studies
+                </h3>
+
+                <p>
+
+                    Build a stronger foundation in
+                    Islamic jurisprudence and practical
+                    religious learning.
+
+                </p>
+
+                <a href="#updates">
+                    View Program →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CURRENT PROGRAM
+===================================================== -->
+
+<section class="program-section">
+
+    <div class="container">
+
+        <div class="program-box reveal">
+
+            <div class="program-content">
+
+                <span class="section-label light">
+                    CURRENT ACADEMIC PROGRAM
+                </span>
+
+                <h2>
+                    Marifat-e-Masoomin (A.S.)
+                </h2>
+
+                <p>
+
+                    A structured study of the lives,
+                    teachings, knowledge and legacy
+                    of the Holy Imams of Ahlul Bayt (A.S.).
+
+                </p>
+
+                <div class="program-meta">
+
+                    <span>
+                        ● Session 01 — Completed
+                    </span>
+
+                    <span>
+                        ● Session 02 — Currently Active
+                    </span>
+
+                    <span>
+                        ● Session 03 — Upcoming
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="program-action">
+
+                <a
+                    href="#student-portal"
+                    class="btn btn-gold">
+
+                    Student Portal →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LECTURER SECTION
+===================================================== -->
+
+<section
+    id="lecturers"
+    class="section lecturers-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                ACADEMIC TEAM
+            </span>
+
+            <h2>
+                Meet Our Lecturer
+            </h2>
+
+            <p>
+                Dedicated to Islamic education and
+                knowledge of Ahlul Bayt (A.S.).
+            </p>
+
+        </div>
+
+
+        <!-- Lecturer Card -->
+
+        <article class="profile-card reveal">
+
+
+            <!-- IMAGE SIDE -->
+
+            <div class="profile-image">
+
+                <img
+                    src="images/lecturer.jpg"
+                    alt="Muhammad Ammar Ali Hashmi">
+
+                <div class="profile-badge">
+                    LECTURER
+                </div>
+
+            </div>
+
+
+            <!-- TEXT SIDE -->
+
+            <div class="profile-content">
+
+                <span class="profile-label">
+                    FOUNDER & LEAD LECTURER
+                </span>
+
+                <h3>
+                    Muhammad Ammar Ali Hashmi
+                </h3>
+
+                <h4>
+                    Zakir • Educator • Islamic Lecturer
+                </h4>
+
+                <p>
+
+                    Muhammad Ammar Ali Hashmi is the
+                    founder and lead educator of
+                    Mawaddat-e-Fil-Qurba Online Learning
+                    Platform.
+
+                </p>
+
+                <p>
+
+                    His educational work focuses on
+                    Islamic learning, Seerah of Ahlul Bayt
+                    (A.S.), Islamic teachings and structured
+                    online educational programs.
+
+                </p>
+
+
+                <div class="profile-tags">
+
+                    <span>
+                        Islamic Education
+                    </span>
+
+                    <span>
+                        Seerat-e-Masoomeen
+                    </span>
+
+                    <span>
+                        Ahlul Bayt (A.S.)
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="#student-portal"
+                    class="profile-button">
+
+                    View Academic Profile →
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MANAGEMENT SECTION
+===================================================== -->
+
+<section class="section management-section">
+
+    <div class="container">
+
+        <div class="profile-card reverse reveal">
+
+
+            <!-- TEXT -->
+
+            <div class="profile-content">
+
+                <span class="profile-label">
+                    PLATFORM MANAGEMENT
+                </span>
+
+                <h2>
+                    Mawaddat-e-Fil-Qurba
+                </h2>
+
+                <h3>
                     Online Islamic Learning Platform
+                </h3>
+
+                <p>
+
+                    The platform is designed to bring
+                    Islamic educational content into a
+                    structured digital environment where
+                    students can learn, attend sessions,
+                    access resources and participate in
+                    assessments.
+
+                </p>
+
+
+                <div class="management-points">
+
+                    <div>
+                        <strong>
+                            01
+                        </strong>
+
+                        <span>
+                            Academic Programs
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            02
+                        </strong>
+
+                        <span>
+                            Student Learning
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            03
+                        </strong>
+
+                        <span>
+                            Online Assessments
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IMAGE -->
+
+            <div class="profile-image">
+
+                <img
+                    src="images/management.jpg"
+                    alt="Mawaddat-e-Fil-Qurba Management">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LEARNING PROCESS
+===================================================== -->
+
+<section class="section learning-section">
+
+    <div class="container">
+
+        <div class="section-heading center reveal">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Your Learning Journey
+            </h2>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+
+            <div class="step-card reveal">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Join
+                </h3>
+
+                <p>
+                    Register as a student and
+                    become part of the platform.
                 </p>
 
             </div>
 
 
+            <div class="step-card reveal">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Learn
+                </h3>
+
+                <p>
+                    Attend lectures and study
+                    structured Islamic content.
+                </p>
+
+            </div>
+
+
+            <div class="step-card reveal">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Assess
+                </h3>
+
+                <p>
+                    Participate in online tests
+                    and academic assessments.
+                </p>
+
+            </div>
+
+
+            <div class="step-card reveal">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Progress
+                </h3>
+
+                <p>
+                    Track your academic progress
+                    through the student portal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     UPDATES
+===================================================== -->
+
+<section
+    id="updates"
+    class="section updates-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                LATEST UPDATES
+            </span>
+
+            <h2>
+                Platform Announcements
+            </h2>
+
         </div>
 
 
+        <div class="updates-grid">
+
+
+            <article class="update-card reveal">
+
+                <span class="update-status active">
+                    ACTIVE
+                </span>
+
+                <span class="update-number">
+                    01
+                </span>
+
+                <h3>
+                    Marifat-e-Masoomin
+                </h3>
+
+                <p>
+                    Session 02 examination and
+                    academic activities.
+                </p>
+
+                <a href="#student-portal">
+                    Student Area →
+                </a>
+
+            </article>
+
+
+
+            <article class="update-card reveal">
+
+                <span class="update-status">
+                    UPCOMING
+                </span>
+
+                <span class="update-number">
+                    02
+                </span>
+
+                <h3>
+                    New Islamic Programs
+                </h3>
+
+                <p>
+                    More structured learning programs
+                    will be announced soon.
+                </p>
+
+                <a href="#courses">
+                    Explore Courses →
+                </a>
+
+            </article>
+
+
+
+            <article class="update-card reveal">
+
+                <span class="update-status">
+                    PLATFORM
+                </span>
+
+                <span class="update-number">
+                    03
+                </span>
+
+                <h3>
+                    Student Portal
+                </h3>
+
+                <p>
+                    Student registration, examinations
+                    and academic results.
+                </p>
+
+                <a href="#student-portal">
+                    Enter Portal →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STUDENT PORTAL
+===================================================== -->
+
+<section
+    id="student-portal"
+    class="student-section">
+
+    <div class="container">
+
+        <div class="student-box reveal">
+
+            <div>
+
+                <span class="section-label light">
+                    STUDENT AREA
+                </span>
+
+                <h2>
+                    Begin Your Journey of Knowledge
+                </h2>
+
+                <p>
+
+                    Student registration, examinations,
+                    academic activities and results will
+                    be managed through the online
+                    student portal.
+
+                </p>
+
+            </div>
+
+
+            <div class="student-buttons">
+
+                <a
+                    href="#"
+                    class="btn btn-gold">
+
+                    Student Login
+
+                </a>
+
+                <a
+                    href="#"
+                    class="btn btn-light">
+
+                    Registration
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- Brand -->
+
+        <div class="footer-brand">
+
+            <img
+                src="images/logo.png"
+                alt="Mawaddat-e-Fil-Qurba">
+
+            <h3>
+                Mawaddat-e-Fil-Qurba
+            </h3>
+
+            <p>
+                Online Islamic Learning Platform
+            </p>
+
+            <span>
+                Knowledge • Faith • Seerah • Ahlul Bayt (A.S.)
+            </span>
+
+        </div>
+
+
+
+        <!-- Platform -->
 
         <div class="footer-column">
 
@@ -1451,7 +1230,7 @@
                 Courses
             </a>
 
-            <a href="#team">
+            <a href="#lecturers">
                 Lecturers
             </a>
 
@@ -1463,27 +1242,31 @@
 
 
 
+        <!-- Student -->
+
         <div class="footer-column">
 
             <h4>
                 Student Area
             </h4>
 
-            <a href="login.html">
+            <a href="#student-portal">
                 Student Login
             </a>
 
-            <a href="register.html">
+            <a href="#student-portal">
                 Registration
             </a>
 
-            <a href="result.html">
+            <a href="#student-portal">
+                Examination
+            </a>
+
+            <a href="#student-portal">
                 Results
             </a>
 
         </div>
-
-
 
     </div>
 
@@ -1492,26 +1275,149 @@
     <div class="footer-bottom">
 
         <p>
+
             © 2026 Mawaddat-e-Fil-Qurba.
             All Rights Reserved.
+
         </p>
 
         <p>
-            Knowledge • Faith • Seerah • Ahlul Bayt (A.S.)
+
+            Built for Islamic Learning • Ahlul Bayt (A.S.)
+
         </p>
 
     </div>
-
 
 </footer>
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      JAVASCRIPT
-========================================================= -->
+===================================================== -->
 
-<script src="js/app.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ==============================================
+       MOBILE MENU
+    ============================================== */
+
+    var menuToggle =
+        document.getElementById("menuToggle");
+
+    var navigation =
+        document.querySelector(".main-nav");
+
+
+    if (menuToggle) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navigation.classList.toggle("mobile-open");
+
+        });
+
+    }
+
+
+    /* ==============================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ============================================== */
+
+    var navLinks =
+        document.querySelectorAll(".main-nav a");
+
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navigation.classList.remove("mobile-open");
+
+        });
+
+    });
+
+
+    /* ==============================================
+       SCROLL REVEAL ANIMATION
+    ============================================== */
+
+    var revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    function revealOnScroll() {
+
+        var windowHeight =
+            window.innerHeight;
+
+
+        revealElements.forEach(function (element) {
+
+            var elementTop =
+                element.getBoundingClientRect().top;
+
+
+            if (elementTop < windowHeight - 80) {
+
+                element.classList.add("show");
+
+            }
+
+        });
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        revealOnScroll
+    );
+
+
+    revealOnScroll();
+
+
+    /* ==============================================
+       VIDEO AUTOPLAY FALLBACK
+    ============================================== */
+
+    var heroVideo =
+        document.querySelector(".hero-video");
+
+
+    if (heroVideo) {
+
+        heroVideo.muted = true;
+
+        var playPromise =
+            heroVideo.play();
+
+
+        if (playPromise !== undefined) {
+
+            playPromise.catch(function () {
+
+                /*
+                   Browser may block autoplay.
+                   Video remains available with controls
+                   if needed later.
+                */
+
+            });
+
+        }
+
+    }
+
+});
+
+</script>
 
 
 </body>

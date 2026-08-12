@@ -1,1 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Exam | Mawaddat Fil Qurba</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:#f7f7f2;
+
+    color:#202522;
+
+    min-height:100vh;
+}
+
+
+/* HEADER */
+
+.header{
+
+    background:#07382f;
+
+    color:white;
+
+    padding:18px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+
+.logo{
+
+    width:44px;
+
+    height:44px;
+
+    border:1px solid #d4b34c;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#d4b34c;
+
+    font-family:"Amiri";
+
+    font-size:28px;
+}
+
+
+.brand-name{
+
+    font-family:"Amiri";
+
+    font-size:21px;
+}
+
+
+.timer{
+
+    background:#8b1e2d;
+
+    padding:11px 18px;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+
+/* MAIN */
+
+.container{
+
+    width:min(950px,92%);
+
+    margin:35px auto;
+
+}
+
+
+/* EXAM INFO */
+
+.exam-info{
+
+    background:white;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    border-top:4px solid #c9a227;
+
+    margin-bottom:25px;
+}
+
+
+.exam-info h1{
+
+    color:#07382f;
+
+    font-size:27px;
+
+    margin-bottom:8px;
+}
+
+
+.exam-info p{
+
+    color:#69736f;
+
+    line-height:1.7;
+}
+
+
+.exam-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:20px;
+}
+
+
+.meta{
+
+    background:#f1f3ed;
+
+    padding:9px 14px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+
+/* START */
+
+.start-area{
+
+    text-align:center;
+
+    background:white;
+
+    padding:45px 25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+
+.start-area h2{
+
+    color:#07382f;
+
+    margin-bottom:10px;
+}
+
+
+.start-area p{
+
+    color:#69736f;
+
+    margin-bottom:25px;
+}
+
+
+.start-btn{
+
+    background:#c9a227;
+
+    color:#07382f;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+}
+
+
+.start-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* QUESTION */
+
+.question-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    margin-bottom:20px;
+}
+
+
+.question-number{
+
+    color:#c09a1b;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+}
+
+
+.question-text{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+
+    font-weight:700;
+}
+
+
+.option{
+
+    display:block;
+
+    margin:12px 0;
+
+}
+
+
+.option input{
+
+    display:none;
+}
+
+
+.option span{
+
+    display:block;
+
+    padding:15px 18px;
+
+    border:2px solid #e4e7df;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.option span:hover{
+
+    border-color:#c9a227;
+
+    background:#fffdf3;
+}
+
+
+.option input:checked + span{
+
+    border-color:#07382f;
+
+    background:#edf5f1;
+
+    color:#07382f;
+
+    font-weight:700;
+}
+
+
+/* PROGRESS */
+
+.progress-box{
+
+    margin-bottom:20px;
+}
+
+
+.progress-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+
+.progress{
+
+    height:9px;
+
+    background:#e5e7e1;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+
+.progress-bar{
+
+    height:100%;
+
+    width:0%;
+
+    background:#c9a227;
+
+    transition:.3s;
+}
+
+
+/* NAV */
+
+.nav-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:20px;
+
+    gap:12px;
+}
+
+
+.nav-btn{
+
+    border:none;
+
+    padding:13px 25px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+    font-weight:800;
+}
+
+
+.prev{
+
+    background:#e6e8e2;
+
+    color:#27332e;
+}
+
+
+.next{
+
+    background:#07382f;
+
+    color:white;
+}
+
+
+.submit{
+
+    background:#8b1e2d;
+
+    color:white;
+
+}
+
+
+/* MESSAGE */
+
+.message{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+
+.message h2{
+
+    color:#07382f;
+
+    margin-bottom:12px;
+}
+
+
+.message p{
+
+    color:#69736f;
+
+    line-height:1.7;
+}
+
+
+.hidden{
+
+    display:none !important;
+}
+
+
+.error{
+
+    color:#8b1e2d;
+
+    font-weight:700;
+
+}
+
+
+@media(max-width:600px){
+
+    .header{
+
+        padding:15px;
+
+    }
+
+    .brand-name{
+
+        font-size:17px;
+
+    }
+
+    .timer{
+
+        padding:9px 12px;
+
+        font-size:13px;
+
+    }
+
+    .container{
+
+        width:94%;
+
+    }
+
+    .question-card{
+
+        padding:22px;
+
+    }
+
+    .question-text{
+
+        font-size:17px;
+
+    }
+
+    .nav-buttons{
+
+        flex-direction:column;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="logo">؏</div>
+
+        <div class="brand-name">
+            مودّت فی القربیٰ
+        </div>
+
+    </div>
+
+
+    <div id="timer" class="timer hidden">
+        02:00:00
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <!-- LOADING -->
+
+    <div id="loading" class="message">
+
+        <h2>Loading Exam...</h2>
+
+        <p>
+            Please wait while your examination is being prepared.
+        </p>
+
+    </div>
+
+
+
+    <!-- MESSAGE -->
+
+    <div id="message" class="message hidden">
+
+        <h2 id="messageTitle"></h2>
+
+        <p id="messageText"></p>
+
+    </div>
+
+
+
+    <!-- EXAM -->
+
+    <section id="examSection" class="hidden">
+
+
+        <div class="exam-info">
+
+            <h1 id="examTitle"></h1>
+
+            <p id="examDescription"></p>
+
+
+            <div class="exam-meta">
+
+                <div class="meta">
+                    ⏱ Duration:
+                    <span id="examDuration"></span>
+                    minutes
+                </div>
+
+                <div class="meta">
+                    📊 Total Marks:
+                    <span id="totalMarks"></span>
+                </div>
+
+                <div class="meta">
+                    🎯 Passing Marks:
+                    <span id="passingMarks"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- START -->
+
+        <div id="startArea" class="start-area">
+
+            <h2>Ready for Examination?</h2>
+
+            <p>
+                Once you start the examination, your timer will begin.
+                You must submit your paper before the examination closes.
+            </p>
+
+            <button id="startBtn" class="start-btn">
+                Start Examination
+            </button>
+
+        </div>
+
+
+
+        <!-- QUESTIONS -->
+
+        <div id="questionArea" class="hidden">
+
+            <div class="progress-box">
+
+                <div class="progress-top">
+
+                    <span id="questionCounter">
+                        Question 1 of 5
+                    </span>
+
+                    <span id="answeredCounter">
+                        Answered: 0
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                    id="progressBar"
+                    class="progress-bar">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="questionContainer"></div>
+
+
+            <div class="nav-buttons">
+
+                <button
+                id="prevBtn"
+                class="nav-btn prev">
+
+                    ← Previous
+
+                </button>
+
+
+                <button
+                id="nextBtn"
+                class="nav-btn next">
+
+                    Next →
+
+                </button>
+
+
+                <button
+                id="submitBtn"
+                class="nav-btn submit hidden">
+
+                    Submit Exam
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+
+
+<script>
+
+
+/* =========================
+   CONFIGURATION
+========================= */
+
+
+const EXAM_ID = 2;
+
+
+/* =========================
+   GLOBAL VARIABLES
+========================= */
+
+
+let exam = null;
+
+let questions = [];
+
+let answers = {};
+
+let currentQuestion = 0;
+
+let timerInterval = null;
+
+let remainingSeconds = 0;
+
+let attemptId = null;
+
+
+/* =========================
+   DOM
+========================= */
+
+
+const loading =
+document.getElementById("loading");
+
+const message =
+document.getElementById("message");
+
+const messageTitle =
+document.getElementById("messageTitle");
+
+const messageText =
+document.getElementById("messageText");
+
+const examSection =
+document.getElementById("examSection");
+
+const startArea =
+document.getElementById("startArea");
+
+const questionArea =
+document.getElementById("questionArea");
+
+const questionContainer =
+document.getElementById("questionContainer");
+
+const timer =
+document.getElementById("timer");
+
+const startBtn =
+document.getElementById("startBtn");
+
+const prevBtn =
+document.getElementById("prevBtn");
+
+const nextBtn =
+document.getElementById("nextBtn");
+
+const submitBtn =
+document.getElementById("submitBtn");
+
+
+/* =========================
+   SHOW MESSAGE
+========================= */
+
+
+function showMessage(title,text){
+
+    loading.classList.add("hidden");
+
+    examSection.classList.add("hidden");
+
+    message.classList.remove("hidden");
+
+    messageTitle.textContent = title;
+
+    messageText.textContent = text;
+
+}
+
+
+/* =========================
+   LOAD EXAM
+========================= */
+
+
+async function loadExam(){
+
+
+    try{
+
+
+        const {
+            data:{
+                user
+            },
+            error:userError
+        } = await supabaseClient.auth.getUser();
+
+
+        if(userError || !user){
+
+            window.location.href =
+            "login.html";
+
+            return;
+
+        }
+
+
+
+        const {
+            data:examData,
+            error:examError
+        } = await supabaseClient
+
+        .from("exams")
+
+        .select("*")
+
+        .eq("id",EXAM_ID)
+
+        .single();
+
+
+
+        if(examError){
+
+            console.error(examError);
+
+            showMessage(
+                "Exam Error",
+                "Unable to load examination."
+            );
+
+            return;
+
+        }
+
+
+
+        exam = examData;
+
+
+
+        const now =
+        new Date();
+
+
+
+        const start =
+        new Date(exam.starts_at);
+
+
+
+        const end =
+        new Date(exam.ends_at);
+
+
+
+        if(exam.status !== "published"){
+
+            showMessage(
+                "Exam Not Available",
+                "This examination has not been published yet."
+            );
+
+            return;
+
+        }
+
+
+
+        if(now < start){
+
+            showMessage(
+                "Examination Not Started",
+                "The examination will open on " +
+                start.toLocaleString()
+            );
+
+            return;
+
+        }
+
+
+
+        if(now >= end){
+
+            showMessage(
+                "Examination Closed",
+                "The examination submission window has ended."
+            );
+
+            return;
+
+        }
+
+
+
+        const {
+            data:questionData,
+            error:questionError
+        } = await supabaseClient
+
+        .from("questions")
+
+        .select("*")
+
+        .eq("exam_id",EXAM_ID)
+
+        .order("question_order",{ascending:true});
+
+
+
+        if(questionError){
+
+            console.error(questionError);
+
+            showMessage(
+                "Question Error",
+                "Unable to load examination questions."
+            );
+
+            return;
+
+        }
+
+
+
+        if(!questionData || questionData.length === 0){
+
+            showMessage(
+                "No Questions",
+                "No questions have been added to this examination yet."
+            );
+
+            return;
+
+        }
+
+
+
+        questions = questionData;
+
+
+
+        document.getElementById("examTitle")
+        .textContent = exam.title;
+
+
+        document.getElementById("examDescription")
+        .textContent = exam.description || "";
+
+
+        document.getElementById("examDuration")
+        .textContent = exam.duration_minutes;
+
+
+        document.getElementById("totalMarks")
+        .textContent = exam.total_marks;
+
+
+        document.getElementById("passingMarks")
+        .textContent = exam.passing_marks;
+
+
+
+        loading.classList.add("hidden");
+
+        examSection.classList.remove("hidden");
+
+
+
+    }catch(error){
+
+        console.error(error);
+
+        showMessage(
+            "Unexpected Error",
+            "Something went wrong while loading the exam."
+        );
+
+    }
+
+}
+
+
+/* =========================
+   START EXAM
+========================= */
+
+
+startBtn.addEventListener(
+"click",
+async function(){
+
+
+    try{
+
+
+        const {
+            data:{
+                user
+            }
+        } =
+        await supabaseClient.auth.getUser();
+
+
+        if(!user){
+
+            window.location.href =
+            "login.html";
+
+            return;
+
+        }
+
+
+
+        /* HARD END TIME CHECK */
+
+
+        const now =
+        new Date();
+
+
+        const examEnd =
+        new Date(exam.ends_at);
+
+
+        if(now >= examEnd){
+
+            showMessage(
+                "Exam Closed",
+                "The examination window has ended."
+            );
+
+            return;
+
+        }
+
+
+
+        /* CREATE ATTEMPT */
+
+
+        const {
+            data:attempt,
+            error
+        } =
+        await supabaseClient
+
+        .from("exam_attempts")
+
+        .insert({
+
+            exam_id:exam.id,
+
+            student_id:user.id,
+
+            started_at:new Date().toISOString(),
+
+            status:"in_progress"
+
+        })
+
+        .select()
+
+        .single();
+
+
+
+        if(error){
+
+            console.error(error);
+
+            alert(
+                "Unable to start examination: " +
+                error.message
+            );
+
+            return;
+
+        }
+
+
+
+        attemptId =
+        attempt.id;
+
+
+
+        startArea.classList.add("hidden");
+
+        questionArea.classList.remove("hidden");
+
+        timer.classList.remove("hidden");
+
+
+
+        /*
+        Student gets 120 minutes,
+        BUT never beyond exam.ends_at.
+        */
+
+
+        const durationSeconds =
+        exam.duration_minutes * 60;
+
+
+        const remainingUntilExamClose =
+        Math.floor(
+            (examEnd.getTime() - Date.now()) / 1000
+        );
+
+
+        remainingSeconds =
+        Math.min(
+            durationSeconds,
+            remainingUntilExamClose
+        );
+
+
+
+        renderQuestion();
+
+        startTimer();
+
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Unable to start examination."
+        );
+
+    }
+
+});
+
+
+/* =========================
+   RENDER QUESTION
+========================= */
+
+
+function renderQuestion(){
+
+
+    const q =
+    questions[currentQuestion];
+
+
+    if(!q) return;
+
+
+
+    questionContainer.innerHTML = `
+
+        <div class="question-card">
+
+            <div class="question-number">
+
+                Question ${currentQuestion + 1}
+
+                of
+
+                ${questions.length}
+
+            </div>
+
+
+            <div class="question-text">
+
+                ${escapeHTML(q.question_text)}
+
+            </div>
+
+
+            <label class="option">
+
+                <input
+                type="radio"
+                name="answer"
+                value="A"
+                ${answers[q.id] === "A" ? "checked" : ""}>
+
+                <span>
+
+                    A. ${escapeHTML(q.option_a)}
+
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                type="radio"
+                name="answer"
+                value="B"
+                ${answers[q.id] === "B" ? "checked" : ""}>
+
+                <span>
+
+                    B. ${escapeHTML(q.option_b)}
+
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                type="radio"
+                name="answer"
+                value="C"
+                ${answers[q.id] === "C" ? "checked" : ""}>
+
+                <span>
+
+                    C. ${escapeHTML(q.option_c)}
+
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                type="radio"
+                name="answer"
+                value="D"
+                ${answers[q.id] === "D" ? "checked" : ""}>
+
+                <span>
+
+                    D. ${escapeHTML(q.option_d)}
+
+                </span>
+
+            </label>
+
+        </div>
+
+    `;
+
+
+
+    document
+    .querySelectorAll('input[name="answer"]')
+    .forEach(input=>{
+
+        input.addEventListener(
+        "change",
+        function(){
+
+            answers[q.id] =
+            this.value;
+
+            updateProgress();
+
+        });
+
+    });
+
+
+
+    updateNavigation();
+
+    updateProgress();
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+
+nextBtn.addEventListener(
+"click",
+function(){
+
+
+    if(currentQuestion <
+    questions.length - 1){
+
+        currentQuestion++;
+
+        renderQuestion();
+
+    }
+
+});
+
+
+prevBtn.addEventListener(
+"click",
+function(){
+
+
+    if(currentQuestion > 0){
+
+        currentQuestion--;
+
+        renderQuestion();
+
+    }
+
+});
+
+
+function updateNavigation(){
+
+
+    prevBtn.disabled =
+    currentQuestion === 0;
+
+
+    if(currentQuestion ===
+    questions.length - 1){
+
+        nextBtn.classList.add("hidden");
+
+        submitBtn.classList.remove("hidden");
+
+    }else{
+
+        nextBtn.classList.remove("hidden");
+
+        submitBtn.classList.add("hidden");
+
+    }
+
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+
+function updateProgress(){
+
+
+    const answered =
+    Object.keys(answers).length;
+
+
+    document.getElementById(
+        "questionCounter"
+    ).textContent =
+    `Question ${currentQuestion + 1} of ${questions.length}`;
+
+
+    document.getElementById(
+        "answeredCounter"
+    ).textContent =
+    `Answered: ${answered}`;
+
+
+    const percentage =
+    (answered / questions.length) * 100;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+    percentage + "%";
+
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+
+function startTimer(){
+
+
+    updateTimer();
+
+
+    timerInterval =
+    setInterval(()=>{
+
+
+        remainingSeconds--;
+
+
+        updateTimer();
+
+
+        if(remainingSeconds <= 0){
+
+            clearInterval(timerInterval);
+
+            autoSubmit();
+
+        }
+
+
+    },1000);
+
+}
+
+
+function updateTimer(){
+
+
+    const hours =
+    Math.floor(
+        remainingSeconds / 3600
+    );
+
+
+    const minutes =
+    Math.floor(
+        (remainingSeconds % 3600) / 60
+    );
+
+
+    const seconds =
+    remainingSeconds % 60;
+
+
+
+    timer.textContent =
+
+        String(hours).padStart(2,"0")
+        + ":" +
+
+        String(minutes).padStart(2,"0")
+        + ":" +
+
+        String(seconds).padStart(2,"0");
+
+
+    if(remainingSeconds <= 300){
+
+        timer.style.background =
+        "#8b1e2d";
+
+    }
+
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+
+submitBtn.addEventListener(
+"click",
+async function(){
+
+    if(!confirm(
+        "Are you sure you want to submit your examination?"
+    )){
+
+        return;
+
+    }
+
+
+    await submitExam();
+
+});
+
+
+async function autoSubmit(){
+
+    alert(
+        "Your examination time has ended. Your paper will now be submitted."
+    );
+
+    await submitExam();
+
+}
+
+
+/* =========================
+   SUBMIT EXAM
+========================= */
+
+
+async function submitExam(){
+
+
+    if(!attemptId){
+
+        return;
+
+    }
+
+
+    clearInterval(timerInterval);
+
+
+    try{
+
+
+        const {
+            data:{
+                user
+            }
+        } =
+        await supabaseClient.auth.getUser();
+
+
+        if(!user){
+
+            return;
+
+        }
+
+
+
+        let score = 0;
+
+
+
+        /*
+        Calculate score
+        */
+
+
+        for(const q of questions){
+
+
+            const selected =
+            answers[q.id] || null;
+
+
+            if(selected){
+
+                /*
+                Save student answer
+                */
+
+
+                const {
+                    error:answerError
+                } =
+                await supabaseClient
+
+                .from("student_answers")
+
+                .insert({
+
+                    attempt_id:attemptId,
+
+                    question_id:q.id,
+
+                    selected_answer:selected
+
+                });
+
+
+                if(answerError){
+
+                    console.error(
+                        answerError
+                    );
+
+                }
+
+            }
+
+
+            if(
+                selected &&
+                selected === q.correct_answer
+            ){
+
+                score +=
+                Number(q.marks || 0);
+
+            }
+
+        }
+
+
+
+        /*
+        Update attempt
+        */
+
+
+        const {
+            error:attemptError
+        } =
+        await supabaseClient
+
+        .from("exam_attempts")
+
+        .update({
+
+            submitted_at:
+            new Date().toISOString(),
+
+            score:score,
+
+            status:"submitted"
+
+        })
+
+        .eq("id",attemptId);
+
+
+
+        if(attemptError){
+
+            console.error(
+                attemptError
+            );
+
+            throw attemptError;
+
+        }
+
+
+
+        showMessage(
+            "Examination Submitted Successfully",
+            `Your paper has been submitted. Your score is ${score} out of ${exam.total_marks}. The result will be available after the result publication time.`
+        );
+
+
+        timer.classList.add("hidden");
+
+        questionArea.classList.add("hidden");
+
+
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "There was an error submitting your examination. Please contact administration."
+        );
+
+    }
+
+}
+
+
+/* =========================
+   SECURITY / HTML ESCAPE
+========================= */
+
+
+function escapeHTML(value){
+
+    return String(value ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+
+loadExam();
+
+
+</script>
+
+
+</body>
+</html>

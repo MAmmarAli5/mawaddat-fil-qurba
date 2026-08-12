@@ -833,7 +833,7 @@ function showMessage(title,text){
 
 
 async function submitExam(){
-
+.eq("id", attemptId);
     if(!attemptId){
         alert("Exam attempt was not found.");
         return;
@@ -944,7 +944,41 @@ async function submitExam(){
 
             throw attemptError;
         }
+const eligibleAt = new Date(
+    new Date(exam.ends_at).getTime() +
+    (Number(exam.result_delay_hours) * 60 * 60 * 1000)
+);
 
+const percentage =
+    Number(exam.total_marks) > 0
+        ? (score / Number(exam.total_marks)) * 100
+        : 0;
+
+const {
+    error: resultError
+} = await supabaseClient
+    .from("results")
+    .insert({
+        exam_id: exam.id,
+        student_id: user.id,
+        attempt_id: attemptId,
+        score: score,
+        total_marks: Number(exam.total_marks),
+        percentage: Number(percentage.toFixed(2)),
+        published: false,
+        submitted_at: new Date().toISOString(),
+        eligible_at: eligibleAt.toISOString()
+    });
+
+if(resultError){
+
+    console.error(
+        "Result creation error:",
+        resultError
+    );
+
+    throw resultError;
+}
 
         /*
          * Hide exam

@@ -156,11 +156,31 @@ const heroVideo =
 
 if (heroVideo) {
 
-    heroVideo.addEventListener(
-        "error",
+    heroVideo.muted = true;
+
+    heroVideo.loop = true;
+
+    heroVideo.autoplay = true;
+
+    heroVideo.playsInline = true;
+
+    const playVideo = () => {
+
+        heroVideo.play().catch(() => {
+            console.log("Autoplay waiting for browser permission.");
+        });
+
+    };
+
+    playVideo();
+
+    document.addEventListener(
+        "visibilitychange",
         () => {
 
-            heroVideo.style.display = "none";
+            if (!document.hidden) {
+                playVideo();
+            }
 
         }
     );

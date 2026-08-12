@@ -1,1 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Student Dashboard | مودّت فی القربیٰ
+</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:"Inter",sans-serif;
+
+background:#f7f7f2;
+
+color:#202522;
+
+}
+
+
+
+/* HEADER */
+
+.header{
+
+height:75px;
+
+background:#07382f;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 40px;
+
+}
+
+
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+
+
+.brand-circle{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+border:1px solid #e1c45c;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-family:"Amiri";
+
+font-size:30px;
+
+color:#e1c45c;
+
+}
+
+
+.brand h1{
+
+font-size:18px;
+
+font-family:"Amiri";
+
+}
+
+
+
+.logout{
+
+background:#c9a227;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:8px;
+
+font-weight:700;
+
+cursor:pointer;
+
+color:#07382f;
+
+}
+
+
+
+/* MAIN */
+
+.container{
+
+padding:40px;
+
+}
+
+
+
+.welcome{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+border-left:5px solid #c9a227;
+
+}
+
+
+
+.welcome h2{
+
+font-size:30px;
+
+}
+
+
+
+.welcome span{
+
+color:#0d4b3e;
+
+}
+
+
+
+.welcome p{
+
+margin-top:10px;
+
+color:#69736f;
+
+}
+
+
+
+/* PROFILE */
+
+.profile-card{
+
+margin-top:30px;
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+
+.info h4{
+
+font-size:12px;
+
+color:#69736f;
+
+}
+
+
+
+.info p{
+
+margin-top:7px;
+
+font-weight:700;
+
+}
+
+
+
+/* SECTION TITLE */
+
+.section-title{
+
+margin-top:40px;
+
+margin-bottom:20px;
+
+font-size:25px;
+
+font-weight:800;
+
+}
+
+
+
+/* COURSES */
+
+.courses{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+
+
+.course{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+transition:.3s;
+
+border-top:4px solid #0d4b3e;
+
+}
+
+
+
+.course:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.course i{
+
+font-size:28px;
+
+color:#c9a227;
+
+}
+
+
+
+.course h3{
+
+margin-top:15px;
+
+font-size:17px;
+
+}
+
+
+
+.course p{
+
+margin-top:8px;
+
+font-size:13px;
+
+color:#69736f;
+
+}
+
+
+
+/* EXAM */
+
+.exam-box{
+
+background:#07382f;
+
+color:white;
+
+padding:30px;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.exam-btn{
+
+background:#c9a227;
+
+color:#07382f;
+
+padding:13px 25px;
+
+border-radius:10px;
+
+font-weight:800;
+
+text-decoration:none;
+
+}
+
+
+
+/* RESULT */
+
+.result{
+
+margin-top:25px;
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+
+
+.badge{
+
+background:#fff3c4;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+color:#856404;
+
+font-weight:700;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.profile-card{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+.courses{
+
+grid-template-columns:1fr;
+
+}
+
+
+.exam-box,
+.result{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header class="header">
+
+
+<div class="brand">
+
+
+<div class="brand-circle">
+؏
+</div>
+
+
+<h1>
+مودّت فی القربیٰ
+</h1>
+
+
+</div>
+
+
+<button id="logout"
+class="logout">
+
+Logout
+
+</button>
+
+
+</header>
+
+
+
+
+<main class="container">
+
+
+
+<div class="welcome">
+
+
+<h2>
+
+Welcome,
+<span id="studentName">
+Student
+</span>
+
+</h2>
+
+
+<p>
+Your personal learning dashboard for courses, examinations and results.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="profile-card">
+
+
+
+<div class="info">
+
+<h4>
+FULL NAME
+</h4>
+
+<p id="name">
+Loading...
+</p>
+
+</div>
+
+
+
+<div class="info">
+
+<h4>
+FATHER NAME
+</h4>
+
+<p id="father">
+Loading...
+</p>
+
+</div>
+
+
+
+<div class="info">
+
+<h4>
+EMAIL
+</h4>
+
+<p id="email">
+Loading...
+</p>
+
+</div>
+
+
+
+<div class="info">
+
+<h4>
+BATCH
+</h4>
+
+<p id="batch">
+Loading...
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<h2 class="section-title">
+My Courses
+</h2>
+
+
+
+<div class="courses">
+
+
+<div class="course">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h3>
+معرفتِ معصومینؑ
+</h3>
+
+<p>
+2026 Learning Batch
+</p>
+
+</div>
+
+
+
+<div class="course">
+
+<i class="fa-solid fa-mosque"></i>
+
+<h3>
+معرفت عقیدہ
+</h3>
+
+<p>
+Ahl al-Bayt Islamic Studies
+</p>
+
+</div>
+
+
+
+<div class="course">
+
+<i class="fa-solid fa-quran"></i>
+
+<h3>
+معرفت قرآن
+</h3>
+
+<p>
+Quranic Knowledge
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<h2 class="section-title">
+Online Examination
+</h2>
+
+
+<div class="exam-box">
+
+
+<div>
+
+<h2>
+MCQ Examination
+</h2>
+
+<p>
+Check available exams and attempt your paper.
+</p>
+
+</div>
+
+
+<a href="#"
+class="exam-btn">
+
+Start Exam
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<h2 class="section-title">
+My Results
+</h2>
+
+
+<div class="result">
+
+
+<div>
+
+<h3>
+Latest Result
+</h3>
+
+<p>
+Results will appear after publication.
+</p>
+
+</div>
+
+
+<div class="badge">
+
+Pending
+
+</div>
+
+
+</div>
+
+
+
+
+</main>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+
+
+
+<script>
+
+
+async function loadDashboard(){
+
+
+const {
+
+data:{
+user
+
+}
+
+}
+
+=
+await supabaseClient.auth.getUser();
+
+
+
+if(!user){
+
+window.location.href="login.html";
+
+return;
+
+}
+
+
+
+
+const {
+
+data,
+error
+
+}
+
+=
+await supabaseClient
+
+.from("profiles")
+
+.select("*")
+
+.eq("id",user.id)
+
+.single();
+
+
+
+
+if(error){
+
+console.log(error);
+
+return;
+
+}
+
+
+
+document.getElementById("studentName").innerText=
+data.full_name;
+
+
+document.getElementById("name").innerText=
+data.full_name;
+
+
+document.getElementById("father").innerText=
+data.father_name || "-";
+
+
+document.getElementById("email").innerText=
+data.email;
+
+
+document.getElementById("batch").innerText=
+data.batch || "-";
+
+
+
+
+}
+
+
+
+
+document
+.getElementById("logout")
+.addEventListener("click",async()=>{
+
+
+await supabaseClient.auth.signOut();
+
+
+window.location.href="login.html";
+
+
+});
+
+
+
+loadDashboard();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Student Registration | مودّت فی القربیٰ">
+
+    <meta name="theme-color"
+          content="#0d4b3e">
+
+    <title>
+        Student Registration | مودّت فی القربیٰ
+    </title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Main Website CSS -->
+
+    <link rel="stylesheet"
+          href="../style.css">
+
+
+    <style>
+
+        /* =====================================
+           REGISTER PAGE
+        ===================================== */
+
+        .auth-page {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            background:
+                #f8f8f5;
+
+        }
+
+
+        /* =====================================
+           LEFT SIDE
+        ===================================== */
+
+        .auth-visual {
+
+            position: relative;
+
+            min-height: 100vh;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #07382f,
+                    #0d4b3e
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 50px;
+
+            color: white;
+
+        }
+
+
+        .auth-visual::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(225,196,92,.25);
+
+        }
+
+
+        .auth-visual::after {
+
+            content: "؏";
+
+            position: absolute;
+
+            font-family:
+                "Amiri", serif;
+
+            font-size: 350px;
+
+            color:
+                rgba(225,196,92,.035);
+
+        }
+
+
+        .auth-visual-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 480px;
+
+            text-align: center;
+
+        }
+
+
+        .auth-symbol {
+
+            width: 90px;
+
+            height: 90px;
+
+            margin:
+                0 auto 25px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(225,196,92,.5);
+
+            display: grid;
+
+            place-items: center;
+
+            font-family:
+                "Amiri", serif;
+
+            font-size: 55px;
+
+            color:
+                #e1c45c;
+
+        }
+
+
+        .auth-visual h1 {
+
+            font-family:
+                "Amiri", serif;
+
+            font-size: 42px;
+
+            line-height: 1.2;
+
+        }
+
+
+        .auth-visual h1 span {
+
+            display: block;
+
+            color:
+                #e1c45c;
+
+        }
+
+
+        .auth-visual p {
+
+            margin-top: 20px;
+
+            color:
+                rgba(255,255,255,.65);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .auth-quote {
+
+            margin-top: 35px;
+
+            padding: 20px;
+
+            border-left:
+                2px solid #c9a227;
+
+            background:
+                rgba(255,255,255,.04);
+
+            text-align: left;
+
+            font-family:
+                "Amiri", serif;
+
+            font-size: 19px;
+
+            color:
+                rgba(255,255,255,.85);
+
+        }
+
+
+        /* =====================================
+           RIGHT SIDE
+        ===================================== */
+
+        .auth-form-side {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 40px 25px;
+
+        }
+
+
+        .auth-card {
+
+            width:
+                min(480px, 100%);
+
+        }
+
+
+        .auth-heading {
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .auth-heading .eyebrow {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .auth-heading h2 {
+
+            font-size: 34px;
+
+            line-height: 1.2;
+
+            color:
+                #202522;
+
+        }
+
+
+        .auth-heading p {
+
+            margin-top: 8px;
+
+            color:
+                #69736f;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================
+           FORM
+        ===================================== */
+
+        .register-form {
+
+            display: grid;
+
+            gap: 17px;
+
+        }
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+
+        }
+
+
+        .form-group label {
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            color:
+                #35403b;
+
+        }
+
+
+        .input-wrapper {
+
+            position: relative;
+
+        }
+
+
+        .input-wrapper i {
+
+            position: absolute;
+
+            left: 15px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            color:
+                #7c8782;
+
+            font-size: 13px;
+
+            pointer-events: none;
+
+        }
+
+
+        .input-wrapper input,
+        .input-wrapper select {
+
+            width: 100%;
+
+            height: 48px;
+
+            border:
+                1px solid #dfe3df;
+
+            border-radius: 10px;
+
+            padding:
+                0 14px 0 42px;
+
+            background:
+                white;
+
+            color:
+                #202522;
+
+            font-family:
+                inherit;
+
+            font-size: 12px;
+
+            outline: none;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .input-wrapper input:focus,
+        .input-wrapper select:focus {
+
+            border-color:
+                #0d4b3e;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(13,75,62,.08);
+
+        }
+
+
+        .password-toggle {
+
+            position: absolute;
+
+            right: 14px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            border: none;
+
+            background: none;
+
+            color:
+                #7c8782;
+
+            cursor: pointer;
+
+        }
+
+
+        .password-input {
+
+            padding-right: 42px !important;
+
+        }
+
+
+        /* =====================================
+           TERMS
+        ===================================== */
+
+        .terms {
+
+            display: flex;
+
+            gap: 9px;
+
+            align-items: flex-start;
+
+            margin-top: 3px;
+
+            color:
+                #69736f;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .terms input {
+
+            margin-top: 3px;
+
+            accent-color:
+                #0d4b3e;
+
+        }
+
+
+        /* =====================================
+           BUTTON
+        ===================================== */
+
+        .register-btn {
+
+            width: 100%;
+
+            height: 50px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background:
+                #c9a227;
+
+            color:
+                #07382f;
+
+            font-family:
+                inherit;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition:
+                .3s ease;
+
+        }
+
+
+        .register-btn:hover {
+
+            background:
+                #e1c45c;
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(201,162,39,.2);
+
+        }
+
+
+        .register-btn:disabled {
+
+            opacity: .6;
+
+            cursor:
+                not-allowed;
+
+            transform:
+                none;
+
+        }
+
+
+        /* =====================================
+           MESSAGE
+        ===================================== */
+
+        .form-message {
+
+            display: none;
+
+            padding: 12px 15px;
+
+            border-radius: 9px;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .form-message.show {
+
+            display: block;
+
+        }
+
+
+        .form-message.success {
+
+            background:
+                #eaf7f1;
+
+            color:
+                #126044;
+
+            border:
+                1px solid #c8eadc;
+
+        }
+
+
+        .form-message.error {
+
+            background:
+                #fff0f1;
+
+            color:
+                #8b2635;
+
+            border:
+                1px solid #f0cdd1;
+
+        }
+
+
+        /* =====================================
+           LOGIN LINK
+        ===================================== */
+
+        .auth-footer {
+
+            text-align: center;
+
+            margin-top: 23px;
+
+            color:
+                #69736f;
+
+            font-size: 11px;
+
+        }
+
+
+        .auth-footer a {
+
+            color:
+                #0d4b3e;
+
+            font-weight: 800;
+
+        }
+
+
+        .back-home {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 20px;
+
+            color:
+                #69736f;
+
+            font-size: 10px;
+
+        }
+
+
+        .back-home:hover {
+
+            color:
+                #0d4b3e;
+
+        }
+
+
+        /* =====================================
+           RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 850px) {
+
+            .auth-page {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .auth-visual {
+
+                min-height:
+                    360px;
+
+                padding:
+                    35px 20px;
+
+            }
+
+
+            .auth-visual h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .auth-quote {
+
+                display: none;
+
+            }
+
+
+            .auth-form-side {
+
+                min-height:
+                    auto;
+
+                padding:
+                    50px 20px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .form-row {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .auth-heading h2 {
+
+                font-size: 29px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="auth-page">
+
+
+    <!-- ==================================
+         LEFT VISUAL
+    =================================== -->
+
+    <section class="auth-visual">
+
+        <div class="auth-visual-content">
+
+            <div class="auth-symbol">
+                ؏
+            </div>
+
+
+            <h1>
+
+                مودّت فی القربیٰ
+
+                <span>
+                    Online Learning Platform
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Begin your journey of knowledge,
+                understanding and connection with
+                the teachings of Ahl al-Baytؑ.
+
+            </p>
+
+
+            <div class="auth-quote">
+
+                Knowledge is a light,
+                and the love of Ahl al-Baytؑ
+                is a path towards it.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================
+         FORM SIDE
+    =================================== -->
+
+    <section class="auth-form-side">
+
+        <div class="auth-card">
+
+
+            <div class="auth-heading">
+
+                <span class="eyebrow">
+                    STUDENT PORTAL
+                </span>
+
+                <h2>
+                    Create Your Account
+                </h2>
+
+                <p>
+                    Register as a student to access
+                    courses and online examinations.
+                </p>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div id="formMessage"
+                 class="form-message">
+            </div>
+
+
+            <!-- Registration Form -->
+
+            <form id="registerForm"
+                  class="register-form">
+
+
+                <!-- Name Row -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name *
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Your full name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="fatherName">
+                            Father's Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <input
+                                type="text"
+                                id="fatherName"
+                                placeholder="Father's name">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Row -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email *
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="student@example.com"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Mobile Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="+92 300 0000000">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Batch -->
+
+                <div class="form-group">
+
+                    <label for="batch">
+                        Course / Batch
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <select id="batch">
+
+                            <option value="">
+                                Select your course / batch
+                            </option>
+
+                            <option value="marifat-masumeen-batch-1">
+                                معرفتِ معصومینؑ — Batch 1
+                            </option>
+
+                            <option value="marifat-masumeen-batch-2">
+                                معرفتِ معصومینؑ — Batch 2
+                            </option>
+
+                            <option value="marifat-masumeen-batch-3">
+                                معرفتِ معصومینؑ — Batch 3
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password *
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                class="password-input"
+                                type="password"
+                                id="password"
+                                placeholder="Minimum 6 characters"
+                                minlength="6"
+                                required>
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="password">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password *
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                class="password-input"
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Repeat password"
+                                minlength="6"
+                                required>
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Terms -->
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required>
+
+                    <span>
+
+                        I agree to use this platform
+                        for educational and lawful purposes.
+
+                    </span>
+
+                </label>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                    id="registerBtn">
+
+                    <span id="registerBtnText">
+                        Create Student Account
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- Login -->
+
+            <div class="auth-footer">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login here
+                </a>
+
+                <br>
+
+                <a class="back-home"
+                   href="../index.html">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Homepage
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- ==================================
+     SUPABASE
+=================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+
+<!-- ==================================
+     REGISTRATION LOGIC
+=================================== -->
+
+<script>
+
+const registerForm =
+    document.getElementById("registerForm");
+
+const registerBtn =
+    document.getElementById("registerBtn");
+
+const registerBtnText =
+    document.getElementById("registerBtnText");
+
+const formMessage =
+    document.getElementById("formMessage");
+
+
+/* =====================================
+   MESSAGE FUNCTION
+===================================== */
+
+function showMessage(message, type) {
+
+    formMessage.textContent = message;
+
+    formMessage.className =
+        `form-message show ${type}`;
+
+}
+
+
+/* =====================================
+   PASSWORD TOGGLE
+===================================== */
+
+document
+    .querySelectorAll(".password-toggle")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const targetId =
+                button.dataset.target;
+
+            const input =
+                document.getElementById(targetId);
+
+            const icon =
+                button.querySelector("i");
+
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                icon.classList.remove(
+                    "fa-eye"
+                );
+
+                icon.classList.add(
+                    "fa-eye-slash"
+                );
+
+            } else {
+
+                input.type = "password";
+
+                icon.classList.remove(
+                    "fa-eye-slash"
+                );
+
+                icon.classList.add(
+                    "fa-eye"
+                );
+
+            }
+
+        });
+
+    });
+
+
+/* =====================================
+   REGISTER
+===================================== */
+
+registerForm.addEventListener(
+    "submit",
+    async (event) => {
+
+        event.preventDefault();
+
+
+        const fullName =
+            document.getElementById(
+                "fullName"
+            ).value.trim();
+
+
+        const fatherName =
+            document.getElementById(
+                "fatherName"
+            ).value.trim();
+
+
+        const email =
+            document.getElementById(
+                "email"
+            ).value.trim()
+            .toLowerCase();
+
+
+        const phone =
+            document.getElementById(
+                "phone"
+            ).value.trim();
+
+
+        const batch =
+            document.getElementById(
+                "batch"
+            ).value;
+
+
+        const password =
+            document.getElementById(
+                "password"
+            ).value;
+
+
+        const confirmPassword =
+            document.getElementById(
+                "confirmPassword"
+            ).value;
+
+
+        /* Password check */
+
+        if (password !== confirmPassword) {
+
+            showMessage(
+                "Passwords do not match.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        /* Button state */
+
+        registerBtn.disabled = true;
+
+        registerBtnText.textContent =
+            "Creating Account...";
+
+
+        try {
+
+
+            /* =================================
+               CREATE AUTH USER
+            ================================= */
+
+            const {
+                data,
+                error
+            } = await supabaseClient.auth
+                .signUp({
+
+                    email: email,
+
+                    password: password,
+
+                    options: {
+
+                        data: {
+
+                            full_name:
+                                fullName,
+
+                            father_name:
+                                fatherName,
+
+                            phone:
+                                phone,
+
+                            batch:
+                                batch
+
+                        }
+
+                    }
+
+                });
+
+
+            if (error) {
+
+                throw error;
+
+            }
+
+
+            /* =================================
+               CREATE PROFILE
+            ================================= */
+
+            if (data.user) {
+
+                const {
+                    error: profileError
+                } = await supabaseClient
+                    .from("profiles")
+                    .insert({
+
+                        id:
+                            data.user.id,
+
+                        full_name:
+                            fullName,
+
+                        father_name:
+                            fatherName,
+
+                        phone:
+                            phone,
+
+                        email:
+                            email,
+
+                        batch:
+                            batch,
+
+                        role:
+                            "student"
+
+                    });
+
+
+                if (profileError) {
+
+                    console.error(
+                        profileError
+                    );
+
+                    throw new Error(
+                        "Account created, but student profile could not be saved."
+                    );
+
+                }
+
+            }
+
+
+            /* =================================
+               SUCCESS
+            ================================= */
+
+            showMessage(
+                "Registration successful! Redirecting to login...",
+                "success"
+            );
+
+
+            registerForm.reset();
+
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "login.html";
+
+            }, 1800);
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            showMessage(
+                error.message ||
+                "Registration failed. Please try again.",
+                "error"
+            );
+
+
+            registerBtn.disabled = false;
+
+            registerBtnText.textContent =
+                "Create Student Account";
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>

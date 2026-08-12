@@ -832,201 +832,155 @@ function showMessage(title,text){
 ========================= */
 
 
-async function loadExam(){
+async function submitExam(){
 
+    if(!attemptId){
+        alert("Exam attempt was not found.");
+        return;
+    }
+
+    clearInterval(timerInterval);
 
     try{
 
-
         const {
-            data:{
-                user
-            },
-            error:userError
+            data: { user },
+            error: userError
         } = await supabaseClient.auth.getUser();
 
-
         if(userError || !user){
-
-            window.location.href =
-            "login.html";
-
+            alert("Your login session has expired. Please login again.");
             return;
+        }
 
+        /*
+         * Calculate result
+         */
+
+        let score = 0;
+
+        /*
+         * Save every answered question
+         */
+
+        for(const q of questions){
+
+            const selected = answers[q.id] || null;
+
+            let isCorrect = false;
+            let marksObtained = 0;
+
+            if(selected){
+
+                isCorrect =
+                    selected === q.correct_answer;
+
+                if(isCorrect){
+                    marksObtained =
+                        Number(q.marks || 0);
+
+                    score += marksObtained;
+                }
+            }
+
+            /*
+             * Save student's answer
+             */
+
+            const {
+                error: answerError
+            } = await supabaseClient
+                .from("student_answers")
+                .insert({
+                    attempt_id: attemptId,
+                    question_id: q.id,
+                    selected_answer: selected,
+                    is_correct: isCorrect,
+                    marks_obtained: marksObtained
+                });
+
+            if(answerError){
+
+                console.error(
+                    "Answer save error:",
+                    answerError
+                );
+
+                throw answerError;
+            }
         }
 
 
+        /*
+         * Update exam attempt
+         */
 
         const {
-            data:examData,
-            error:examError
+            error: attemptError
         } = await supabaseClient
+            .from("exam_attempts")
+            .update({
 
-        .from("exams")
+                submitted_at:
+                    new Date().toISOString(),
 
-        .select("*")
+                score: score,
 
-        .eq("id",EXAM_ID)
+                total_marks:
+                    Number(exam.total_marks),
 
-        .single();
+                status: "submitted"
+
+            })
+            .eq("id", attemptId);
 
 
+        if(attemptError){
 
-        if(examError){
-
-            console.error(examError);
-
-            showMessage(
-                "Exam Error",
-                "Unable to load examination."
+            console.error(
+                "Attempt update error:",
+                attemptError
             );
 
-            return;
-
+            throw attemptError;
         }
 
 
+        /*
+         * Hide exam
+         */
 
-        exam = examData;
+        questionArea.classList.add("hidden");
 
+        timer.classList.add("hidden");
 
 
-        const now =
-        new Date();
+        /*
+         * Show success
+         */
 
+        showMessage(
 
+            "Examination Submitted Successfully",
 
-        const start =
-        new Date(exam.starts_at);
+            `Your examination has been submitted successfully.
 
+            Score: ${score} / ${exam.total_marks}
 
+            Your result will be available after the scheduled result publication time.`
 
-        const end =
-        new Date(exam.ends_at);
-
-
-
-        if(exam.status !== "published"){
-
-            showMessage(
-                "Exam Not Available",
-                "This examination has not been published yet."
-            );
-
-            return;
-
-        }
-
-
-
-        if(now < start){
-
-            showMessage(
-                "Examination Not Started",
-                "The examination will open on " +
-                start.toLocaleString()
-            );
-
-            return;
-
-        }
-
-
-
-        if(now >= end){
-
-            showMessage(
-                "Examination Closed",
-                "The examination submission window has ended."
-            );
-
-            return;
-
-        }
-
-
-
-        const {
-            data:questionData,
-            error:questionError
-        } = await supabaseClient
-
-        .from("questions")
-
-        .select("*")
-
-        .eq("exam_id",EXAM_ID)
-
-        .order("question_order",{ascending:true});
-
-
-
-        if(questionError){
-
-            console.error(questionError);
-
-            showMessage(
-                "Question Error",
-                "Unable to load examination questions."
-            );
-
-            return;
-
-        }
-
-
-
-        if(!questionData || questionData.length === 0){
-
-            showMessage(
-                "No Questions",
-                "No questions have been added to this examination yet."
-            );
-
-            return;
-
-        }
-
-
-
-        questions = questionData;
-
-
-
-        document.getElementById("examTitle")
-        .textContent = exam.title;
-
-
-        document.getElementById("examDescription")
-        .textContent = exam.description || "";
-
-
-        document.getElementById("examDuration")
-        .textContent = exam.duration_minutes;
-
-
-        document.getElementById("totalMarks")
-        .textContent = exam.total_marks;
-
-
-        document.getElementById("passingMarks")
-        .textContent = exam.passing_marks;
-
-
-
-        loading.classList.add("hidden");
-
-        examSection.classList.remove("hidden");
-
+        );
 
 
     }catch(error){
 
-        console.error(error);
+        console.error(
+            "Submission error:",
+            error
+        );
 
-        showMessage(
-            "Unexpected Error",
-            "Something went wrong while loading the exam."
+        alert(
+            "There was an error while submitting your examination. Please try again or contact administration."
         );
 
     }

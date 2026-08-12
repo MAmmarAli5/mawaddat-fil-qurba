@@ -2,543 +2,326 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Online Exam | Mawaddat Fil Qurba</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700;800&display=swap"
-rel="stylesheet">
-
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:"Inter",sans-serif;
-
-    background:#f7f7f2;
-
-    color:#202522;
-
-    min-height:100vh;
-}
-
-
-/* HEADER */
-
-.header{
-
-    background:#07382f;
-
-    color:white;
-
-    padding:18px 35px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:100;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
-
-
-.brand{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-}
-
-
-.logo{
-
-    width:44px;
-
-    height:44px;
-
-    border:1px solid #d4b34c;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#d4b34c;
-
-    font-family:"Amiri";
-
-    font-size:28px;
-}
-
-
-.brand-name{
-
-    font-family:"Amiri";
-
-    font-size:21px;
-}
-
-
-.timer{
-
-    background:#8b1e2d;
-
-    padding:11px 18px;
-
-    border-radius:10px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-
-}
-
-
-/* MAIN */
-
-.container{
-
-    width:min(950px,92%);
-
-    margin:35px auto;
-
-}
-
-
-/* EXAM INFO */
-
-.exam-info{
-
-    background:white;
-
-    padding:28px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-
-    border-top:4px solid #c9a227;
-
-    margin-bottom:25px;
-}
-
-
-.exam-info h1{
-
-    color:#07382f;
-
-    font-size:27px;
-
-    margin-bottom:8px;
-}
-
-
-.exam-info p{
-
-    color:#69736f;
-
-    line-height:1.7;
-}
-
-
-.exam-meta{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:12px;
-
-    margin-top:20px;
-}
-
-
-.meta{
-
-    background:#f1f3ed;
-
-    padding:9px 14px;
-
-    border-radius:8px;
-
-    font-size:13px;
-
-    font-weight:700;
-}
-
-
-/* START */
-
-.start-area{
-
-    text-align:center;
-
-    background:white;
-
-    padding:45px 25px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-}
-
-
-.start-area h2{
-
-    color:#07382f;
-
-    margin-bottom:10px;
-}
-
-
-.start-area p{
-
-    color:#69736f;
-
-    margin-bottom:25px;
-}
-
-
-.start-btn{
-
-    background:#c9a227;
-
-    color:#07382f;
-
-    border:none;
-
-    padding:15px 35px;
-
-    border-radius:10px;
-
-    font-size:16px;
-
-    font-weight:800;
-
-    cursor:pointer;
-
-}
-
-
-.start-btn:hover{
-
-    transform:translateY(-2px);
-
-}
-
-
-/* QUESTION */
-
-.question-card{
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-
-    margin-bottom:20px;
-}
-
-
-.question-number{
-
-    color:#c09a1b;
-
-    font-size:14px;
-
-    font-weight:800;
-
-    margin-bottom:12px;
-}
-
-
-.question-text{
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    margin-bottom:22px;
-
-    font-weight:700;
-}
-
-
-.option{
-
-    display:block;
-
-    margin:12px 0;
-
-}
-
-
-.option input{
-
-    display:none;
-}
-
-
-.option span{
-
-    display:block;
-
-    padding:15px 18px;
-
-    border:2px solid #e4e7df;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    transition:.2s;
-}
-
-
-.option span:hover{
-
-    border-color:#c9a227;
-
-    background:#fffdf3;
-}
-
-
-.option input:checked + span{
-
-    border-color:#07382f;
-
-    background:#edf5f1;
-
-    color:#07382f;
-
-    font-weight:700;
-}
-
-
-/* PROGRESS */
-
-.progress-box{
-
-    margin-bottom:20px;
-}
-
-
-.progress-top{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-bottom:8px;
-
-    font-size:13px;
-
-    font-weight:700;
-}
-
-
-.progress{
-
-    height:9px;
-
-    background:#e5e7e1;
-
-    border-radius:20px;
-
-    overflow:hidden;
-}
-
-
-.progress-bar{
-
-    height:100%;
-
-    width:0%;
-
-    background:#c9a227;
-
-    transition:.3s;
-}
-
-
-/* NAV */
-
-.nav-buttons{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    margin-top:20px;
-
-    gap:12px;
-}
-
-
-.nav-btn{
-
-    border:none;
-
-    padding:13px 25px;
-
-    border-radius:9px;
-
-    cursor:pointer;
-
-    font-weight:800;
-}
-
-
-.prev{
-
-    background:#e6e8e2;
-
-    color:#27332e;
-}
-
-
-.next{
-
-    background:#07382f;
-
-    color:white;
-}
-
-
-.submit{
-
-    background:#8b1e2d;
-
-    color:white;
-
-}
-
-
-/* MESSAGE */
-
-.message{
-
-    background:white;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-}
-
-
-.message h2{
-
-    color:#07382f;
-
-    margin-bottom:12px;
-}
-
-
-.message p{
-
-    color:#69736f;
-
-    line-height:1.7;
-}
-
-
-.hidden{
-
-    display:none !important;
-}
-
-
-.error{
-
-    color:#8b1e2d;
-
-    font-weight:700;
-
-}
-
-
-@media(max-width:600px){
-
-    .header{
-
-        padding:15px;
-
-    }
-
-    .brand-name{
-
-        font-size:17px;
-
-    }
-
-    .timer{
-
-        padding:9px 12px;
-
-        font-size:13px;
-
-    }
-
-    .container{
-
-        width:94%;
-
-    }
-
-    .question-card{
-
-        padding:22px;
-
-    }
-
-    .question-text{
-
-        font-size:17px;
-
-    }
-
-    .nav-buttons{
-
-        flex-direction:column;
-
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Exam | Mawaddat Fil Qurba</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f7f7f2;
+            color: #202522;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #07382f;
+            color: white;
+            padding: 18px 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0,0,0,.15);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            border: 1px solid #d4b34c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4b34c;
+            font-family: "Amiri", serif;
+            font-size: 28px;
+        }
+
+        .brand-name {
+            font-family: "Amiri", serif;
+            font-size: 21px;
+        }
+
+        .timer {
+            background: #8b1e2d;
+            padding: 11px 18px;
+            border-radius: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: min(950px, 92%);
+            margin: 35px auto;
+        }
+
+        .exam-info {
+            background: white;
+            padding: 28px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+            border-top: 4px solid #c9a227;
+            margin-bottom: 25px;
+        }
+
+        .exam-info h1 {
+            color: #07382f;
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .exam-info p {
+            color: #69736f;
+            line-height: 1.7;
+        }
+
+        .exam-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .meta {
+            background: #f1f3ed;
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .start-area {
+            text-align: center;
+            background: white;
+            padding: 45px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+        }
+
+        .start-area h2 {
+            color: #07382f;
+            margin-bottom: 10px;
+        }
+
+        .start-area p {
+            color: #69736f;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .start-btn {
+            background: #c9a227;
+            color: #07382f;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .question-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            color: #c09a1b;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .question-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+            font-weight: 700;
+        }
+
+        .option {
+            display: block;
+            margin: 12px 0;
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option span {
+            display: block;
+            padding: 15px 18px;
+            border: 2px solid #e4e7df;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .option span:hover {
+            border-color: #c9a227;
+            background: #fffdf3;
+        }
+
+        .option input:checked + span {
+            border-color: #07382f;
+            background: #edf5f1;
+            color: #07382f;
+            font-weight: 700;
+        }
+
+        .progress-box {
+            margin-bottom: 20px;
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .progress {
+            height: 9px;
+            background: #e5e7e1;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #c9a227;
+            transition: .3s;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            border: none;
+            padding: 13px 25px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        .nav-btn:disabled {
+            opacity: .45;
+            cursor: not-allowed;
+        }
+
+        .prev {
+            background: #e6e8e2;
+            color: #27332e;
+        }
+
+        .next {
+            background: #07382f;
+            color: white;
+        }
+
+        .submit {
+            background: #8b1e2d;
+            color: white;
+        }
+
+        .message {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+        }
+
+        .message h2 {
+            color: #07382f;
+            margin-bottom: 12px;
+        }
+
+        .message p {
+            color: #69736f;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 15px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .timer {
+                padding: 9px 12px;
+                font-size: 13px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .question-card {
+                padding: 22px;
+            }
+
+            .question-text {
+                font-size: 17px;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -558,13 +341,11 @@ body{
 
     </div>
 
-
     <div id="timer" class="timer hidden">
         02:00:00
     </div>
 
 </header>
-
 
 
 <main class="container">
@@ -583,7 +364,6 @@ body{
     </div>
 
 
-
     <!-- MESSAGE -->
 
     <div id="message" class="message hidden">
@@ -593,7 +373,6 @@ body{
         <p id="messageText"></p>
 
     </div>
-
 
 
     <!-- EXAM -->
@@ -606,7 +385,6 @@ body{
             <h1 id="examTitle"></h1>
 
             <p id="examDescription"></p>
-
 
             <div class="exam-meta">
 
@@ -631,7 +409,6 @@ body{
         </div>
 
 
-
         <!-- START -->
 
         <div id="startArea" class="start-area">
@@ -648,7 +425,6 @@ body{
             </button>
 
         </div>
-
 
 
         <!-- QUESTIONS -->
@@ -669,12 +445,11 @@ body{
 
                 </div>
 
-
                 <div class="progress">
 
                     <div
-                    id="progressBar"
-                    class="progress-bar">
+                        id="progressBar"
+                        class="progress-bar">
                     </div>
 
                 </div>
@@ -688,8 +463,8 @@ body{
             <div class="nav-buttons">
 
                 <button
-                id="prevBtn"
-                class="nav-btn prev">
+                    id="prevBtn"
+                    class="nav-btn prev">
 
                     ← Previous
 
@@ -697,8 +472,8 @@ body{
 
 
                 <button
-                id="nextBtn"
-                class="nav-btn next">
+                    id="nextBtn"
+                    class="nav-btn next">
 
                     Next →
 
@@ -706,8 +481,8 @@ body{
 
 
                 <button
-                id="submitBtn"
-                class="nav-btn submit hidden">
+                    id="submitBtn"
+                    class="nav-btn submit hidden">
 
                     Submit Exam
 
@@ -717,102 +492,92 @@ body{
 
         </div>
 
-
     </section>
-
 
 </main>
 
 
+<!-- SUPABASE -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="../js/supabase.js"></script>
 
 
-
 <script>
 
-
-/* =========================
+/* =====================================================
    CONFIGURATION
-========================= */
-
+===================================================== */
 
 const EXAM_ID = 2;
 
 
-/* =========================
+/* =====================================================
    GLOBAL VARIABLES
-========================= */
-
+===================================================== */
 
 let exam = null;
-
 let questions = [];
-
 let answers = {};
-
 let currentQuestion = 0;
 
 let timerInterval = null;
-
 let remainingSeconds = 0;
 
 let attemptId = null;
+let submitting = false;
 
 
-/* =========================
-   DOM
-========================= */
-
+/* =====================================================
+   DOM ELEMENTS
+===================================================== */
 
 const loading =
-document.getElementById("loading");
+    document.getElementById("loading");
 
 const message =
-document.getElementById("message");
+    document.getElementById("message");
 
 const messageTitle =
-document.getElementById("messageTitle");
+    document.getElementById("messageTitle");
 
 const messageText =
-document.getElementById("messageText");
+    document.getElementById("messageText");
 
 const examSection =
-document.getElementById("examSection");
+    document.getElementById("examSection");
 
 const startArea =
-document.getElementById("startArea");
+    document.getElementById("startArea");
 
 const questionArea =
-document.getElementById("questionArea");
+    document.getElementById("questionArea");
 
 const questionContainer =
-document.getElementById("questionContainer");
+    document.getElementById("questionContainer");
 
 const timer =
-document.getElementById("timer");
+    document.getElementById("timer");
 
 const startBtn =
-document.getElementById("startBtn");
+    document.getElementById("startBtn");
 
 const prevBtn =
-document.getElementById("prevBtn");
+    document.getElementById("prevBtn");
 
 const nextBtn =
-document.getElementById("nextBtn");
+    document.getElementById("nextBtn");
 
 const submitBtn =
-document.getElementById("submitBtn");
+    document.getElementById("submitBtn");
 
 
-/* =========================
+/* =====================================================
    SHOW MESSAGE
-========================= */
+===================================================== */
 
-
-function showMessage(title,text){
+function showMessage(title, text) {
 
     loading.classList.add("hidden");
 
@@ -823,249 +588,233 @@ function showMessage(title,text){
     messageTitle.textContent = title;
 
     messageText.textContent = text;
-
 }
 
 
-/* =========================
+/* =====================================================
    LOAD EXAM
-========================= */
+===================================================== */
 
+async function loadExam() {
 
-async function submitExam(){
-.eq("id", attemptId);
-    if(!attemptId){
-        alert("Exam attempt was not found.");
-        return;
-    }
-
-    clearInterval(timerInterval);
-
-    try{
+    try {
 
         const {
-            data: { user },
+            data: {
+                user
+            },
             error: userError
         } = await supabaseClient.auth.getUser();
 
-        if(userError || !user){
-            alert("Your login session has expired. Please login again.");
+
+        if (userError || !user) {
+
+            window.location.href = "login.html";
+
             return;
         }
 
-        /*
-         * Calculate result
-         */
 
-        let score = 0;
-
-        /*
-         * Save every answered question
-         */
-
-        for(const q of questions){
-
-            const selected = answers[q.id] || null;
-
-            let isCorrect = false;
-            let marksObtained = 0;
-
-            if(selected){
-
-                isCorrect =
-                    selected === q.correct_answer;
-
-                if(isCorrect){
-                    marksObtained =
-                        Number(q.marks || 0);
-
-                    score += marksObtained;
-                }
-            }
-
-            /*
-             * Save student's answer
-             */
-
-            const {
-                error: answerError
-            } = await supabaseClient
-                .from("student_answers")
-                .insert({
-                    attempt_id: attemptId,
-                    question_id: q.id,
-                    selected_answer: selected,
-                    is_correct: isCorrect,
-                    marks_obtained: marksObtained
-                });
-
-            if(answerError){
-
-                console.error(
-                    "Answer save error:",
-                    answerError
-                );
-
-                throw answerError;
-            }
-        }
-
-
-        /*
-         * Update exam attempt
-         */
+        /* Get exam */
 
         const {
-            error: attemptError
+            data: examData,
+            error: examError
         } = await supabaseClient
-            .from("exam_attempts")
-            .update({
-
-                submitted_at:
-                    new Date().toISOString(),
-
-                score: score,
-
-                total_marks:
-                    Number(exam.total_marks),
-
-                status: "submitted"
-
-            })
-            .eq("id", attemptId);
+            .from("exams")
+            .select("*")
+            .eq("id", EXAM_ID)
+            .single();
 
 
-        if(attemptError){
+        if (examError || !examData) {
 
-            console.error(
-                "Attempt update error:",
-                attemptError
+            console.error(examError);
+
+            showMessage(
+                "Exam Error",
+                "Unable to load the examination."
             );
 
-            throw attemptError;
-        }
-const eligibleAt = new Date(
-    new Date(exam.ends_at).getTime() +
-    (Number(exam.result_delay_hours) * 60 * 60 * 1000)
-);
-
-const percentage =
-    Number(exam.total_marks) > 0
-        ? (score / Number(exam.total_marks)) * 100
-        : 0;
-
-const {
-    error: resultError
-} = await supabaseClient
-    .from("results")
-    .insert({
-        exam_id: exam.id,
-        student_id: user.id,
-        attempt_id: attemptId,
-        score: score,
-        total_marks: Number(exam.total_marks),
-        percentage: Number(percentage.toFixed(2)),
-        published: false,
-        submitted_at: new Date().toISOString(),
-        eligible_at: eligibleAt.toISOString()
-    });
-
-if(resultError){
-
-    console.error(
-        "Result creation error:",
-        resultError
-    );
-
-    throw resultError;
-}
-
-        /*
-         * Hide exam
-         */
-
-        questionArea.classList.add("hidden");
-
-        timer.classList.add("hidden");
-
-
-        /*
-         * Show success
-         */
-
-        showMessage(
-
-            "Examination Submitted Successfully",
-
-            `Your examination has been submitted successfully.
-
-            Score: ${score} / ${exam.total_marks}
-
-            Your result will be available after the scheduled result publication time.`
-
-        );
-
-
-    }catch(error){
-
-        console.error(
-            "Submission error:",
-            error
-        );
-
-        alert(
-            "There was an error while submitting your examination. Please try again or contact administration."
-        );
-
-    }
-
-}
-
-
-/* =========================
-   START EXAM
-========================= */
-
-
-startBtn.addEventListener(
-"click",
-async function(){
-
-
-    try{
-
-
-        const {
-            data:{
-                user
-            }
-        } =
-        await supabaseClient.auth.getUser();
-
-
-        if(!user){
-
-            window.location.href =
-            "login.html";
-
             return;
-
         }
 
 
+        exam = examData;
 
-        /* HARD END TIME CHECK */
+
+        /* Current time */
+
+        const now = new Date();
 
 
-        const now =
-        new Date();
-
+        const examStart =
+            new Date(exam.starts_at);
 
         const examEnd =
-        new Date(exam.ends_at);
+            new Date(exam.ends_at);
 
 
-        if(now >= examEnd){
+        /* Exam status */
+
+        if (exam.status !== "published") {
+
+            showMessage(
+                "Exam Not Available",
+                "This examination has not been published yet."
+            );
+
+            return;
+        }
+
+
+        /* Before opening */
+
+        if (now < examStart) {
+
+            showMessage(
+                "Examination Not Started",
+                "The examination will open on " +
+                examStart.toLocaleString()
+            );
+
+            return;
+        }
+
+
+        /* After closing */
+
+        if (now >= examEnd) {
+
+            showMessage(
+                "Examination Closed",
+                "The examination window has ended."
+            );
+
+            return;
+        }
+
+
+        /* Load questions */
+
+        const {
+            data: questionData,
+            error: questionError
+        } = await supabaseClient
+            .from("questions")
+            .select("*")
+            .eq("exam_id", EXAM_ID)
+            .order("question_order", {
+                ascending: true
+            });
+
+
+        if (questionError) {
+
+            console.error(questionError);
+
+            showMessage(
+                "Question Error",
+                "Unable to load examination questions."
+            );
+
+            return;
+        }
+
+
+        if (!questionData || questionData.length === 0) {
+
+            showMessage(
+                "No Questions",
+                "No questions have been added to this examination yet."
+            );
+
+            return;
+        }
+
+
+        questions = questionData;
+
+
+        /* Display exam information */
+
+        document.getElementById("examTitle")
+            .textContent = exam.title;
+
+        document.getElementById("examDescription")
+            .textContent = exam.description || "";
+
+        document.getElementById("examDuration")
+            .textContent = exam.duration_minutes;
+
+        document.getElementById("totalMarks")
+            .textContent = exam.total_marks;
+
+        document.getElementById("passingMarks")
+            .textContent = exam.passing_marks;
+
+
+        loading.classList.add("hidden");
+
+        examSection.classList.remove("hidden");
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        showMessage(
+            "Unexpected Error",
+            "Something went wrong while loading the examination."
+        );
+    }
+}
+
+
+/* =====================================================
+   START EXAM
+===================================================== */
+
+startBtn.addEventListener(
+    "click",
+    startExam
+);
+
+
+async function startExam() {
+
+    if (!exam) {
+        return;
+    }
+
+
+    try {
+
+        const {
+            data: {
+                user
+            },
+            error: userError
+        } = await supabaseClient.auth.getUser();
+
+
+        if (userError || !user) {
+
+            window.location.href = "login.html";
+
+            return;
+        }
+
+
+        /* Re-check server time window */
+
+        const now = new Date();
+
+        const examEnd =
+            new Date(exam.ends_at);
+
+
+        if (now >= examEnd) {
 
             showMessage(
                 "Exam Closed",
@@ -1073,58 +822,147 @@ async function(){
             );
 
             return;
-
         }
 
 
-
-        /* CREATE ATTEMPT */
-
+        /* Prevent duplicate active attempt */
 
         const {
-            data:attempt,
-            error
-        } =
-        await supabaseClient
-
-        .from("exam_attempts")
-
-        .insert({
-
-            exam_id:exam.id,
-
-            student_id:user.id,
-
-            started_at:new Date().toISOString(),
-
-            status:"in_progress"
-
-        })
-
-        .select()
-
-        .single();
+            data: existingAttempts,
+            error: existingError
+        } = await supabaseClient
+            .from("exam_attempts")
+            .select("*")
+            .eq("exam_id", exam.id)
+            .eq("student_id", user.id)
+            .eq("status", "in_progress")
+            .order("started_at", {
+                ascending: false
+            })
+            .limit(1);
 
 
+        if (existingError) {
 
-        if(error){
-
-            console.error(error);
+            console.error(existingError);
 
             alert(
-                "Unable to start examination: " +
-                error.message
+                "Unable to check your previous attempt."
             );
 
             return;
-
         }
 
 
+        /* Resume existing attempt */
 
-        attemptId =
-        attempt.id;
+        if (
+            existingAttempts &&
+            existingAttempts.length > 0
+        ) {
 
+            const existingAttempt =
+                existingAttempts[0];
+
+            attemptId =
+                existingAttempt.id;
+
+            const startedAt =
+                new Date(existingAttempt.started_at);
+
+            const durationSeconds =
+                Number(exam.duration_minutes) * 60;
+
+            const attemptEnd =
+                new Date(
+                    startedAt.getTime() +
+                    durationSeconds * 1000
+                );
+
+            const effectiveEnd =
+                attemptEnd < examEnd
+                    ? attemptEnd
+                    : examEnd;
+
+            remainingSeconds =
+                Math.max(
+                    0,
+                    Math.floor(
+                        (effectiveEnd.getTime() - Date.now()) / 1000
+                    )
+                );
+
+        } else {
+
+            /* Create new attempt */
+
+            const {
+                data: attempt,
+                error: attemptError
+            } = await supabaseClient
+                .from("exam_attempts")
+                .insert({
+
+                    exam_id: exam.id,
+
+                    student_id: user.id,
+
+                    started_at:
+                        new Date().toISOString(),
+
+                    status: "in_progress",
+
+                    total_marks:
+                        Number(exam.total_marks)
+
+                })
+                .select()
+                .single();
+
+
+            if (attemptError) {
+
+                console.error(attemptError);
+
+                alert(
+                    "Unable to start examination: " +
+                    attemptError.message
+                );
+
+                return;
+            }
+
+
+            attemptId =
+                attempt.id;
+
+
+            const durationSeconds =
+                Number(exam.duration_minutes) * 60;
+
+            const remainingUntilExamClose =
+                Math.floor(
+                    (examEnd.getTime() - Date.now()) / 1000
+                );
+
+
+            remainingSeconds =
+                Math.min(
+                    durationSeconds,
+                    remainingUntilExamClose
+                );
+        }
+
+
+        if (remainingSeconds <= 0) {
+
+            showMessage(
+                "Exam Time Expired",
+                "Your examination time has ended."
+            );
+
+            return;
+        }
 
 
         startArea.classList.add("hidden");
@@ -1134,63 +972,35 @@ async function(){
         timer.classList.remove("hidden");
 
 
-
-        /*
-        Student gets 120 minutes,
-        BUT never beyond exam.ends_at.
-        */
-
-
-        const durationSeconds =
-        exam.duration_minutes * 60;
-
-
-        const remainingUntilExamClose =
-        Math.floor(
-            (examEnd.getTime() - Date.now()) / 1000
-        );
-
-
-        remainingSeconds =
-        Math.min(
-            durationSeconds,
-            remainingUntilExamClose
-        );
-
-
-
         renderQuestion();
 
         startTimer();
 
 
-    }catch(error){
+    } catch (error) {
 
         console.error(error);
 
         alert(
             "Unable to start examination."
         );
-
     }
+}
 
-});
 
-
-/* =========================
+/* =====================================================
    RENDER QUESTION
-========================= */
+===================================================== */
 
-
-function renderQuestion(){
-
+function renderQuestion() {
 
     const q =
-    questions[currentQuestion];
+        questions[currentQuestion];
 
 
-    if(!q) return;
-
+    if (!q) {
+        return;
+    }
 
 
     questionContainer.innerHTML = `
@@ -1200,9 +1010,7 @@ function renderQuestion(){
             <div class="question-number">
 
                 Question ${currentQuestion + 1}
-
                 of
-
                 ${questions.length}
 
             </div>
@@ -1218,15 +1026,14 @@ function renderQuestion(){
             <label class="option">
 
                 <input
-                type="radio"
-                name="answer"
-                value="A"
-                ${answers[q.id] === "A" ? "checked" : ""}>
+                    type="radio"
+                    name="answer"
+                    value="A"
+                    ${answers[q.id] === "A" ? "checked" : ""}
+                >
 
                 <span>
-
                     A. ${escapeHTML(q.option_a)}
-
                 </span>
 
             </label>
@@ -1235,15 +1042,14 @@ function renderQuestion(){
             <label class="option">
 
                 <input
-                type="radio"
-                name="answer"
-                value="B"
-                ${answers[q.id] === "B" ? "checked" : ""}>
+                    type="radio"
+                    name="answer"
+                    value="B"
+                    ${answers[q.id] === "B" ? "checked" : ""}
+                >
 
                 <span>
-
                     B. ${escapeHTML(q.option_b)}
-
                 </span>
 
             </label>
@@ -1252,15 +1058,14 @@ function renderQuestion(){
             <label class="option">
 
                 <input
-                type="radio"
-                name="answer"
-                value="C"
-                ${answers[q.id] === "C" ? "checked" : ""}>
+                    type="radio"
+                    name="answer"
+                    value="C"
+                    ${answers[q.id] === "C" ? "checked" : ""}
+                >
 
                 <span>
-
                     C. ${escapeHTML(q.option_c)}
-
                 </span>
 
             </label>
@@ -1269,15 +1074,14 @@ function renderQuestion(){
             <label class="option">
 
                 <input
-                type="radio"
-                name="answer"
-                value="D"
-                ${answers[q.id] === "D" ? "checked" : ""}>
+                    type="radio"
+                    name="answer"
+                    value="D"
+                    ${answers[q.id] === "D" ? "checked" : ""}
+                >
 
                 <span>
-
                     D. ${escapeHTML(q.option_d)}
-
                 </span>
 
             </label>
@@ -1287,433 +1091,469 @@ function renderQuestion(){
     `;
 
 
-
     document
-    .querySelectorAll('input[name="answer"]')
-    .forEach(input=>{
+        .querySelectorAll('input[name="answer"]')
+        .forEach(input => {
 
-        input.addEventListener(
-        "change",
-        function(){
+            input.addEventListener(
+                "change",
+                function () {
 
-            answers[q.id] =
-            this.value;
+                    answers[q.id] =
+                        this.value;
 
-            updateProgress();
+                    updateProgress();
+                }
+            );
 
         });
-
-    });
-
 
 
     updateNavigation();
 
     updateProgress();
-
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
-
+===================================================== */
 
 nextBtn.addEventListener(
-"click",
-function(){
+    "click",
+    function () {
 
+        if (
+            currentQuestion <
+            questions.length - 1
+        ) {
 
-    if(currentQuestion <
-    questions.length - 1){
+            currentQuestion++;
 
-        currentQuestion++;
-
-        renderQuestion();
-
+            renderQuestion();
+        }
     }
-
-});
+);
 
 
 prevBtn.addEventListener(
-"click",
-function(){
+    "click",
+    function () {
 
+        if (currentQuestion > 0) {
 
-    if(currentQuestion > 0){
+            currentQuestion--;
 
-        currentQuestion--;
-
-        renderQuestion();
-
+            renderQuestion();
+        }
     }
+);
 
-});
 
-
-function updateNavigation(){
-
+function updateNavigation() {
 
     prevBtn.disabled =
-    currentQuestion === 0;
+        currentQuestion === 0;
 
 
-    if(currentQuestion ===
-    questions.length - 1){
+    if (
+        currentQuestion ===
+        questions.length - 1
+    ) {
 
         nextBtn.classList.add("hidden");
 
         submitBtn.classList.remove("hidden");
 
-    }else{
+    } else {
 
         nextBtn.classList.remove("hidden");
 
         submitBtn.classList.add("hidden");
-
     }
-
 }
 
 
-/* =========================
+/* =====================================================
    PROGRESS
-========================= */
+===================================================== */
 
-
-function updateProgress(){
-
+function updateProgress() {
 
     const answered =
-    Object.keys(answers).length;
+        Object.keys(answers).length;
 
 
     document.getElementById(
         "questionCounter"
     ).textContent =
-    `Question ${currentQuestion + 1} of ${questions.length}`;
+        `Question ${currentQuestion + 1} of ${questions.length}`;
 
 
     document.getElementById(
         "answeredCounter"
     ).textContent =
-    `Answered: ${answered}`;
+        `Answered: ${answered}`;
 
 
     const percentage =
-    (answered / questions.length) * 100;
+        questions.length > 0
+            ? (answered / questions.length) * 100
+            : 0;
 
 
     document.getElementById(
         "progressBar"
     ).style.width =
-    percentage + "%";
-
+        percentage + "%";
 }
 
 
-/* =========================
+/* =====================================================
    TIMER
-========================= */
+===================================================== */
 
-
-function startTimer(){
-
+function startTimer() {
 
     updateTimer();
-
-
-    timerInterval =
-    setInterval(()=>{
-
-
-        remainingSeconds--;
-
-
-        updateTimer();
-
-
-        if(remainingSeconds <= 0){
-
-            clearInterval(timerInterval);
-
-            autoSubmit();
-
-        }
-
-
-    },1000);
-
-}
-
-
-function updateTimer(){
-
-
-    const hours =
-    Math.floor(
-        remainingSeconds / 3600
-    );
-
-
-    const minutes =
-    Math.floor(
-        (remainingSeconds % 3600) / 60
-    );
-
-
-    const seconds =
-    remainingSeconds % 60;
-
-
-
-    timer.textContent =
-
-        String(hours).padStart(2,"0")
-        + ":" +
-
-        String(minutes).padStart(2,"0")
-        + ":" +
-
-        String(seconds).padStart(2,"0");
-
-
-    if(remainingSeconds <= 300){
-
-        timer.style.background =
-        "#8b1e2d";
-
-    }
-
-}
-
-
-/* =========================
-   SUBMIT
-========================= */
-
-
-submitBtn.addEventListener(
-"click",
-async function(){
-
-    if(!confirm(
-        "Are you sure you want to submit your examination?"
-    )){
-
-        return;
-
-    }
-
-
-    await submitExam();
-
-});
-
-
-async function autoSubmit(){
-
-    alert(
-        "Your examination time has ended. Your paper will now be submitted."
-    );
-
-    await submitExam();
-
-}
-
-
-/* =========================
-   SUBMIT EXAM
-========================= */
-
-
-async function submitExam(){
-
-
-    if(!attemptId){
-
-        return;
-
-    }
 
 
     clearInterval(timerInterval);
 
 
-    try{
+    timerInterval =
+        setInterval(
+            async function () {
+
+                remainingSeconds--;
+
+                updateTimer();
 
 
-        const {
-            data:{
-                user
-            }
-        } =
-        await supabaseClient.auth.getUser();
+                if (remainingSeconds <= 0) {
+
+                    clearInterval(
+                        timerInterval
+                    );
+
+                    await autoSubmit();
+                }
+
+            },
+            1000
+        );
+}
 
 
-        if(!user){
+function updateTimer() {
 
+    const hours =
+        Math.floor(
+            remainingSeconds / 3600
+        );
+
+
+    const minutes =
+        Math.floor(
+            (remainingSeconds % 3600) / 60
+        );
+
+
+    const seconds =
+        remainingSeconds % 60;
+
+
+    timer.textContent =
+        String(hours).padStart(2, "0") +
+        ":" +
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(seconds).padStart(2, "0");
+
+
+    if (remainingSeconds <= 300) {
+
+        timer.style.background =
+            "#8b1e2d";
+    }
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+submitBtn.addEventListener(
+    "click",
+    async function () {
+
+        if (submitting) {
             return;
-
         }
 
+
+        if (
+            !confirm(
+                "Are you sure you want to submit your examination?"
+            )
+        ) {
+            return;
+        }
+
+
+        await submitExam();
+    }
+);
+
+
+/* =====================================================
+   AUTO SUBMIT
+===================================================== */
+
+async function autoSubmit() {
+
+    if (submitting) {
+        return;
+    }
+
+
+    alert(
+        "Your examination time has ended. Your paper will now be submitted."
+    );
+
+
+    await submitExam();
+}
+
+
+/* =====================================================
+   SUBMIT EXAM
+===================================================== */
+
+async function submitExam() {
+
+    if (submitting) {
+        return;
+    }
+
+
+    if (!attemptId) {
+
+        alert(
+            "Exam attempt was not found."
+        );
+
+        return;
+    }
+
+
+    submitting = true;
+
+
+    clearInterval(timerInterval);
+
+
+    try {
+
+        const {
+            data: {
+                user
+            },
+            error: userError
+        } = await supabaseClient.auth.getUser();
+
+
+        if (userError || !user) {
+
+            alert(
+                "Your login session has expired. Please login again."
+            );
+
+            submitting = false;
+
+            return;
+        }
+
+
+        /* Final hard cutoff */
+
+        const examEnd =
+            new Date(exam.ends_at);
+
+
+        if (new Date() >= examEnd) {
+
+            /*
+             * Still submit the attempt.
+             * The database records the real submitted time.
+             */
+        }
 
 
         let score = 0;
 
 
+        /* Save answers */
 
-        /*
-        Calculate score
-        */
-
-
-        for(const q of questions){
-
+        for (const q of questions) {
 
             const selected =
-            answers[q.id] || null;
+                answers[q.id] || null;
 
 
-            if(selected){
-
-                /*
-                Save student answer
-                */
+            const isCorrect =
+                selected !== null &&
+                selected === q.correct_answer;
 
 
-                const {
-                    error:answerError
-                } =
-                await supabaseClient
+            const marksObtained =
+                isCorrect
+                    ? Number(q.marks || 0)
+                    : 0;
 
+
+            if (isCorrect) {
+
+                score +=
+                    marksObtained;
+            }
+
+
+            /*
+             * Save student's answer.
+             */
+
+            const {
+                error: answerError
+            } = await supabaseClient
                 .from("student_answers")
-
                 .insert({
 
-                    attempt_id:attemptId,
+                    attempt_id:
+                        attemptId,
 
-                    question_id:q.id,
+                    question_id:
+                        q.id,
 
-                    selected_answer:selected
+                    selected_answer:
+                        selected,
+
+                    is_correct:
+                        isCorrect,
+
+                    marks_obtained:
+                        marksObtained
 
                 });
 
 
-                if(answerError){
+            if (answerError) {
 
-                    console.error(
-                        answerError
-                    );
+                console.error(
+                    "Answer save error:",
+                    answerError
+                );
 
-                }
-
+                throw answerError;
             }
-
-
-            if(
-                selected &&
-                selected === q.correct_answer
-            ){
-
-                score +=
-                Number(q.marks || 0);
-
-            }
-
         }
 
 
-
-        /*
-        Update attempt
-        */
-
+        /* Update attempt */
 
         const {
-            error:attemptError
-        } =
-        await supabaseClient
+            error: attemptError
+        } = await supabaseClient
+            .from("exam_attempts")
+            .update({
 
-        .from("exam_attempts")
+                submitted_at:
+                    new Date().toISOString(),
 
-        .update({
+                score:
+                    score,
 
-            submitted_at:
-            new Date().toISOString(),
+                total_marks:
+                    Number(exam.total_marks),
 
-            score:score,
+                status:
+                    "submitted"
 
-            status:"submitted"
-
-        })
-
-        .eq("id",attemptId);
-
+            })
+            .eq("id", attemptId);
 
 
-        if(attemptError){
+        if (attemptError) {
 
             console.error(
+                "Attempt update error:",
                 attemptError
             );
 
             throw attemptError;
-
         }
 
 
-
-        showMessage(
-            "Examination Submitted Successfully",
-            `Your paper has been submitted. Your score is ${score} out of ${exam.total_marks}. The result will be available after the result publication time.`
-        );
-
-
-        timer.classList.add("hidden");
+        /* Hide exam */
 
         questionArea.classList.add("hidden");
 
+        timer.classList.add("hidden");
 
 
-    }catch(error){
+        /* Success message */
 
-        console.error(error);
+        showMessage(
 
-        alert(
-            "There was an error submitting your examination. Please contact administration."
+            "Examination Submitted Successfully",
+
+            `Your paper has been submitted successfully.
+
+Score: ${score} / ${exam.total_marks}
+
+Your result will be available after the scheduled result publication time.`
+
         );
 
-    }
 
+    } catch (error) {
+
+        console.error(
+            "Submission error:",
+            error
+        );
+
+
+        alert(
+            "There was an error while submitting your examination. Please contact administration."
+        );
+
+
+        submitting = false;
+    }
 }
 
 
-/* =========================
-   SECURITY / HTML ESCAPE
-========================= */
+/* =====================================================
+   HTML ESCAPE
+===================================================== */
 
-
-function escapeHTML(value){
+function escapeHTML(value) {
 
     return String(value ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#039;");
-
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
 }
 
 
-/* =========================
-   START
-========================= */
-
+/* =====================================================
+   START APPLICATION
+===================================================== */
 
 loadExam();
-
 
 </script>
 

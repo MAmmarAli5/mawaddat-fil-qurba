@@ -1715,7 +1715,145 @@ function escapeHTML(value) {
 ===================================================== */
 
 loadExam();
+/* =====================================================
+   EXAM SECURITY / ANTI-CHEATING
+===================================================== */
 
+/* Disable right click */
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+
+
+/* Disable text selection */
+document.addEventListener("selectstart", function (e) {
+    e.preventDefault();
+});
+
+
+/* Disable drag */
+document.addEventListener("dragstart", function (e) {
+    e.preventDefault();
+});
+
+
+/* Disable copy / cut / paste */
+["copy", "cut", "paste"].forEach(function (eventName) {
+
+    document.addEventListener(eventName, function (e) {
+
+        e.preventDefault();
+
+    });
+
+});
+
+
+/* Disable common keyboard shortcuts */
+document.addEventListener("keydown", function (e) {
+
+    const key = e.key.toLowerCase();
+
+    /* Ctrl / Cmd shortcuts */
+
+    if (
+        (e.ctrlKey || e.metaKey) &&
+        ["c", "x", "v", "a", "u", "s", "p"].includes(key)
+    ) {
+
+        e.preventDefault();
+
+    }
+
+
+    /* Developer tools */
+
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(key)) ||
+        (e.ctrlKey && key === "u")
+    ) {
+
+        e.preventDefault();
+
+    }
+
+});
+
+
+/* =====================================================
+   TAB / WINDOW CHANGE DETECTION
+===================================================== */
+
+let tabSwitchCount = 0;
+
+
+/*
+ * Only monitor while the examination is actually running.
+ */
+
+document.addEventListener("visibilitychange", function () {
+
+    if (!questionArea.classList.contains("hidden")) {
+
+        if (document.hidden) {
+
+            tabSwitchCount++;
+
+            console.warn(
+                "Exam tab switched. Count:",
+                tabSwitchCount
+            );
+
+            alert(
+                "Warning: You have left the examination tab.\n\n" +
+                "Please return to the examination immediately.\n\n" +
+                "Tab switches detected: " +
+                tabSwitchCount
+            );
+
+        }
+
+    }
+
+});
+
+
+/* =====================================================
+   WINDOW BLUR DETECTION
+===================================================== */
+
+window.addEventListener("blur", function () {
+
+    if (!questionArea.classList.contains("hidden")) {
+
+        console.warn(
+            "Exam window lost focus."
+        );
+
+    }
+
+});
+
+
+/* =====================================================
+   BEFORE LEAVING EXAM PAGE
+===================================================== */
+
+window.addEventListener("beforeunload", function (e) {
+
+    if (
+        !questionArea.classList.contains("hidden") &&
+        !submitting
+    ) {
+
+        e.preventDefault();
+
+        e.returnValue = "";
+
+    }
+
+});
 </script>
 
 

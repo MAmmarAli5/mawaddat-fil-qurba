@@ -1507,7 +1507,9 @@ async function submitExam() {
     "Examination Submitted Successfully",
     "Your examination has been submitted successfully. Your result will be published after 24 hours. Please wait for the result announcement."
 );
-
+setTimeout(() => {
+    window.location.href = "result.html";
+}, 3000);
 
     } catch (error) {
 

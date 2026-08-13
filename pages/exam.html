@@ -1503,17 +1503,10 @@ async function submitExam() {
 
         /* Success message */
 
-        showMessage(
-
-            "Examination Submitted Successfully",
-
-            `Your paper has been submitted successfully.
-
-Score: ${score} / ${exam.total_marks}
-
-Your result will be available after the scheduled result publication time.`
-
-        );
+      showMessage(
+    "Examination Submitted Successfully",
+    "Your examination has been submitted successfully. Your result will be published after 24 hours. Please wait for the result announcement."
+);
 
 
     } catch (error) {

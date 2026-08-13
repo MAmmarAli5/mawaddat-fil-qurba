@@ -1285,24 +1285,136 @@ function updateTimer() {
 
 submitBtn.addEventListener(
     "click",
-    async function () {
+   async function submitExam() {
 
-        if (submitting) {
-            return;
-        }
-
-
-        if (
-            !confirm(
-                "Are you sure you want to submit your examination?"
-            )
-        ) {
-            return;
-        }
-
-
-        await submitExam();
+    if (submitting) {
+        return;
     }
+
+    if (!attemptId) {
+
+        alert("Exam attempt was not found.");
+
+        return;
+    }
+
+    submitting = true;
+
+    clearInterval(timerInterval);
+
+    try {
+
+        const {
+            data: {
+                user
+            },
+            error: userError
+        } = await supabaseClient.auth.getUser();
+
+
+        if (userError || !user) {
+
+            alert(
+                "Your login session has expired. Please login again."
+            );
+
+            submitting = false;
+
+            return;
+        }
+
+
+        /*
+         * Submit answers to secure database function.
+         *
+         * The database calculates:
+         * - correct answers
+         * - score
+         * - percentage
+         * - student_answers
+         * - exam_attempt
+         * - result
+         *
+         * correct_answer is NOT trusted from browser.
+         */
+
+        const {
+            data,
+            error
+        } = await supabaseClient.rpc(
+            "submit_exam",
+            {
+                p_attempt_id: attemptId,
+                p_answers: answers
+            }
+        );
+
+
+        if (error) {
+
+            console.error(
+                "Secure submission error:",
+                error
+            );
+
+            throw error;
+        }
+
+
+        if (!data || data.success !== true) {
+
+            throw new Error(
+                "Examination submission was not completed."
+            );
+        }
+
+
+        /*
+         * Hide examination
+         */
+
+        questionArea.classList.add("hidden");
+
+        timer.classList.add("hidden");
+
+
+        /*
+         * Success message
+         */
+
+        showMessage(
+            "Examination Submitted Successfully",
+            "Your examination has been submitted successfully. Your result will be published on 16 August 2026 at 7:00 PM."
+        );
+
+
+        /*
+         * Redirect to result page
+         */
+
+        setTimeout(() => {
+
+            window.location.href = "result.html";
+
+        }, 3000);
+
+
+    } catch (error) {
+
+        console.error(
+            "Submission error:",
+            error
+        );
+
+
+        alert(
+            "There was an error while submitting your examination. Please contact administration."
+        );
+
+
+        submitting = false;
+    }
+}
 );
 
 

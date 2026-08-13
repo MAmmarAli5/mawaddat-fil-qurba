@@ -4,23 +4,18 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
 Student Dashboard | مودّت فی القربیٰ
 </title>
 
-
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
 <style>
-
 
 *{
 margin:0;
@@ -28,398 +23,262 @@ padding:0;
 box-sizing:border-box;
 }
 
-
 body{
-
 font-family:"Inter",sans-serif;
-
 background:#f7f7f2;
-
 color:#202522;
-
 }
-
-
 
 /* HEADER */
 
 .header{
-
 height:75px;
-
 background:#07382f;
-
 color:white;
-
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
 padding:0 40px;
-
 }
-
-
 
 .brand{
-
 display:flex;
-
 align-items:center;
-
 gap:12px;
-
 }
-
-
 
 .brand-circle{
-
 width:45px;
-
 height:45px;
-
 border-radius:50%;
-
 border:1px solid #e1c45c;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 font-family:"Amiri";
-
 font-size:30px;
-
 color:#e1c45c;
-
 }
-
 
 .brand h1{
-
 font-size:18px;
-
 font-family:"Amiri";
-
 }
-
-
 
 .logout{
-
 background:#c9a227;
-
 border:none;
-
 padding:12px 20px;
-
 border-radius:8px;
-
 font-weight:700;
-
 cursor:pointer;
-
 color:#07382f;
-
 }
-
-
 
 /* MAIN */
 
 .container{
-
 padding:40px;
-
 }
-
-
 
 .welcome{
-
 background:white;
-
 padding:30px;
-
 border-radius:20px;
-
 box-shadow:0 10px 30px rgba(0,0,0,.06);
-
 border-left:5px solid #c9a227;
-
 }
-
-
 
 .welcome h2{
-
 font-size:30px;
-
 }
-
-
 
 .welcome span{
-
 color:#0d4b3e;
-
 }
-
-
 
 .welcome p{
-
 margin-top:10px;
-
 color:#69736f;
-
 }
-
-
 
 /* PROFILE */
 
 .profile-card{
-
 margin-top:30px;
-
 background:white;
-
 padding:25px;
-
 border-radius:20px;
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:20px;
-
 box-shadow:0 10px 30px rgba(0,0,0,.05);
-
 }
-
-
 
 .info h4{
-
 font-size:12px;
-
 color:#69736f;
-
 }
-
-
 
 .info p{
-
 margin-top:7px;
-
 font-weight:700;
-
 }
-
-
 
 /* SECTION TITLE */
 
 .section-title{
-
 margin-top:40px;
-
 margin-bottom:20px;
-
 font-size:25px;
-
 font-weight:800;
-
 }
-
-
 
 /* COURSES */
 
 .courses{
-
 display:grid;
-
 grid-template-columns:repeat(3,1fr);
-
 gap:20px;
-
 }
-
-
 
 .course{
-
 background:white;
-
 padding:25px;
-
 border-radius:18px;
-
 transition:.3s;
-
 border-top:4px solid #0d4b3e;
-
 }
-
-
 
 .course:hover{
-
 transform:translateY(-6px);
-
 box-shadow:0 15px 35px rgba(0,0,0,.08);
-
 }
-
-
 
 .course i{
-
 font-size:28px;
-
 color:#c9a227;
-
 }
-
-
 
 .course h3{
-
 margin-top:15px;
-
 font-size:17px;
-
 }
 
-
+.course .urdu-title{
+font-family:"Amiri",serif;
+font-size:20px;
+margin-top:8px;
+color:#07382f;
+}
 
 .course p{
-
 margin-top:8px;
-
 font-size:13px;
-
 color:#69736f;
-
 }
 
-
+.no-courses{
+background:white;
+padding:25px;
+border-radius:18px;
+color:#69736f;
+text-align:center;
+}
 
 /* EXAM */
 
 .exam-box{
-
 background:#07382f;
-
 color:white;
-
 padding:30px;
-
 border-radius:20px;
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 }
-
-
 
 .exam-btn{
-
 background:#c9a227;
-
 color:#07382f;
-
 padding:13px 25px;
-
 border-radius:10px;
-
 font-weight:800;
-
 text-decoration:none;
-
 }
-
-
 
 /* RESULT */
 
 .result{
-
 margin-top:25px;
-
 background:white;
-
 padding:25px;
-
 border-radius:20px;
-
 display:flex;
-
 justify-content:space-between;
-
 }
-
-
 
 .badge{
-
 background:#fff3c4;
-
 padding:8px 15px;
-
 border-radius:20px;
-
 color:#856404;
-
 font-weight:700;
-
 }
 
+/* LOADING */
 
+.loading-courses{
+background:white;
+padding:25px;
+border-radius:18px;
+color:#69736f;
+text-align:center;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
 
-
 .profile-card{
-
 grid-template-columns:1fr 1fr;
-
 }
-
 
 .courses{
-
 grid-template-columns:1fr;
-
 }
-
 
 .exam-box,
 .result{
-
 flex-direction:column;
-
 gap:20px;
+}
 
 }
 
+@media(max-width:600px){
 
+.header{
+padding:0 15px;
 }
 
+.brand h1{
+font-size:15px;
+}
 
+.container{
+padding:25px 15px;
+}
+
+.welcome h2{
+font-size:24px;
+}
+
+.profile-card{
+grid-template-columns:1fr;
+}
+
+}
 
 </style>
 
@@ -429,45 +288,34 @@ gap:20px;
 <body>
 
 
-
 <header class="header">
 
-
 <div class="brand">
-
 
 <div class="brand-circle">
 ؏
 </div>
 
-
 <h1>
 مودّت فی القربیٰ
 </h1>
 
-
 </div>
 
 
-<button id="logout"
-class="logout">
-
+<button id="logout" class="logout">
 Logout
-
 </button>
 
-
 </header>
-
-
 
 
 <main class="container">
 
 
+<!-- WELCOME -->
 
 <div class="welcome">
-
 
 <h2>
 
@@ -478,20 +326,16 @@ Student
 
 </h2>
 
-
 <p>
 Your personal learning dashboard for courses, examinations and results.
 </p>
 
-
 </div>
 
 
-
-
+<!-- PROFILE -->
 
 <div class="profile-card">
-
 
 
 <div class="info">
@@ -507,7 +351,6 @@ Loading...
 </div>
 
 
-
 <div class="info">
 
 <h4>
@@ -521,7 +364,6 @@ Loading...
 </div>
 
 
-
 <div class="info">
 
 <h4>
@@ -533,7 +375,6 @@ Loading...
 </p>
 
 </div>
-
 
 
 <div class="info">
@@ -552,73 +393,23 @@ Loading...
 </div>
 
 
-
-
-
+<!-- COURSES -->
 
 <h2 class="section-title">
 My Courses
 </h2>
 
 
+<div id="courses" class="courses">
 
-<div class="courses">
-
-
-<div class="course">
-
-<i class="fa-solid fa-book-open"></i>
-
-<h3>
-معرفتِ معصومینؑ
-</h3>
-
-<p>
-2026 Learning Batch
-</p>
+<div class="loading-courses">
+Loading your enrolled courses...
+</div>
 
 </div>
 
 
-
-<div class="course">
-
-<i class="fa-solid fa-mosque"></i>
-
-<h3>
-معرفت عقیدہ
-</h3>
-
-<p>
-Ahl al-Bayt Islamic Studies
-</p>
-
-</div>
-
-
-
-<div class="course">
-
-<i class="fa-solid fa-quran"></i>
-
-<h3>
-معرفت قرآن
-</h3>
-
-<p>
-Quranic Knowledge
-</p>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
+<!-- EXAMINATION -->
 
 <h2 class="section-title">
 Online Examination
@@ -626,7 +417,6 @@ Online Examination
 
 
 <div class="exam-box">
-
 
 <div>
 
@@ -645,13 +435,10 @@ Check available exams and attempt your paper.
 Start Exam
 </a>
 
-
 </div>
 
 
-
-
-
+<!-- RESULTS -->
 
 <h2 class="section-title">
 My Results
@@ -659,7 +446,6 @@ My Results
 
 
 <div class="result">
-
 
 <div>
 
@@ -675,52 +461,90 @@ Results will appear after publication.
 
 
 <div class="badge">
-
 Pending
-
 </div>
 
-
 </div>
-
-
 
 
 </main>
 
 
-
-
-
+<!-- SUPABASE -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="../js/supabase.js"></script>
 
 
-
-
 <script>
 
 
+/* =====================================================
+   COURSE ICON
+===================================================== */
+
+function getCourseIcon(title){
+
+const text = String(title || "").toLowerCase();
+
+if(
+text.includes("quran") ||
+text.includes("قرآن")
+){
+return "fa-quran";
+}
+
+if(
+text.includes("aqeeda") ||
+text.includes("aqeedah") ||
+text.includes("عقیدہ")
+){
+return "fa-mosque";
+}
+
+if(
+text.includes("fiqh") ||
+text.includes("فقہ")
+){
+return "fa-scale-balanced";
+}
+
+if(
+text.includes("marifat") ||
+text.includes("معرفت")
+){
+return "fa-book-open";
+}
+
+return "fa-book";
+}
+
+
+/* =====================================================
+   LOAD DASHBOARD
+===================================================== */
+
 async function loadDashboard(){
 
+try{
+
+
+/* -----------------------------------------------------
+   GET CURRENT USER
+----------------------------------------------------- */
 
 const {
-
 data:{
 user
-
+},
+error:userError
 }
-
-}
-
 =
 await supabaseClient.auth.getUser();
 
 
-
-if(!user){
+if(userError || !user){
 
 window.location.href="login.html";
 
@@ -729,15 +553,14 @@ return;
 }
 
 
-
+/* -----------------------------------------------------
+   LOAD PROFILE
+----------------------------------------------------- */
 
 const {
-
 data,
 error
-
 }
-
 =
 await supabaseClient
 
@@ -750,66 +573,291 @@ await supabaseClient
 .single();
 
 
-
-
 if(error){
 
-console.log(error);
+console.error("Profile error:",error);
 
 return;
 
 }
 
 
-
-document.getElementById("studentName").innerText=
-data.full_name;
-
-
-document.getElementById("name").innerText=
-data.full_name;
+document.getElementById("studentName").innerText =
+data.full_name || "Student";
 
 
-document.getElementById("father").innerText=
+document.getElementById("name").innerText =
+data.full_name || "-";
+
+
+document.getElementById("father").innerText =
 data.father_name || "-";
 
 
-document.getElementById("email").innerText=
-data.email;
+document.getElementById("email").innerText =
+data.email || user.email || "-";
 
 
-document.getElementById("batch").innerText=
+document.getElementById("batch").innerText =
 data.batch || "-";
 
 
+/* -----------------------------------------------------
+   LOAD STUDENT ENROLLMENTS
+----------------------------------------------------- */
 
+const {
+data:enrollments,
+error:enrollmentError
+}
+=
+await supabaseClient
+
+.from("enrollments")
+
+.select(`
+    course_id,
+    status,
+    courses (
+        id,
+        title,
+        title_urdu,
+        description,
+        year,
+        status
+    )
+`)
+
+.eq("student_id",user.id)
+
+.eq("status","active");
+
+
+if(enrollmentError){
+
+console.error(
+"Enrollment error:",
+enrollmentError
+);
+
+document.getElementById("courses").innerHTML = `
+
+<div class="no-courses">
+
+Unable to load your enrolled courses.
+
+</div>
+
+`;
+
+return;
 
 }
 
 
+/* -----------------------------------------------------
+   COURSE CONTAINER
+----------------------------------------------------- */
+
+const coursesContainer =
+document.getElementById("courses");
 
 
-document
-.getElementById("logout")
-.addEventListener("click",async()=>{
+coursesContainer.innerHTML="";
 
 
-await supabaseClient.auth.signOut();
+/* -----------------------------------------------------
+   NO ENROLLMENTS
+----------------------------------------------------- */
+
+if(!enrollments || enrollments.length === 0){
+
+coursesContainer.innerHTML = `
+
+<div class="no-courses">
+
+You are not currently enrolled in any course.
+
+</div>
+
+`;
+
+return;
+
+}
 
 
-window.location.href="login.html";
+/* -----------------------------------------------------
+   RENDER ONLY ENROLLED COURSES
+----------------------------------------------------- */
+
+enrollments.forEach(function(enrollment){
+
+
+const course =
+enrollment.courses;
+
+
+if(!course){
+
+return;
+
+}
+
+
+/* Optional: only show published/active courses */
+
+if(
+course.status &&
+course.status !== "active" &&
+course.status !== "published"
+){
+
+return;
+
+}
+
+
+const icon =
+getCourseIcon(
+course.title_urdu ||
+course.title
+);
+
+
+const courseCard =
+document.createElement("div");
+
+courseCard.className="course";
+
+
+courseCard.innerHTML = `
+
+<i class="fa-solid ${icon}"></i>
+
+
+${course.title_urdu ? `
+
+<div class="urdu-title">
+
+${escapeHTML(course.title_urdu)}
+
+</div>
+
+` : ""}
+
+
+<h3>
+
+${escapeHTML(course.title || "Course")}
+
+</h3>
+
+
+<p>
+
+${escapeHTML(
+course.description ||
+(
+course.year
+?
+course.year + " Learning Batch"
+:
+""
+)
+)}
+
+</p>
+
+`;
+
+
+coursesContainer.appendChild(courseCard);
 
 
 });
 
 
+/* -----------------------------------------------------
+   IF ALL COURSES WERE FILTERED
+----------------------------------------------------- */
+
+if(
+coursesContainer.children.length === 0
+){
+
+coursesContainer.innerHTML = `
+
+<div class="no-courses">
+
+No active enrolled courses found.
+
+</div>
+
+`;
+
+}
+
+
+}catch(error){
+
+console.error(
+"Dashboard error:",
+error
+);
+
+}
+
+}
+
+
+/* =====================================================
+   HTML ESCAPE
+===================================================== */
+
+function escapeHTML(value){
+
+return String(value ?? "")
+
+.replaceAll("&","&amp;")
+
+.replaceAll("<","&lt;")
+
+.replaceAll(">","&gt;")
+
+.replaceAll('"',"&quot;")
+
+.replaceAll("'","&#039;");
+
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+document
+.getElementById("logout")
+.addEventListener(
+"click",
+async function(){
+
+await supabaseClient.auth.signOut();
+
+window.location.href="login.html";
+
+}
+);
+
+
+/* =====================================================
+   START
+===================================================== */
 
 loadDashboard();
 
 
-
 </script>
-
 
 
 </body>

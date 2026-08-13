@@ -1492,7 +1492,59 @@ async function submitExam() {
 
             throw attemptError;
         }
+/* Create Result */
 
+const eligibleAt = new Date(
+    Date.now() + (24 * 60 * 60 * 1000)
+);
+
+const percentage =
+    Number(exam.total_marks) > 0
+    ? (score / Number(exam.total_marks)) * 100
+    : 0;
+
+
+const {
+    error: resultError
+} = await supabaseClient
+    .from("results")
+    .insert({
+
+        exam_id: exam.id,
+
+        student_id: user.id,
+
+        attempt_id: attemptId,
+
+        score: score,
+
+        total_marks:
+            Number(exam.total_marks),
+
+        percentage:
+            Number(percentage.toFixed(2)),
+
+        published: false,
+
+        submitted_at:
+            new Date().toISOString(),
+
+        eligible_at:
+            eligibleAt.toISOString()
+
+    });
+
+
+if(resultError){
+
+    console.error(
+        "Result insert error:",
+        resultError
+    );
+
+    throw resultError;
+
+}
 
         /* Hide exam */
 

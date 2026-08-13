@@ -1494,9 +1494,9 @@ async function submitExam() {
         }
 /* Create Result */
 
-const eligibleAt = new Date(
-    Date.now() + (24 * 60 * 60 * 1000)
-);
+// Fixed result publication time:
+// 16 August 2026, 7:00 PM Pakistan Time
+const eligibleAt = new Date("2026-08-16T19:00:00+05:00");
 
 const percentage =
     Number(exam.total_marks) > 0

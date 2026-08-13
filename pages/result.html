@@ -191,15 +191,18 @@ document.getElementById("loading").style.display="none";
 
 
 
-if(data.published !== true){
+const now = new Date();
+const eligibleAt = new Date(data.eligible_at);
 
+if (
+    data.published !== true ||
+    now < eligibleAt
+) {
 
-document.getElementById("pending")
-.style.display="block";
+    document.getElementById("pending")
+        .style.display = "block";
 
-
-return;
-
+    return;
 }
 
 

@@ -965,7 +965,124 @@ img {
     font-size: 14px;
 
 }
+/* =========================
+   LATEST UPDATE
+========================= */
 
+
+.latest-update{
+    padding-top:0;
+}
+
+
+.update-card{
+
+    min-height:420px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background-image:url("assets/session3-flyer.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.update-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+
+
+.update-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    padding:50px;
+
+    max-width:600px;
+
+}
+
+
+
+.update-content h2{
+
+    font-family:"Amiri";
+
+    font-size:45px;
+
+    color:#e1c45c;
+
+    margin:15px 0;
+
+}
+
+
+
+.update-content h3{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.update-content p{
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+
+
+@media(max-width:600px){
+
+.update-content{
+
+padding:30px;
+
+}
+
+
+.update-content h2{
+
+font-size:32px;
+
+}
+
+
+.update-content h3{
+
+font-size:24px;
+
+}
+
+}
 
 /* =========================================
    MISSION
